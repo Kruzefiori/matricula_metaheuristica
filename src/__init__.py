@@ -9,11 +9,5 @@ def main():
 
     print(pdf.readPDFJSON(args))
 
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
