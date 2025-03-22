@@ -21,19 +21,21 @@ def readPDFJSON(args):
 #https://pymupdf.readthedocs.io/en/latest/tutorial/#extracting-text
 #https://pymupdf.readthedocs.io/en/latest/tutorial/#extracting-text-into-a-json-object
   
-        # Remover valores NaN e Null da tabela
-        # Processar a tabela em grupos de 3
-        #print(tabela)
-        print("------------------- 0")
-        #print(len(tabela))
-        print(tabela)
-        print("------------------- 1")
-        print(tabela[1])
-        print("------------------- 2")
-        print(tabela[2])
+
+        # Remove columns with NotANumber, '*', or '#' in any cell
+        tabela = [tab.dropna(axis=1, how='all').dropna(axis=0, how='all') for tab in tabela]
+        tabela = [tab[~tab.isin(['*', '#'])] for tab in tabela]
+        tabela = [tab.dropna(axis=1, how='all').dropna(axis=0, how='all') for tab in tabela]
+
+        # Remove columns that contain: 'Ano/Período', 'Ano/Período Letivo', 'Hora Aula', 'CH', 'Turma', 'Freq %', 'NotaMín'
+        tabela = [tab[~tab.astype(str).apply(lambda x: x.str.contains('Ano/Período|Ano/Período Letivo|Hora Aula|CH|Turma|Freq %|NotaMín').any(), axis=1)] for tab in tabela]
+
+        # print first table
+        print(tabela[0])
+
 
         # Salvar o resultado em JSON
-        with open("sample.txt", "w") as outfile:
+        with open("sample2.txt", "w") as outfile:
             outfile.write(str(tabela))
         
         return ''

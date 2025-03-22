@@ -1,0 +1,266 @@
+[         0       1                                                  2    3    4    5      6    7    8    9
+2      NaN     NaN  DISPENSADO DO ENADE/INGRESSANTE EM RAZÃO DO CA...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+3   2016.1   ENADE                                                NaN   --    0   --     --   --  ---   --
+4      NaN     NaN                 INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+5      NaN     NaN                    MSc. CARLOS MINORU TAMAKI (32h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+6   2016.1  CIC130                                                NaN   32   32   01   93,8  6.3  6.3  APR
+7      NaN     NaN              FUNDAMENTOS DE FÍSICA PARA COMPUTAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+8      NaN     NaN                Dr. ROBERTO CLAUDINO DA SILVA (64h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+9   2016.1  CIC510                                                NaN   64   64   01   84,4  7.2  7.2  APR
+10     NaN     NaN                         FUNDAMENTOS DE PROGRAMAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+11     NaN     NaN  Dr. ROBERTO AFFONSO DA COSTA JUNIOR (32h), Dr....  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+12  2016.1  COM110                                                NaN   80   80   --  100,0   --  6.8  APR
+13     NaN     NaN            METODOLOGIA CIENTÍFICA PARA INFORMÁTICA  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+14     NaN     NaN                   Dra. ADRIANA PREST MATTEDI (32h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+15  2016.1  COM310                                                NaN   32   32   01   87,5  6.1  6.1  APR
+16     NaN     NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+17     NaN     NaN           ANA CAROLINA RODRIGUES DE SA SILVA (64h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+18  2016.1  MAT011                                                NaN   64   64   09  100,0  0.0  1.4  REP
+19     NaN     NaN                          FUNDAMENTOS DA MATEMÁTICA  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+20     NaN     NaN           ANA CAROLINA RODRIGUES DE SA SILVA (64h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+21  2016.1  MAT050                                                NaN   64   64   01  100,0  5.8  6.0  APR
+22     NaN     NaN        ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+23     NaN     NaN  MSc. CARLOS MINORU TAMAKI (16h), MSc. CARLOS M...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+24  2016.2  CIC120                                                NaN   64   64   --  100,0   --  5.2  REP
+25     NaN     NaN                             ECONOMIA DA INFORMAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+26     NaN     NaN                   Dra. ADRIANA PREST MATTEDI (48h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+27  2016.2  CIC310                                                NaN   48   48   01   93,8  4.8  5.6  REP,
+
+----------------------------------------------------------------------------------------------------------------
+
+         0       2                                                  3    4    6    7      8    9    11   12
+2      NaN     NaN                 ALGORITMOS E ESTRUTURAS DE DADOS I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+3      NaN     NaN  Dr. EDISON OLIVEIRA DE JESUS (32h), Dr. EDISON...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+4   2016.2  COM111                                                NaN   96   96   --   89,6   --  2.0  REP
+5      NaN     NaN               LIBRAS - LÍNGUA BRASILEIRA DE SINAIS  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+6      NaN     NaN             Dra. ANA CAROLINA SALES OLIVEIRA (48h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+7   2016.2  LET007                                                NaN   48   48   04   81,3  7.0  7.5  APR
+8      NaN     NaN                                          CÁLCULO I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+9      NaN     NaN               Dr. MATEUS HENRIQUE DE ALMEIDA (96h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+10  2016.2  MAT001                                                NaN   96   96   02  100,0  3.0  3.5  REP
+11     NaN     NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+12     NaN     NaN                     MSc. HEVILLA NOBRE CEZAR (64h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+13  2016.2  MAT011                                                NaN   64   64   01  100,0  0.5  1.2  REP
+14     NaN     NaN                                MATEMÁTICA DISCRETA  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+15     NaN     NaN  MSc. ANDRE DESIDERIO MALDONADO (16h), MSc. AND...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+16  2016.2  MAT015                                                NaN   64   64   --   98,3   --  0.8  REP
+17     NaN     NaN                             LÓGICA PARA COMPUTAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+18     NaN     NaN  Dr. ISABELA NEVES DRUMMOND (16h), Dr. ISABELA ...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+19  2017.1  CIC131                                                NaN   64   64   --  100,0   --  2.6  REP
+20     NaN     NaN                  ALGORITMO E ESTRUTURA DE DADOS II  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+21     NaN     NaN  Dr. VANESSA CRISTINA OLIVEIRA DE SOUZA (32h), ...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+22  2017.1  COM112                                                NaN   80   80   --   88,0   --  2.2  REP
+23     NaN     NaN                           ENGENHARIA DE SOFTWARE I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+24     NaN     NaN  Dr. ADLER DINIZ DE SOUZA (32h), Dr. ADLER DINI...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+25  2017.1  COM210                                                NaN   80   80   --  100,0   --  6.0  APR
+26     NaN     NaN                                   BANCO DE DADOS I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+27     NaN     NaN  Dr. MELISE MARIA VEIGA DE PAULA (32h), Dr. MEL...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+28  2017.1  COM230                                                NaN   64   64   --   68,0   --  2.4  REP
+29     NaN     NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+30     NaN     NaN                 Dra. MARCIA SAYURI KASHIMOTO (64h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+31  2017.1  MAT011                                                NaN   64   64   08   78,1  2.0  4.6  REP
+32     NaN     NaN                  ANÁLISE E PROJETO DE ALGORITMOS I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+33     NaN     NaN  Dr. ROBERTO AFFONSO DA COSTA JUNIOR (16h), Dr....  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+34  2017.2  CIC110                                                NaN   64   64   --   81,0   --  1.7  REP
+35     NaN     NaN        ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+36     NaN     NaN  MSc. CARLOS MINORU TAMAKI (16h), MSc. CARLOS M...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+37  2017.2  CIC120                                                NaN   64   64   --  100,0   --  6.7  APR
+38     NaN     NaN                             ECONOMIA DA INFORMAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+39     NaN     NaN                   Dra. ADRIANA PREST MATTEDI (48h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+40  2017.2  CIC310                                                NaN   48   48   01   81,3  6.0  6.0  APR
+41     NaN     NaN                 ALGORITMOS E ESTRUTURAS DE DADOS I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+42     NaN     NaN  Dr. VANESSA CRISTINA OLIVEIRA DE SOUZA (32h), ...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+43  2017.2  COM111                                                NaN   96   96   --   69,2   --  1.9  REP
+44     NaN     NaN                                          CÁLCULO I  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+45     NaN     NaN  Dr. RODRIGO SILVA LIMA (95h), MSc. HEVILLA NOB...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+46  2017.2  MAT001                                                NaN   96   96   03  100,0  1.9  1.9  REP
+47     NaN     NaN                                MATEMÁTICA DISCRETA  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+48     NaN     NaN                        LUCIANA CARRARA ABREU (64h)  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+49  2017.2  MAT057                                                NaN   64   64   02  100,0  0.0  0.7  REP
+50     NaN     NaN       ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES II  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+51     NaN     NaN  MSc. CARLOS MINORU TAMAKI (48h), MSc. CARLOS M...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+52  2018.1  CIC121                                                NaN   64   64   --  100,0   --  7.1  APR
+53     NaN     NaN                             LÓGICA PARA COMPUTAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+54     NaN     NaN  Dr. ISABELA NEVES DRUMMOND (48h), Dr. ISABELA ...  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+55  2018.1  CIC131                                                NaN   64   64   --   93,0   --  7.0  APR
+56     NaN     NaN                  ALGORITMO E ESTRUTURA DE DADOS II  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+57     NaN     NaN  Dr. ELISA DE CASSIA SILVA RODRIGUES (32h), Dr....  NaN  NaN  NaN    NaN  NaN  NaN  NaN
+58  2018.1  COM112                                                NaN   80   80   --   83,1   --  8.2  APR,
+
+----------------------------------------------------------------------------------------------------------------
+
+         0       3                                                  4    5    7    8      9    10   12     13
+1      NaN     NaN                        INTERAÇÃO HUMANO-COMPUTADOR  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+2      NaN     NaN           Dr. ALEXANDRE CARLOS BRANDAO RAMOS (64h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+3   2018.1  COM213                                                NaN   64   64   01  100,0  7.9  7.9    APR
+4      NaN     NaN             ANÁLISE DE INVESTIMENTO EM INFORMÁTICA  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+5      NaN     NaN                   Dra. ADRIANA PREST MATTEDI (48h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+6   2018.1  COM311                                                NaN   48   48   01   81,3  5.2  6.0    APR
+7      NaN     NaN             GOVERNANÇA EM TECNOLOGIA DE INFORMAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+8      NaN     NaN        Dr. RAFAEL DE MAGALHAES DIAS FRINHANI (64h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+9   2018.1  SIN210                                                NaN   64   64   01  100,0  5.2  5.4    REP
+10     NaN     NaN                              ORGANIZAÇÃO E MÉTODOS  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+11     NaN     NaN                   Dra. ADRIANA PREST MATTEDI (48h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+12  2018.1  SIN313                                                NaN   48   48   01   75,0  5.9  6.5    APR
+13     NaN     NaN                          PARADIGMAS DE PROGRAMAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+14     NaN     NaN  Dr. ISABELA NEVES DRUMMOND (16h), Dr. ISABELA ...  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+15  2018.2  CIC133                                                NaN   64   64   --   89,0   --  7.6    APR
+16     NaN     NaN                            INTELIGÊNCIA ARTIFICIAL  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+17     NaN     NaN  Dr. ISABELA NEVES DRUMMOND (48h), Dr. ISABELA ...  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+18  2018.2  CIC260                                                NaN   64   64   --   81,0   --  7.7    APR
+19     NaN     NaN                 ALGORITMOS E ESTRUTURAS DE DADOS I  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+20     NaN     NaN  Dr. ELISA DE CASSIA SILVA RODRIGUES (64h), Dr....  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+21  2018.2  COM111  DE CASSIA SILVA RODRIGUES (64h), Dr. ELISA DE ...   96   96   --   57,1   --  6.0    APR
+22     NaN     NaN                            INFORMÁTICA E SOCIEDADE  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+23     NaN     NaN                 Dra. TEREZA GONCALVES KIRNER (48h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+24  2018.2  COM312                                                NaN   48   48   02  100,0  7.0  7.0    APR
+25     NaN     NaN                                          CÁLCULO I  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+26     NaN     NaN            MSc. RODRIGO LIPPARELLI FERNANDEZ (96h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+27  2018.2  MAT001                                                NaN   96   96   03  100,0  0.0  0.2    REP
+28     NaN     NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+29     NaN     NaN                      FLAVIO FERREIRA FREITAS (64h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+30  2018.2  MAT011                                                NaN   64   64   02   81,3  0.0  0.2    REP
+31     NaN     NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+32     NaN     NaN                      FLAVIO FERREIRA FREITAS (64h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+33  2018.4  MAT011                                                NaN   64   64   01   71,9  0.0  2.0  REPMF
+34     NaN     NaN                     INTRODUÇÃO AO EMPREENDEDORISMO  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+35     NaN     NaN                     Dr. FABIO ROBERTO FOWLER (48h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+36  2019.1  ADM083                                                NaN   48   48   03  100,0  7.0  7.0    APR
+37     NaN     NaN                   COMPUTAÇÃO ORIENTADA A OBJETOS I  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+39  2019.1  COM220                                                NaN   64   64   --   70,6   --  0.8    REP
+40     NaN     NaN                                   BANCO DE DADOS I  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+41     NaN     NaN  Dr. MELISE MARIA VEIGA DE PAULA (32h), Dr. MEL...  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+42  2019.1  COM230                                                NaN   64   64   --   87,0   --  3.4    REP
+43     NaN     NaN                                          CÁLCULO I  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+44     NaN     NaN  THIAGO JUNQUEIRA REZEK (48h), Dr. EDISOM DE SO...  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+45  2019.1  MAT001                                                NaN   96   96   04  100,0  1.0  1.5    REP
+46     NaN     NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+47     NaN     NaN            GERALDO EUSTAQUIO DA SILVA JUNIOR (64h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+48  2019.1  MAT011                                                NaN   64   64   07   81,0  2.2  3.1    REP
+49     NaN     NaN                  ANÁLISE E PROJETO DE ALGORITMOS I  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+50     NaN     NaN  Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h), Dr...  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+51  2019.2  CIC110                                                NaN   64   64   --   79,6   --  0.8    REP
+52     NaN     NaN                          ENGENHARIA DE SOFTWARE II  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+54  2019.2  COM211                                                NaN   64   64   --   87,5   --  8.3    APR
+55     NaN     NaN                    GERÊNCIA DE PROJETO DE SOFTWARE  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+56     NaN     NaN                     Dr. ADLER DINIZ DE SOUZA (64h)  NaN  NaN  NaN    NaN  NaN  NaN    NaN
+57  2019.2  COM212                                                NaN   64   64   01  100,0  0.0  1.9    REP,
+
+----------------------------------------------------------------------------------------------------------------
+
+         0         2                                                  3    4    5    6      7    8    9     10
+2      NaN       NaN                   COMPUTAÇÃO ORIENTADA A OBJETOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+4   2019.2    COM220                                                NaN   64   64   --   78,1   --  2.4   REP
+5      NaN       NaN  CÁLCULO I - TURMA OFERECIDA PARA REPETENTES DE...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+6      NaN       NaN                   MSc. GISELE LEITE DA SILVA (96h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+7   2019.2    MAT001                                    MODALIDADE EAD.   96   96   03  100,0  2.0  3.4   REP
+8      NaN       NaN  GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR - TURMA O...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+10  2019.2    MAT011                                                NaN   64   64   01  100,0  1.5  1.5   REP
+11     NaN       NaN                      REPETENTES NA MODALIDADE EAD.  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+12     NaN       NaN                              MARKETING OPERACIONAL  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+13     NaN       NaN                 MSc. JULIANA CAMINHA NORONHA (80h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+14  2020.1    ADM061                                                NaN   80   80   01  100,0  6.4  6.7   APR
+15     NaN       NaN                    GERÊNCIA DE PROJETO DE SOFTWARE  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+16     NaN       NaN                     Dr. ADLER DINIZ DE SOUZA (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+17  2020.1    COM212                                                NaN   64   64   01  100,0  8.4  8.5   APR
+18     NaN       NaN                                   BANCO DE DADOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+19     NaN       NaN  Dr. MELISE MARIA VEIGA DE PAULA (32h), Dr. MEL...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+20  2020.1    COM230                                                NaN   64   64   --   75,0   --  6.1   APR
+21     NaN       NaN                      CRIATIVIDADE, DESIGN & MAKING  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+22     NaN       NaN                 MSc. JULIANA CAMINHA NORONHA (32h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+23  2020.1    PGY055                                                NaN   32   32   01  100,0  0.0  0.0   REP
+24     NaN       NaN                  ANÁLISE E PROJETO DE ALGORITMOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+25     NaN       NaN  Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h), Dr...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+26  2020.2    CIC110                                                NaN   64   64   --  100,0   --  0.0   REP
+27     NaN       NaN                                          CÁLCULO I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+28     NaN       NaN                   MSc. GISELE LEITE DA SILVA (96h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+29  2020.2    MAT001                                                NaN   96   96   01  100,0  4.0  6.0   APR
+30     NaN       NaN               GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+31     NaN       NaN           Dr. CLAUDEMIR PINHEIRO DE OLIVEIRA (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+32  2020.2    MAT011                                                NaN   64   64   02  100,0  5.0  6.0   APR
+33     NaN       NaN                                MATEMÁTICA DISCRETA  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+34     NaN       NaN  MSc. HEVILLA NOBRE CEZAR (48h), MSc. HEVILLA N...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+35  2020.2    MAT015                                                NaN   64   64   --  100,0   --  7.3   APR
+36     NaN       NaN                            EQUACOES DIFERENCIAIS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+37     NaN       NaN          MSc. EDILSON EXPEDITO DA SILVA LIMA (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+38  2020.4    MAT021                                                NaN   64   64   01  100,0  2.0  3.0   REP
+39     NaN       NaN                   CÁLCULO NUMÉRICO PARA COMPUTAÇÃO  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+40     NaN       NaN  MSc. CARLOS MINORU TAMAKI (32h), MSc. CARLOS M...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+41  2021.1    CIC250                                                NaN   64   64   --  100,0   --  6.3   APR
+42     NaN       NaN                   PROCESSAMENTO DIGITAL DE IMAGENS  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+43     NaN       NaN  Dr. ELISA DE CASSIA SILVA RODRIGUES (48h), Dr....  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+44  2021.1    CIC271                                                NaN   64   64   --   86,7   --  7.7   APR
+45     NaN       NaN                                         CÁLCULO II  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+46     NaN       NaN                 Dr. ANTONIO CARLOS FERNANDES (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+47  2021.1    MAT002                                                NaN   64   64   01  100,0  6.4  7.5   APR
+48     NaN       NaN                        PROBABILIDADE E ESTATÍSTICA  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+50  2021.1    MAT013                                                NaN   64   64   02   93,0  0.0  2.0   REP
+51     NaN       NaN                  ANÁLISE E PROJETO DE ALGORITMOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+52     NaN       NaN  Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h), Dr...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+53  2021.2    CIC110                                                NaN   64   64   --   89,1   --   --  CANC
+54     NaN       NaN                  ANÁLISE E PROJETO DE ALGORITMOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+55     NaN       NaN         Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (48h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+56  2021.2  CIC110.1                                                NaN   48   48   01   89,0   --   --  CANC
+57     NaN       NaN        ANÁLISE E PROJETO DE ALGORITMOS I (PRÁTICA)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+58     NaN       NaN         Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+59  2021.2  CIC110.2                                                NaN   16   16   01   87,0   --   --  CANC,
+
+----------------------------------------------------------------------------------------------------------------
+
+         0         1                                                  2    3    5    6      7    8    10    11
+2      NaN       NaN                              SISTEMAS OPERACIONAIS  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+3      NaN       NaN  MSc. CARLOS MINORU TAMAKI (32h), MSc. CARLOS M...  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+4   2021.2    COM120                                                NaN   80   80   --  100,0   --   --  CANC
+5      NaN       NaN                              SISTEMAS OPERACIONAIS  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+6      NaN       NaN                    MSc. CARLOS MINORU TAMAKI (48h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+7   2021.2  COM120.1                                                NaN   48   48   01  100,0   --   --  CANC
+8      NaN       NaN                    SISTEMAS OPERACIONAIS (PRÁTICA)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+9      NaN       NaN                    MSc. CARLOS MINORU TAMAKI (32h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+10  2021.2  COM120.2                                                NaN   32   32   01  100,0   --   --  CANC
+11     NaN       NaN                   COMPUTAÇÃO ORIENTADA A OBJETOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+13  2021.2    COM220                                                NaN   64   64   --  100,0   --   --  CANC
+14     NaN       NaN                   COMPUTAÇÃO ORIENTADA A OBJETOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+16  2021.2  COM220.1                                                NaN   32   32   01  100,0   --   --  CANC
+17     NaN       NaN         COMPUTAÇÃO ORIENTADA A OBJETOS I (PRÁTICA)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+19  2021.2  COM220.2                                                NaN   32   32   01  100,0   --   --  CANC
+20     NaN       NaN                        PROBABILIDADE E ESTATÍSTICA  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+21     NaN       NaN              Dr. JOSE HUMBERTO BRAVO VIDARTE (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+22  2021.2    MAT013                                                NaN   64   64   01   20,0   --   --  CANC
+23     NaN       NaN                            EQUACOES DIFERENCIAIS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+24     NaN       NaN                 Dra. MARCIA SAYURI KASHIMOTO (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+25  2021.2    MAT021                                                NaN   64   64   01   59,0   --   --  CANC
+26     NaN       NaN                        PROBABILIDADE E ESTATÍSTICA  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+27     NaN       NaN              Dr. JOSE HUMBERTO BRAVO VIDARTE (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+28  2022.1    MAT013                                                NaN   64   64   04  100,0   --   --  CANC
+29     NaN       NaN                           INTELIGÊNCIA DE NEGÓCIOS  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+31  2022.1    SIN413                                                NaN   64   64   01  100,0   --   --  CANC
+32     NaN       NaN                  ANÁLISE E PROJETO DE ALGORITMOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+33     NaN       NaN         Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (48h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+34  2022.2  CIC110.1                                                NaN   48   48   01  100,0   --   --  CANC
+35     NaN       NaN        ANÁLISE E PROJETO DE ALGORITMOS I (PRÁTICA)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+36     NaN       NaN         Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+37  2022.2  CIC110.2                                                NaN   16   16   01  100,0   --   --  CANC
+38     NaN       NaN                              SISTEMAS OPERACIONAIS  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+39     NaN       NaN                      Dr. LUIZ OLMES CARVALHO (48h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+40  2022.2  COM120.1                                                NaN   48   48   01  100,0   --   --  CANC
+41     NaN       NaN                    SISTEMAS OPERACIONAIS (PRÁTICA)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+42     NaN       NaN                      Dr. LUIZ OLMES CARVALHO (32h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+43  2022.2  COM120.2                                                NaN   32   32   01  100,0   --   --  CANC
+44     NaN       NaN                   COMPUTAÇÃO ORIENTADA A OBJETOS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+46  2022.2  COM220.1                                                NaN   32   32   01  100,0   --   --  CANC
+47     NaN       NaN         COMPUTAÇÃO ORIENTADA A OBJETOS I (PRÁTICA)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+49  2022.2  COM220.2                                                NaN   32   32   01  100,0   --   --  CANC
+50     NaN       NaN                        PROBABILIDADE E ESTATÍSTICA  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+51     NaN       NaN              Dr. JOSE HUMBERTO BRAVO VIDARTE (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+52  2022.2    MAT013                                                NaN   64   64   01  100,0   --   --  CANC
+53     NaN       NaN                            EQUACOES DIFERENCIAIS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+54     NaN       NaN                    Dr. LEANDRO GUSTAVO GOMES (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+55  2022.2    MAT021                                                NaN   64   64   03  100,0   --   --  CANC
+56     NaN       NaN                        PROBABILIDADE E ESTATÍSTICA  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+57     NaN       NaN              Dr. JOSE HUMBERTO BRAVO VIDARTE (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+58  2023.1    MAT013                                                NaN   64   64   03    6,0   --   --  CANC,
+
+        0       1                                2    3    5    6      7    8    10    11
+2     NaN     NaN          EQUACOES DIFERENCIAIS I  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+3     NaN     NaN  Dr. LUCAS RUIZ DOS SANTOS (64h)  NaN  NaN  NaN    NaN  NaN  NaN   NaN
+4  2023.1  MAT021                              NaN   64   64   04  100,0   --   --  CANC

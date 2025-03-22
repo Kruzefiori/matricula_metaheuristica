@@ -1,5 +1,4 @@
 import argparse
-import pdfplumber
 from modules import pdf
 
 def main():
