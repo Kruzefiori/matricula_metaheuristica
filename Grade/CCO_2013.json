@@ -1,0 +1,12 @@
+{
+    "COM111": {
+        "BLOCKS": ["COM112", "CIC314" , "EXAMPLE"],
+        "IS_MANDATORY": true,
+        "HAS_MIN_TO_UNBLOCK": true
+    },
+    "COM112": {
+        "BLOCKS": ["CIC313", "CIC314" , "EXAMPLE"],
+        "IS_MANDATORY": true,
+        "HAS_MIN_TO_UNBLOCK": false
+    }
+}

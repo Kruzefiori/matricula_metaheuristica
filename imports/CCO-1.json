@@ -1,0 +1,10 @@
+{
+    "ESPECIFICATIONS": {
+        "GRADE": "2013",
+        "MAX": "2024.2"
+    },
+    "DISC_APR": {
+        "CIC313": {"APR" : true , "nota" : 6},
+        "CIC314": {"APR" : false , "nota" : 5}
+    }
+}

@@ -7,7 +7,7 @@ def main():
     parser.add_argument('--dataset_name', required=True)
     args = parser.parse_args()
 
-    print(pdf.readPDFJSON(args))
+    print(pdf.readPDF())
 
 if __name__ == "__main__":
     main()
