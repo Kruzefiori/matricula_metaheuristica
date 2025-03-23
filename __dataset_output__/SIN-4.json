@@ -1,122 +1,122 @@
 [
   {
     "Disciplina": "IEPG01",
-    "Nota": "7.6",
+    "Nota": 7.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "IEPG22",
-    "Nota": "6.1",
+    "Nota": 6.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT00A",
-    "Nota": "0.0",
+    "Nota": 0.0,
     "Situação": "REP"
   },
   {
     "Disciplina": "SAHC04",
-    "Nota": "8.9",
+    "Nota": 8.9,
     "Situação": "APR"
   },
   {
     "Disciplina": "SAHC05",
-    "Nota": "6.7",
+    "Nota": 6.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES01",
-    "Nota": "6.4",
+    "Nota": 6.4,
     "Situação": "APR"
   },
   {
     "Disciplina": "IEPG04",
-    "Nota": "7.6",
+    "Nota": 7.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "LET007",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "TRANC"
   },
   {
     "Disciplina": "MAT00A",
-    "Nota": "0.1",
+    "Nota": 0.1,
     "Situação": "REP"
   },
   {
     "Disciplina": "STCO01",
-    "Nota": "6.4",
+    "Nota": 6.4,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES02",
-    "Nota": "7.7",
+    "Nota": 7.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES04",
-    "Nota": "8.6",
+    "Nota": 8.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "XMAC01",
-    "Nota": "5.1",
+    "Nota": 5.1,
     "Situação": "REP"
   },
   {
     "Disciplina": "IEPG10",
-    "Nota": "0.1",
+    "Nota": 0.1,
     "Situação": "REP"
   },
   {
     "Disciplina": "IEPG20",
-    "Nota": "7.6",
+    "Nota": 7.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "SDES05",
-    "Nota": "8.4",
+    "Nota": 8.4,
     "Situação": "APR"
   },
   {
     "Disciplina": "SRSC03",
-    "Nota": "5.1",
+    "Nota": 5.1,
     "Situação": "REP"
   },
   {
     "Disciplina": "STCO02",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "TRANC"
   },
   {
     "Disciplina": "XDES03",
-    "Nota": "3.5",
+    "Nota": 3.5,
     "Situação": "REP"
   },
   {
     "Disciplina": "ADM03E",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "ADM54H",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "IEPG10",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "MAT00A",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "XMAC01",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   }
 ]

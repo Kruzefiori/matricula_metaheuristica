@@ -1,52 +1,52 @@
 [
   {
     "Disciplina": "CAHC04",
-    "Nota": "7.4",
+    "Nota": 7.4,
     "Situação": "APR"
   },
   {
     "Disciplina": "CRSC03",
-    "Nota": "6.6",
+    "Nota": 6.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT00A",
-    "Nota": "8.2",
+    "Nota": 8.2,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES01",
-    "Nota": "7.6",
+    "Nota": 7.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "XMAC01",
-    "Nota": "8.1",
+    "Nota": 8.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "CMAC04",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "CRSC04",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "CTCO01",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "ECOX21",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "MAT00B",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   }
 ]

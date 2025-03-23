@@ -2,16 +2,19 @@ import pdfplumber
 import re
 import json
 
-def parser_pdf_to_json(pdf_path):
+def parser_pdf_to_json(pdf_name):
+    if not pdf_name:
+        raise Exception("PDF name is required - the parameter --date_name is missing for this operation")
     # Listas para armazenar os dados
     dados = []
-    json_name = re.sub(r"^historico_", "", pdf_path.split("/")[-1])
-    path = "./datasets/" + pdf_path + ".pdf"
+    json_name = re.sub(r"^historico_", "", pdf_name.split("/")[-1])
+    path = "./datasets/" + pdf_name + ".pdf"
     json_path = "./__dataset_output__/" + json_name + ".json"
     print(json_path)
 
     with pdfplumber.open(path) as pdf:
         for page in pdf.pages:
+            #extrai o texto da página
             text = page.extract_text()
             
             # Expressão regular para capturar Código, Média e Situação
@@ -23,7 +26,7 @@ def parser_pdf_to_json(pdf_path):
                 situacao = match.group(3)  # Situação
                 dados.append({
                     "Disciplina": disciplina,
-                    "Nota": nota,  
+                    "Nota": float(nota) if nota.replace('.', '', 1).isdigit() else nota,
                     "Situação": situacao
                 })
             with open(json_path, "w", encoding="utf-8") as f:

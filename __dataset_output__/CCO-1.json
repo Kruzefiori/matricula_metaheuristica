@@ -1,427 +1,427 @@
 [
   {
     "Disciplina": "CIC130",
-    "Nota": "6.3",
+    "Nota": 6.3,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC510",
-    "Nota": "7.2",
+    "Nota": 7.2,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM110",
-    "Nota": "6.8",
+    "Nota": 6.8,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM310",
-    "Nota": "6.1",
+    "Nota": 6.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "1.4",
+    "Nota": 1.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT050",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC120",
-    "Nota": "5.2",
+    "Nota": 5.2,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC310",
-    "Nota": "5.6",
+    "Nota": 5.6,
     "Situação": "REP"
   },
   {
     "Disciplina": "COM111",
-    "Nota": "2.0",
+    "Nota": 2.0,
     "Situação": "REP"
   },
   {
     "Disciplina": "LET007",
-    "Nota": "7.5",
+    "Nota": 7.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT001",
-    "Nota": "3.5",
+    "Nota": 3.5,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "1.2",
+    "Nota": 1.2,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT015",
-    "Nota": "0.8",
+    "Nota": 0.8,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC131",
-    "Nota": "2.6",
+    "Nota": 2.6,
     "Situação": "REP"
   },
   {
     "Disciplina": "COM112",
-    "Nota": "2.2",
+    "Nota": 2.2,
     "Situação": "REP"
   },
   {
     "Disciplina": "COM210",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM230",
-    "Nota": "2.4",
+    "Nota": 2.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "4.6",
+    "Nota": 4.6,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "1.7",
+    "Nota": 1.7,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC120",
-    "Nota": "6.7",
+    "Nota": 6.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC310",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM111",
-    "Nota": "1.9",
+    "Nota": 1.9,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT001",
-    "Nota": "1.9",
+    "Nota": 1.9,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT057",
-    "Nota": "0.7",
+    "Nota": 0.7,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC121",
-    "Nota": "7.1",
+    "Nota": 7.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC131",
-    "Nota": "7.0",
+    "Nota": 7.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM112",
-    "Nota": "8.2",
+    "Nota": 8.2,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM213",
-    "Nota": "7.9",
+    "Nota": 7.9,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM311",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "SIN210",
-    "Nota": "5.4",
+    "Nota": 5.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "SIN313",
-    "Nota": "6.5",
+    "Nota": 6.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC133",
-    "Nota": "7.6",
+    "Nota": 7.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC260",
-    "Nota": "7.7",
+    "Nota": 7.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM111",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM312",
-    "Nota": "7.0",
+    "Nota": 7.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT001",
-    "Nota": "0.2",
+    "Nota": 0.2,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "0.2",
+    "Nota": 0.2,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "2.0",
+    "Nota": 2.0,
     "Situação": "REPMF"
   },
   {
     "Disciplina": "ADM083",
-    "Nota": "7.0",
+    "Nota": 7.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "0.8",
+    "Nota": 0.8,
     "Situação": "REP"
   },
   {
     "Disciplina": "COM230",
-    "Nota": "3.4",
+    "Nota": 3.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT001",
-    "Nota": "1.5",
+    "Nota": 1.5,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "3.1",
+    "Nota": 3.1,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "0.8",
+    "Nota": 0.8,
     "Situação": "REP"
   },
   {
     "Disciplina": "COM211",
-    "Nota": "8.3",
+    "Nota": 8.3,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM212",
-    "Nota": "1.9",
+    "Nota": 1.9,
     "Situação": "REP"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "2.4",
+    "Nota": 2.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT001",
-    "Nota": "3.4",
+    "Nota": 3.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "1.5",
+    "Nota": 1.5,
     "Situação": "REP"
   },
   {
     "Disciplina": "ADM061",
-    "Nota": "6.7",
+    "Nota": 6.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM212",
-    "Nota": "8.5",
+    "Nota": 8.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "COM230",
-    "Nota": "6.1",
+    "Nota": 6.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "PGY055",
-    "Nota": "0.0",
+    "Nota": 0.0,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "0.0",
+    "Nota": 0.0,
     "Situação": "REP"
   },
   {
     "Disciplina": "MAT001",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT011",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT015",
-    "Nota": "7.3",
+    "Nota": 7.3,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT021",
-    "Nota": "3.0",
+    "Nota": 3.0,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC250",
-    "Nota": "6.3",
+    "Nota": 6.3,
     "Situação": "APR"
   },
   {
     "Disciplina": "CIC271",
-    "Nota": "7.7",
+    "Nota": 7.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT002",
-    "Nota": "7.5",
+    "Nota": 7.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "2.0",
+    "Nota": 2.0,
     "Situação": "REP"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM120",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM120",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM120",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT021",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "SIN413",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM120",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM120",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT021",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT021",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "CANC"
   }
 ]

@@ -1,112 +1,112 @@
 [
   {
     "Disciplina": "IEPG01",
-    "Nota": "7.9",
+    "Nota": 7.9,
     "Situação": "APR"
   },
   {
     "Disciplina": "IEPG22",
-    "Nota": "7.5",
+    "Nota": 7.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT00A",
-    "Nota": "3.4",
+    "Nota": 3.4,
     "Situação": "REP"
   },
   {
     "Disciplina": "SAHC04",
-    "Nota": "8.5",
+    "Nota": 8.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "SAHC05",
-    "Nota": "7.7",
+    "Nota": 7.7,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES01",
-    "Nota": "8.1",
+    "Nota": 8.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "IEPG04",
-    "Nota": "7.1",
+    "Nota": 7.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "MAT00A",
-    "Nota": "8.1",
+    "Nota": 8.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "STCO01",
-    "Nota": "8.6",
+    "Nota": 8.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES02",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES04",
-    "Nota": "8.6",
+    "Nota": 8.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "XMAC01",
-    "Nota": "6.1",
+    "Nota": 6.1,
     "Situação": "APR"
   },
   {
     "Disciplina": "IEPG20",
-    "Nota": "6.3",
+    "Nota": 6.3,
     "Situação": "APR"
   },
   {
     "Disciplina": "SDES05",
-    "Nota": "6.4",
+    "Nota": 6.4,
     "Situação": "APR"
   },
   {
     "Disciplina": "SRSC03",
-    "Nota": "6.5",
+    "Nota": 6.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "STCO02",
-    "Nota": "8.0",
+    "Nota": 8.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "XDES03",
-    "Nota": "9.5",
+    "Nota": 9.5,
     "Situação": "APR"
   },
   {
     "Disciplina": "IEPG14",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "SMAC03",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "SRSC02",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "XMAC02",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   },
   {
     "Disciplina": "XPAD01",
-    "Nota": "---",
+    "Nota": "--",
     "Situação": "MATR"
   }
 ]

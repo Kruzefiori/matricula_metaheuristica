@@ -1,0 +1,242 @@
+[
+  {
+    "Disciplina": "COM110",
+    "Nota": 8.9,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM310",
+    "Nota": 6.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "MAT010",
+    "Nota": 9.5,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN130",
+    "Nota": 8.3,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN410",
+    "Nota": 8.2,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "CIC310",
+    "Nota": 7.6,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM111",
+    "Nota": 8.9,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "LET007",
+    "Nota": 9.1,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "MAT007",
+    "Nota": 7.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN120",
+    "Nota": 9.4,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN310",
+    "Nota": 9.1,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN411",
+    "Nota": 7.7,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM112",
+    "Nota": 7.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM210",
+    "Nota": 9.9,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM220",
+    "Nota": 7.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": 0.0,
+    "Situação": "REP"
+  },
+  {
+    "Disciplina": "MAT017",
+    "Nota": 8.7,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM120",
+    "Nota": 7.5,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM211",
+    "Nota": 9.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM221",
+    "Nota": 8.7,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM230",
+    "Nota": 3.5,
+    "Situação": "REP"
+  },
+  {
+    "Disciplina": "COM311",
+    "Nota": 7.7,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN110",
+    "Nota": 6.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM231",
+    "Nota": 3.9,
+    "Situação": "REP"
+  },
+  {
+    "Disciplina": "COM240",
+    "Nota": 7.9,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN132",
+    "Nota": 7.4,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN260",
+    "Nota": 8.5,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN311",
+    "Nota": 6.1,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM212",
+    "Nota": 8.8,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM222",
+    "Nota": 9.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM241",
+    "Nota": 9.5,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM242",
+    "Nota": 6.2,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM312",
+    "Nota": 8.5,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN312",
+    "Nota": 8.4,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SADG01",
+    "Nota": 9.9,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN313",
+    "Nota": 6.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN413",
+    "Nota": 10.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN414",
+    "Nota": 7.1,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "XAHC02",
+    "Nota": 8.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "XPAD01",
+    "Nota": 6.9,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "IEPG04",
+    "Nota": 6.3,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": 6.0,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SDES07",
+    "Nota": 9.6,
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "CIC111",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "CIC111",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "SPAD02",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "XMCO03",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "XPAD09",
+    "Nota": "--",
+    "Situação": "MATR"
+  }
+]

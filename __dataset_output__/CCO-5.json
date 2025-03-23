@@ -26,37 +26,37 @@
   },
   {
     "Disciplina": "CAHC04",
-    "Nota": "6.9",
+    "Nota": 6.9,
     "Situação": "APR"
   },
   {
     "Disciplina": "CRSC03",
-    "Nota": "5.5",
+    "Nota": 5.5,
     "Situação": "REP"
   },
   {
     "Disciplina": "XMAC01",
-    "Nota": "3.5",
+    "Nota": 3.5,
     "Situação": "REP"
   },
   {
     "Disciplina": "CRSC03",
-    "Nota": "6.4",
+    "Nota": 6.4,
     "Situação": "APR"
   },
   {
     "Disciplina": "SIN313",
-    "Nota": "6.0",
+    "Nota": 6.0,
     "Situação": "APR"
   },
   {
     "Disciplina": "XMAC01",
-    "Nota": "7.6",
+    "Nota": 7.6,
     "Situação": "APR"
   },
   {
     "Disciplina": "XMCO01",
-    "Nota": "8.3",
+    "Nota": 8.3,
     "Situação": "APR"
   },
   {
@@ -86,7 +86,7 @@
   },
   {
     "Disciplina": "ATIVIDADES",
-    "Nota": "40.0",
+    "Nota": 40.0,
     "Situação": "OUTRAS"
   }
 ]
