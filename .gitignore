@@ -1,4 +1,4 @@
 __pycache__
 my-venv/
 .vscode/
-./datasets
+datasets/*.pdf
