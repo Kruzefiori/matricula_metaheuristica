@@ -1,0 +1,60 @@
+          1      10        11
+0                            
+1             Média  Situação
+2                            
+3                            
+4     COM120     --      CANC
+5                            
+6                            
+7   COM120.1     --      CANC
+8                            
+9                            
+10  COM120.2     --      CANC
+11                           
+12                           
+13    COM220     --      CANC
+14                           
+15                           
+16  COM220.1     --      CANC
+17                           
+18                           
+19  COM220.2     --      CANC
+20                           
+21                           
+22    MAT013     --      CANC
+23                           
+24                           
+25    MAT021     --      CANC
+26                           
+27                           
+28    MAT013     --      CANC
+29                           
+30                           
+31    SIN413     --      CANC
+32                           
+33                           
+34  CIC110.1     --      CANC
+35                           
+36                           
+37  CIC110.2     --      CANC
+38                           
+39                           
+40  COM120.1     --      CANC
+41                           
+42                           
+43  COM120.2     --      CANC
+44                           
+45                           
+46  COM220.1     --      CANC
+47                           
+48                           
+49  COM220.2     --      CANC
+50                           
+51                           
+52    MAT013     --      CANC
+53                           
+54                           
+55    MAT021     --      CANC
+56                           
+57                           
+58    MAT013     --      CANC

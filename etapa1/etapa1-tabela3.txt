@@ -1,0 +1,61 @@
+             0  1         2                                                  3     4   5      6       7     8      9         10
+0   Ano/Período                                                                  Hora                     Nota                 
+1        Letivo                                           Componente Curricular  Aula  CH  Turma  Freq %   Mín  Média  Situação
+2                                              COMPUTAÇÃO ORIENTADA A OBJETOS I                                                
+3                             Dr. LAERCIO AUGUSTO BALDOCHI JUNIOR (32h), Dr....                                                
+4        2019.2       COM220                                                       64  64     --    78,1    --    2.4       REP
+5                             CÁLCULO I - TURMA OFERECIDA PARA REPETENTES DE...                                                
+6                                              MSc. GISELE LEITE DA SILVA (96h)                                                
+7        2019.2       MAT001                                    MODALIDADE EAD.    96  96     03   100,0   2.0    3.4       REP
+8                             GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR - TURMA O...                                                
+9                                Dra. NANCY CAROLINA CHACHAPOYAS SIESQUEN (64h)                                                
+10       2019.2       MAT011                                                       64  64     01   100,0   1.5    1.5       REP
+11                                                REPETENTES NA MODALIDADE EAD.                                                
+12                                                        MARKETING OPERACIONAL                                                
+13                                           MSc. JULIANA CAMINHA NORONHA (80h)                                                
+14       2020.1       ADM061                                                       80  80     01   100,0   6.4    6.7       APR
+15                                              GERÊNCIA DE PROJETO DE SOFTWARE                                                
+16                                               Dr. ADLER DINIZ DE SOUZA (64h)                                                
+17       2020.1       COM212                                                       64  64     01   100,0   8.4    8.5       APR
+18                                                             BANCO DE DADOS I                                                
+19                            Dr. MELISE MARIA VEIGA DE PAULA (32h), Dr. MEL...                                                
+20       2020.1       COM230                                                       64  64     --    75,0    --    6.1       APR
+21                                                CRIATIVIDADE, DESIGN & MAKING                                                
+22                                           MSc. JULIANA CAMINHA NORONHA (32h)                                                
+23       2020.1       PGY055                                                       32  32     01   100,0   0.0    0.0       REP
+24                                            ANÁLISE E PROJETO DE ALGORITMOS I                                                
+25                            Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h), Dr...                                                
+26       2020.2       CIC110                                                       64  64     --   100,0    --    0.0       REP
+27                                                                    CÁLCULO I                                                
+28                                             MSc. GISELE LEITE DA SILVA (96h)                                                
+29       2020.2       MAT001                                                       96  96     01   100,0   4.0    6.0       APR
+30                                         GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR                                                
+31                                     Dr. CLAUDEMIR PINHEIRO DE OLIVEIRA (64h)                                                
+32       2020.2       MAT011                                                       64  64     02   100,0   5.0    6.0       APR
+33                                                          MATEMÁTICA DISCRETA                                                
+34                            MSc. HEVILLA NOBRE CEZAR (48h), MSc. HEVILLA N...                                                
+35       2020.2       MAT015                                                       64  64     --   100,0    --    7.3       APR
+36                                                      EQUACOES DIFERENCIAIS I                                                
+37                                    MSc. EDILSON EXPEDITO DA SILVA LIMA (64h)                                                
+38       2020.4       MAT021                                                       64  64     01   100,0   2.0    3.0       REP
+39                                             CÁLCULO NUMÉRICO PARA COMPUTAÇÃO                                                
+40                            MSc. CARLOS MINORU TAMAKI (32h), MSc. CARLOS M...                                                
+41       2021.1       CIC250                                                       64  64     --   100,0    --    6.3       APR
+42                                             PROCESSAMENTO DIGITAL DE IMAGENS                                                
+43                            Dr. ELISA DE CASSIA SILVA RODRIGUES (48h), Dr....                                                
+44       2021.1       CIC271                                                       64  64     --    86,7    --    7.7       APR
+45                                                                   CÁLCULO II                                                
+46                                           Dr. ANTONIO CARLOS FERNANDES (64h)                                                
+47       2021.1       MAT002                                                       64  64     01   100,0   6.4    7.5       APR
+48                                                  PROBABILIDADE E ESTATÍSTICA                                                
+49                            Dr. JOSE HUMBERTO BRAVO VIDARTE (48h), Dra. NA...                                                
+50       2021.1       MAT013                                                       64  64     02    93,0   0.0    2.0       REP
+51                                            ANÁLISE E PROJETO DE ALGORITMOS I                                                
+52                            Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h), Dr...                                                
+53       2021.2       CIC110                                                       64  64     --    89,1    --     --      CANC
+54                                            ANÁLISE E PROJETO DE ALGORITMOS I                                                
+55                                   Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (48h)                                                
+56       2021.2     CIC110.1                                                       48  48     01    89,0    --     --      CANC
+57                                  ANÁLISE E PROJETO DE ALGORITMOS I (PRÁTICA)                                                
+58                                   Dr. PEDRO HENRIQUE DEL BIANCO HOKAMA (16h)                                                
+59       2021.2     CIC110.2                                                       16  16     01    87,0    --     --      CANC

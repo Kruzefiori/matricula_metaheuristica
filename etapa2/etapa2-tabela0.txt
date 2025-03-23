@@ -1,0 +1,29 @@
+              0       1                                                  2     3   4      5       6     7      8         9
+0   Ano/Período                                                             Hora                     Nota                 
+1        Letivo                                      Componente Curricular  Aula  CH  Turma  Freq %   Mín  Média  Situação
+2                        DISPENSADO DO ENADE/INGRESSANTE EM RAZÃO DO CA...                                                
+3        2016.1   ENADE                                                       --   0     --      --    --    ---        --
+4                                       INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO                                                
+5                                          MSc. CARLOS MINORU TAMAKI (32h)                                                
+6        2016.1  CIC130                                                       32  32     01    93,8   6.3    6.3       APR
+7                                    FUNDAMENTOS DE FÍSICA PARA COMPUTAÇÃO                                                
+8                                      Dr. ROBERTO CLAUDINO DA SILVA (64h)                                                
+9        2016.1  CIC510                                                       64  64     01    84,4   7.2    7.2       APR
+10                                              FUNDAMENTOS DE PROGRAMAÇÃO                                                
+11                       Dr. ROBERTO AFFONSO DA COSTA JUNIOR (32h), Dr....                                                
+12       2016.1  COM110                                                       80  80     --   100,0    --    6.8       APR
+13                                 METODOLOGIA CIENTÍFICA PARA INFORMÁTICA                                                
+14                                        Dra. ADRIANA PREST MATTEDI (32h)                                                
+15       2016.1  COM310                                                       32  32     01    87,5   6.1    6.1       APR
+16                                    GEOMETRIA ANALÍTICA E ÁLGEBRA LINEAR                                                
+17                                ANA CAROLINA RODRIGUES DE SA SILVA (64h)                                                
+18       2016.1  MAT011                                                       64  64     09   100,0   0.0    1.4       REP
+19                                               FUNDAMENTOS DA MATEMÁTICA                                                
+20                                ANA CAROLINA RODRIGUES DE SA SILVA (64h)                                                
+21       2016.1  MAT050                                                       64  64     01   100,0   5.8    6.0       APR
+22                             ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES I                                                
+23                       MSc. CARLOS MINORU TAMAKI (16h), MSc. CARLOS M...                                                
+24       2016.2  CIC120                                                       64  64     --   100,0    --    5.2       REP
+25                                                  ECONOMIA DA INFORMAÇÃO                                                
+26                                        Dra. ADRIANA PREST MATTEDI (48h)                                                
+27       2016.2  CIC310                                                       48  48     01    93,8   4.8    5.6       REP
