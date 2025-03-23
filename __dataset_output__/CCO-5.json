@@ -1,0 +1,92 @@
+[
+  {
+    "Disciplina": "MAT001",
+    "Nota": "--",
+    "Situação": "CUMP"
+  },
+  {
+    "Disciplina": "MAT002",
+    "Nota": "--",
+    "Situação": "CUMP"
+  },
+  {
+    "Disciplina": "MAT011",
+    "Nota": "--",
+    "Situação": "CUMP"
+  },
+  {
+    "Disciplina": "SOC003",
+    "Nota": "--",
+    "Situação": "CUMP"
+  },
+  {
+    "Disciplina": "XDES01",
+    "Nota": "--",
+    "Situação": "CUMP"
+  },
+  {
+    "Disciplina": "CAHC04",
+    "Nota": "6.9",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "CRSC03",
+    "Nota": "5.5",
+    "Situação": "REP"
+  },
+  {
+    "Disciplina": "XMAC01",
+    "Nota": "3.5",
+    "Situação": "REP"
+  },
+  {
+    "Disciplina": "CRSC03",
+    "Nota": "6.4",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN313",
+    "Nota": "6.0",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "XMAC01",
+    "Nota": "7.6",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "XMCO01",
+    "Nota": "8.3",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "CMAC04",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "CRSC04",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "CTCO01",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "XAHC01",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "XDES04",
+    "Nota": "--",
+    "Situação": "MATR"
+  },
+  {
+    "Disciplina": "ATIVIDADES",
+    "Nota": "40.0",
+    "Situação": "OUTRAS"
+  }
+]

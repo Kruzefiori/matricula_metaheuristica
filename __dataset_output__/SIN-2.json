@@ -1,0 +1,147 @@
+[
+  {
+    "Disciplina": "COM110",
+    "Nota": "9.4",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM310",
+    "Nota": "6.9",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "MAT010",
+    "Nota": "9.2",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN130",
+    "Nota": "9.8",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN410",
+    "Nota": "8.3",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM111",
+    "Nota": "9.3",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "EAM043",
+    "Nota": "7.3",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "MAT007",
+    "Nota": "6.5",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN120",
+    "Nota": "10.0",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN310",
+    "Nota": "8.6",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "SIN411",
+    "Nota": "8.0",
+    "Situação": "APR"
+  },
+  {
+    "Disciplina": "COM112",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM112",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM210",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM210",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM220",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM220",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT017",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM210",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM210",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM220",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "COM220",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "0.0",
+    "Situação": "REPMF"
+  },
+  {
+    "Disciplina": "SIN311",
+    "Nota": "0.0",
+    "Situação": "REPMF"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "---",
+    "Situação": "MATR"
+  }
+]

@@ -1,6 +1,0 @@
-            0       1                                2         3  4   5      6       7        8  9      10        11
-0  Ano/Período                                                                                                      
-1       Letivo                    Componente Curricular  HoraAula     CH  Turma  Freq %  NotaMín     Média  Situação
-2                               EQUACOES DIFERENCIAIS I                                                             
-3                       Dr. LUCAS RUIZ DOS SANTOS (64h)                                                             
-4       2023.1  MAT021                                         64     64     04   100,0       --        --      CANC

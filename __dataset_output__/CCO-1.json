@@ -1,10 +1,5 @@
 [
   {
-    "Disciplina": "ENADE",
-    "Nota": "---",
-    "Situação": "--"
-  },
-  {
     "Disciplina": "CIC130",
     "Nota": "6.3",
     "Situação": "APR"
@@ -316,117 +311,117 @@
   },
   {
     "Disciplina": "CIC110",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "CIC110.1",
-    "Nota": "--",
+    "Disciplina": "CIC110",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "CIC110.2",
-    "Nota": "--",
+    "Disciplina": "CIC110",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM120",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM120.1",
-    "Nota": "--",
+    "Disciplina": "COM120",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM120.2",
-    "Nota": "--",
+    "Disciplina": "COM120",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "COM220",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM220.1",
-    "Nota": "--",
+    "Disciplina": "COM220",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM220.2",
-    "Nota": "--",
+    "Disciplina": "COM220",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT021",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "SIN413",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "CIC110.1",
-    "Nota": "--",
+    "Disciplina": "CIC110",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "CIC110.2",
-    "Nota": "--",
+    "Disciplina": "CIC110",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM120.1",
-    "Nota": "--",
+    "Disciplina": "COM120",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM120.2",
-    "Nota": "--",
+    "Disciplina": "COM120",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM220.1",
-    "Nota": "--",
+    "Disciplina": "COM220",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
-    "Disciplina": "COM220.2",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT021",
-    "Nota": "--",
+    "Disciplina": "COM220",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT013",
-    "Nota": "--",
+    "Nota": "---",
     "Situação": "CANC"
   },
   {
     "Disciplina": "MAT021",
-    "Nota": "--",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT013",
+    "Nota": "---",
+    "Situação": "CANC"
+  },
+  {
+    "Disciplina": "MAT021",
+    "Nota": "---",
     "Situação": "CANC"
   }
 ]
