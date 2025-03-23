@@ -14,10 +14,10 @@ def main():
     # Formatar o JSON
     final_json = json.dumps(json.loads(final_json_unformatted), indent=2, ensure_ascii=False)
 
-    # Salvar o JSON
-    with open("final.json", "w") as outfile:
-        outfile.write(final_json)
-
+    # Salvar o JSON, com o nome do dataset
+    with open(f"output/{args.dataset_name}.json", "w") as f:
+        f.write(final_json)
+        print(f"JSON salvo em output/{args.dataset_name}.json")
     
 
 if __name__ == "__main__":
