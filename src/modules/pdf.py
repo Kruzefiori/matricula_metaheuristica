@@ -29,12 +29,14 @@ def getTablesFromPDF(args):
 
 def processTables(tables):
     def clean_table(df, tableNumber):
-        """Limpa e formata a tabela removendo colunas desnecessárias e filtrando apenas os dados essenciais."""
+        # ETAPA 1
+        # Limpa e formata a tabela removendo colunas desnecessárias e filtrando apenas os dados essenciais.
         df.replace({np.nan: '', '#': '', '*': ''}, inplace=True)  # Remover NaN, '#' e '*'
         # salvando as etapas em um arquivo txt, como: etapa1-tabela[tabelaNumber].txt
         with open(f"./etapa1/etapa1-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
 
+        # ETAPA 2
         # Verificar as colunas em que todas as células estão vazias, e removê-las
         empty_cols = df.columns[df.apply(lambda col: col.astype(str).str.strip().eq('')).all()]
         df.drop(empty_cols, axis=1, inplace=True)
@@ -42,6 +44,7 @@ def processTables(tables):
         with open(f"./etapa2/etapa2-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
 
+        # ETAPA 3
         # 'Ano/Período', 'Ano/Período Letivo', 'Letivo', 'Componente Curricular', 'Componente', 'Curricular', 'Hora', 'Aula', 'hora aula', 'CH', 'Turma', 'Freq %', 'Freq', '%', 'NotaMín' 'Nota', 'Mín'
         # Obtendo as colunas que contêm uma dessas strings, e removendo-as
         unwanted_cols = df.columns[df.apply(lambda col: col.astype(str).str.contains('Ano/Período|Ano/Período Letivo|Letivo|Componente Curricular|Componente|Curricular|Hora|Aula|hora aula|CH|Turma|Freq %|Freq|%|NotaMín|Nota|Mín', case=False, na=False)).any()]
@@ -49,13 +52,15 @@ def processTables(tables):
         # salvando as etapas em um arquivo txt, como: etapa3-tabela[tabelaNumber].txt
         with open(f"./etapa3/etapa3-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
-            
+        
+        # ETAPA 4
         # Renumeração das colunas
         df.columns = range(len(df.columns))
         # salvando as etapas em um arquivo txt, como: etapa4-tabela[tabelaNumber].txt
         with open(f"./etapa4/etapa4-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
 
+        # ETAPA 5
         # Verificar as linhas em que todas as células estão vazias, e removê-las
         empty_rows = df.index[df.apply(lambda row: row.astype(str).str.strip().eq('')).all(axis=1)]
         df.drop(empty_rows, inplace=True)
@@ -63,18 +68,21 @@ def processTables(tables):
         with open(f"./etapa5/etapa5-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
 
+        # ETAPA 6
         # Remover as linhas que contêm: 'Média', 'Situação'
         df = df[~df.astype(str).apply(lambda x: x.str.contains('Média|Situação', case=False, na=False).any(), axis=1)]
         # salvando as etapas em um arquivo txt, como: etapa6-tabela[tabelaNumber].txt
         with open(f"./etapa6/etapa6-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
 
+        # ETAPA 7
         # Renumeração das linhas
         df.reset_index(drop=True, inplace=True)
         # salvando as etapas em um arquivo txt, como: etapa7-tabela[tabelaNumber].txt
         with open(f"./etapa7/etapa7-tabela{tableNumber}.txt", "w") as outfile:
             outfile.write(str(df))
-
+        
+        # ETAPA 8
         # Adicionar uma nova linha no início da tabela com os nomes das colunas: 'Disciplina', 'Nota', 'Situação'
         df.columns = ['Disciplina', 'Nota', 'Situação']
         # salvando as etapas em um arquivo txt, como: etapa8-tabela[tabelaNumber].txt
