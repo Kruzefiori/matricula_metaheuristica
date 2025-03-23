@@ -11,13 +11,13 @@ def create_UI():
         dataset_name = (combo.get()).removesuffix(".pdf") # Remove a extensão .pdf, fica mais fácil de organizar a função a seguir para criar o nome do JSON
         print(dataset_name)
         if not dataset_name:
-            messagebox.showerror("Error", "Dataset name is required")
+            messagebox.showerror("Erro", "É necessário escolher um arquivo")
             return
         try:
             pdf_parser.parser_pdf_to_json(dataset_name)
-            messagebox.showinfo("Success", "Histórico importado com sucesso")
+            messagebox.showinfo("Sucesso", "Histórico importado com sucesso")
         except Exception as e:
-            messagebox.showerror("Error", f"Error: {e}")
+            messagebox.showerror("Erro", f"Error: {e}")
     
     root = tk.Tk()
     root.title("Recomendação de matrícula")
