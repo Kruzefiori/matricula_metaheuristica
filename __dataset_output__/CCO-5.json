@@ -1,92 +1,101 @@
-[
-  {
-    "Disciplina": "MAT001",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "MAT002",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "MAT011",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "SOC003",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "XDES01",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "CAHC04",
-    "Nota": 6.9,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CRSC03",
-    "Nota": 5.5,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "XMAC01",
-    "Nota": 3.5,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "CRSC03",
-    "Nota": 6.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN313",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XMAC01",
-    "Nota": 7.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XMCO01",
-    "Nota": 8.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CMAC04",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "CRSC04",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "CTCO01",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "XAHC01",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "XDES04",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "ATIVIDADES",
-    "Nota": 40.0,
-    "Situação": "OUTRAS"
-  }
-]
+{
+  "historico": [
+    {
+      "periodo": "2023.1",
+      "Disciplina": "CAHC04",
+      "Nota": 6.9,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "CRSC03",
+      "Nota": 5.5,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "XMAC01",
+      "Nota": 3.5,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "CRSC03",
+      "Nota": 6.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "SIN313",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XMAC01",
+      "Nota": 7.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XMCO01",
+      "Nota": 8.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CMAC04",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CRSC04",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CTCO01",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "XAHC01",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "XDES04",
+      "Nota": "--",
+      "Situação": "MATR"
+    }
+  ],
+  "pendentes": [
+    "CRSC04",
+    "CTCO01",
+    "CMAC04",
+    "CTCO02",
+    "CMAC03",
+    "XDES04",
+    "XMAC02",
+    "XDES02",
+    "CRSC02",
+    "XRSC01",
+    "CTCO04",
+    "CMAC05",
+    "CDES05",
+    "CRSC05",
+    "XDES03",
+    "CTCO05",
+    "CTCO03",
+    "XPAD01",
+    "CMCO05",
+    "XAHC02",
+    "CTCO06",
+    "XAHC01",
+    "XAHC03"
+  ]
+}

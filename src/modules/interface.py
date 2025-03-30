@@ -1,4 +1,4 @@
-from modules import pdf_parser
+from modules import pdfParser
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -14,14 +14,14 @@ def create_UI():
             messagebox.showerror("Erro", "É necessário escolher um arquivo")
             return
         try:
-            pdf_parser.parser_pdf_to_json(dataset_name)
+            pdfParser.parser_pdf_to_json(dataset_name)
             messagebox.showinfo("Sucesso", "Histórico importado com sucesso")
         except Exception as e:
             messagebox.showerror("Erro", f"Error: {e}")
     
     root = tk.Tk()
     root.title("Recomendação de matrícula")
-    arquivos = helper.listar_arquivos() #lista os arquivos disponíveis na pasta datasets
+    arquivos = helper.listFiles() #lista os arquivos disponíveis na pasta datasets
     btn_read_pdf = tk.Button(root, text="Read PDF", command=handle_read_pdf)
     btn_read_pdf.pack(pady=10)
     combo = ttk.Combobox(root, values=arquivos, state="readonly", width=40)

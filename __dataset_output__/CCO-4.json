@@ -1,307 +1,373 @@
-[
-  {
-    "Disciplina": "MAT011",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "CIC130",
-    "Nota": 7.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC510",
-    "Nota": 6.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM110",
-    "Nota": 6.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM310",
-    "Nota": 6.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT001",
-    "Nota": "--",
-    "Situação": "CUMP"
-  },
-  {
-    "Disciplina": "MAT002",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT050",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "CIC120",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "CIC120",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "CIC310",
-    "Nota": 7.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT015",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "MAT015",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "MAT021",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "CIC131",
-    "Nota": 7.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC250",
-    "Nota": 0.6,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "CIC271",
-    "Nota": 6.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM311",
-    "Nota": 7.8,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT021",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC120",
-    "Nota": 0.1,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "CIC260",
-    "Nota": 1.8,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "COM111",
-    "Nota": 9.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM210",
-    "Nota": 5.4,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "SIN312",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "CIC250",
-    "Nota": 7.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM112",
-    "Nota": 1.6,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "COM210",
-    "Nota": 7.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM212",
-    "Nota": 6.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM213",
-    "Nota": 8.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "ECOE44",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "ECOE44",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "MAT050",
-    "Nota": 0.0,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "CIC120",
-    "Nota": 6.7,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC260",
-    "Nota": 1.3,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "COM211",
-    "Nota": 8.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM220",
-    "Nota": 7.2,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM230",
-    "Nota": 6.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM312",
-    "Nota": 7.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN411",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "COM221",
-    "Nota": 8.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CRSC02",
-    "Nota": 6.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT050",
-    "Nota": 7.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "STCO02",
-    "Nota": 9.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XDES03",
-    "Nota": 8.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XMAC01",
-    "Nota": 7.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC270",
-    "Nota": 7.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CTCO04",
-    "Nota": 6.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN310",
-    "Nota": 2.0,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "SIN312",
-    "Nota": 8.2,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XRSC01",
-    "Nota": 7.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC111",
-    "Nota": 3.0,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "CTCO05",
-    "Nota": 5.3,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "SIN413",
-    "Nota": "--",
-    "Situação": "TRANC"
-  },
-  {
-    "Disciplina": "XRSC07",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XRSC09",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CIC133",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "CIC133",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "CRSC04",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "XMCO01",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "XPAD04",
-    "Nota": "--",
-    "Situação": "MATR"
-  }
-]
+{
+  "historico": [
+    {
+      "periodo": "2020.1",
+      "Disciplina": "CIC130",
+      "Nota": 7.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2020.1",
+      "Disciplina": "CIC510",
+      "Nota": 6.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2020.1",
+      "Disciplina": "COM110",
+      "Nota": 6.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2020.1",
+      "Disciplina": "COM310",
+      "Nota": 6.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2020.1",
+      "Disciplina": "MAT001",
+      "Nota": "--",
+      "Situação": "CUMP"
+    },
+    {
+      "periodo": "2020.1",
+      "Disciplina": "MAT002",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2020.1",
+      "Disciplina": "MAT050",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2020.2",
+      "Disciplina": "CIC120",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2020.2",
+      "Disciplina": "CIC120",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2020.2",
+      "Disciplina": "CIC310",
+      "Nota": 7.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2020.2",
+      "Disciplina": "MAT015",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2020.2",
+      "Disciplina": "MAT015",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2020.2",
+      "Disciplina": "MAT021",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "CIC131",
+      "Nota": 7.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "CIC250",
+      "Nota": 0.6,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "CIC271",
+      "Nota": 6.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "COM311",
+      "Nota": 7.8,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "MAT013",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "MAT021",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "CIC120",
+      "Nota": 0.1,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "CIC260",
+      "Nota": 1.8,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "COM111",
+      "Nota": 9.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "COM210",
+      "Nota": 5.4,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "SIN312",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "CIC250",
+      "Nota": 7.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM112",
+      "Nota": 1.6,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM210",
+      "Nota": 7.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM212",
+      "Nota": 6.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM213",
+      "Nota": 8.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "ECOE44",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "ECOE44",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "MAT050",
+      "Nota": 0.0,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "CIC120",
+      "Nota": 6.7,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "CIC260",
+      "Nota": 1.3,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM211",
+      "Nota": 8.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM220",
+      "Nota": 7.2,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM230",
+      "Nota": 6.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM312",
+      "Nota": 7.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "SIN411",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "COM221",
+      "Nota": 8.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "CRSC02",
+      "Nota": 6.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "MAT050",
+      "Nota": 7.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "STCO02",
+      "Nota": 9.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "XDES03",
+      "Nota": 8.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "XMAC01",
+      "Nota": 7.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "CIC270",
+      "Nota": 7.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "CTCO04",
+      "Nota": 6.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "SIN310",
+      "Nota": 2.0,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "SIN312",
+      "Nota": 8.2,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "XRSC01",
+      "Nota": 7.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "CIC111",
+      "Nota": 3.0,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "CTCO05",
+      "Nota": 5.3,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "SIN413",
+      "Nota": "--",
+      "Situação": "TRANC"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XRSC07",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XRSC09",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CIC133",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CIC133",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CRSC04",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "XMCO01",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "XPAD04",
+      "Nota": "--",
+      "Situação": "MATR"
+    }
+  ],
+  "pendentes": [
+    "CIC121",
+    "CIC132",
+    "CIC111",
+    "CIC133",
+    "CIC220",
+    "CIC260",
+    "COM231"
+  ]
+}

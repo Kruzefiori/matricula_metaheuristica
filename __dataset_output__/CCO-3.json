@@ -1,52 +1,90 @@
-[
-  {
-    "Disciplina": "CAHC04",
-    "Nota": 7.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CRSC03",
-    "Nota": 6.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT00A",
-    "Nota": 8.2,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XDES01",
-    "Nota": 7.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XMAC01",
-    "Nota": 8.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "CMAC04",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "CRSC04",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "CTCO01",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "ECOX21",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "MAT00B",
-    "Nota": "--",
-    "Situação": "MATR"
-  }
-]
+{
+  "historico": [
+    {
+      "periodo": "2024.1",
+      "Disciplina": "CAHC04",
+      "Nota": 7.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "CRSC03",
+      "Nota": 6.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "MAT00A",
+      "Nota": 8.2,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XDES01",
+      "Nota": 7.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XMAC01",
+      "Nota": 8.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CMAC04",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CRSC04",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "CTCO01",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "ECOX21",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "MAT00B",
+      "Nota": "--",
+      "Situação": "MATR"
+    }
+  ],
+  "pendentes": [
+    "CRSC04",
+    "CTCO01",
+    "CMAC04",
+    "CTCO02",
+    "CMAC03",
+    "XDES04",
+    "XMAC02",
+    "XDES02",
+    "CRSC02",
+    "XDES03",
+    "XRSC01",
+    "CTCO04",
+    "CMAC05",
+    "CDES05",
+    "CRSC05",
+    "CMCO05",
+    "CTCO05",
+    "CTCO03",
+    "XPAD01",
+    "XMCO01",
+    "CTCO06",
+    "XAHC02",
+    "XAHC01",
+    "XAHC03"
+  ]
+}

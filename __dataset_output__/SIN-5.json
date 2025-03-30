@@ -1,112 +1,154 @@
-[
-  {
-    "Disciplina": "IEPG01",
-    "Nota": 7.9,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "IEPG22",
-    "Nota": 7.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT00A",
-    "Nota": 3.4,
-    "Situação": "REP"
-  },
-  {
-    "Disciplina": "SAHC04",
-    "Nota": 8.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SAHC05",
-    "Nota": 7.7,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XDES01",
-    "Nota": 8.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "IEPG04",
-    "Nota": 7.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT00A",
-    "Nota": 8.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "STCO01",
-    "Nota": 8.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XDES02",
-    "Nota": 6.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XDES04",
-    "Nota": 8.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XMAC01",
-    "Nota": 6.1,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "IEPG20",
-    "Nota": 6.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SDES05",
-    "Nota": 6.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SRSC03",
-    "Nota": 6.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "STCO02",
-    "Nota": 8.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "XDES03",
-    "Nota": 9.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "IEPG14",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "SMAC03",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "SRSC02",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "XMAC02",
-    "Nota": "--",
-    "Situação": "MATR"
-  },
-  {
-    "Disciplina": "XPAD01",
-    "Nota": "--",
-    "Situação": "MATR"
-  }
-]
+{
+  "historico": [
+    {
+      "periodo": "2023.1",
+      "Disciplina": "IEPG01",
+      "Nota": 7.9,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "IEPG22",
+      "Nota": 7.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "MAT00A",
+      "Nota": 3.4,
+      "Situação": "REP"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "SAHC04",
+      "Nota": 8.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "SAHC05",
+      "Nota": 7.7,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "XDES01",
+      "Nota": 8.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "IEPG04",
+      "Nota": 7.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "MAT00A",
+      "Nota": 8.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "STCO01",
+      "Nota": 8.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "XDES02",
+      "Nota": 6.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "XDES04",
+      "Nota": 8.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "XMAC01",
+      "Nota": 6.1,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "IEPG20",
+      "Nota": 6.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "SDES05",
+      "Nota": 6.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "SRSC03",
+      "Nota": 6.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "STCO02",
+      "Nota": 8.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "XDES03",
+      "Nota": 9.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "IEPG14",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "SMAC03",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "SRSC02",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "XMAC02",
+      "Nota": "--",
+      "Situação": "MATR"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "XPAD01",
+      "Nota": "--",
+      "Situação": "MATR"
+    }
+  ],
+  "pendentes": [
+    "XMAC02",
+    "SMAC03",
+    "XPAD01",
+    "SRSC02",
+    "IEPG14",
+    "SPAD03",
+    "XRSC01",
+    "SPAD02",
+    "XMCO01",
+    "SDES06",
+    "IEPG10",
+    "XAHC02",
+    "SDES07",
+    "XAHC03",
+    "XAHC01",
+    "SADG01"
+  ]
+}

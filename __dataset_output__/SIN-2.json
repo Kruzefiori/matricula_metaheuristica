@@ -1,147 +1,208 @@
-[
-  {
-    "Disciplina": "COM110",
-    "Nota": 9.4,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM310",
-    "Nota": 6.9,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT010",
-    "Nota": 9.2,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN130",
-    "Nota": 9.8,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN410",
-    "Nota": 8.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM111",
-    "Nota": 9.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "EAM043",
-    "Nota": 7.3,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "MAT007",
-    "Nota": 6.5,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN120",
-    "Nota": 10.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN310",
-    "Nota": 8.6,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "SIN411",
-    "Nota": 8.0,
-    "Situação": "APR"
-  },
-  {
-    "Disciplina": "COM112",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM112",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM210",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM210",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM220",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM220",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT017",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM210",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM210",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM220",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "COM220",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": "--",
-    "Situação": "CANC"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": 0.0,
-    "Situação": "REPMF"
-  },
-  {
-    "Disciplina": "SIN311",
-    "Nota": 0.0,
-    "Situação": "REPMF"
-  },
-  {
-    "Disciplina": "MAT013",
-    "Nota": "--",
-    "Situação": "MATR"
-  }
-]
+{
+  "historico": [
+    {
+      "periodo": "2021.1",
+      "Disciplina": "COM110",
+      "Nota": 9.4,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "COM310",
+      "Nota": 6.9,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "MAT010",
+      "Nota": 9.2,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "SIN130",
+      "Nota": 9.8,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.1",
+      "Disciplina": "SIN410",
+      "Nota": 8.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "COM111",
+      "Nota": 9.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "EAM043",
+      "Nota": 7.3,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "MAT007",
+      "Nota": 6.5,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "SIN120",
+      "Nota": 10.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "SIN310",
+      "Nota": 8.6,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2021.2",
+      "Disciplina": "SIN411",
+      "Nota": 8.0,
+      "Situação": "APR"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM112",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM112",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM210",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM210",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM220",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "COM220",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "MAT013",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.1",
+      "Disciplina": "MAT017",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM210",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM210",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM220",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "COM220",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2022.2",
+      "Disciplina": "MAT013",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2023.1",
+      "Disciplina": "MAT013",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2023.2",
+      "Disciplina": "MAT013",
+      "Nota": "--",
+      "Situação": "CANC"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "MAT013",
+      "Nota": 0.0,
+      "Situação": "REPMF"
+    },
+    {
+      "periodo": "2024.1",
+      "Disciplina": "SIN311",
+      "Nota": 0.0,
+      "Situação": "REPMF"
+    },
+    {
+      "periodo": "2024.2",
+      "Disciplina": "MAT013",
+      "Nota": "--",
+      "Situação": "MATR"
+    }
+  ],
+  "pendentes": [
+    "COM112",
+    "COM210",
+    "MAT017",
+    "MAT013",
+    "COM220",
+    "COM211",
+    "COM311",
+    "COM230",
+    "COM120",
+    "SIN110",
+    "COM221",
+    "COM240",
+    "SIN311",
+    "SIN260",
+    "SIN132",
+    "COM231",
+    "COM312",
+    "COM241",
+    "COM212",
+    "SIN312",
+    "COM242",
+    "COM222",
+    "SIN413",
+    "SIN414",
+    "COM213",
+    "SIN210",
+    "SIN412",
+    "SIN313"
+  ]
+}
