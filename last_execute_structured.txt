@@ -1,359 +1,259 @@
 {
   "aprBySemester": {
-    "2018.1": [
+    "2021.1": [
+      {
+        "disc": "COM110",
+        "nota": 8.9
+      },
       {
         "disc": "COM310",
         "nota": 6.0
       },
       {
-        "disc": "SIN410",
-        "nota": 6.9
-      }
-    ],
-    "2019.1": [
+        "disc": "MAT010",
+        "nota": 9.5
+      },
       {
         "disc": "SIN130",
-        "nota": 6.6
+        "nota": 8.3
+      },
+      {
+        "disc": "SIN410",
+        "nota": 8.2
       }
     ],
-    "2019.2": [
+    "2021.2": [
       {
-        "disc": "COM210",
-        "nota": 6.0
-      },
-      {
-        "disc": "SIN120",
-        "nota": 6.8
-      },
-      {
-        "disc": "SIN310",
-        "nota": 6.4
-      },
-      {
-        "disc": "SIN411",
-        "nota": 7.0
-      }
-    ],
-    "2020.1": [
-      {
-        "disc": "COM110",
-        "nota": 9.6
-      },
-      {
-        "disc": "MAT010",
-        "nota": 8.4
-      }
-    ],
-    "2020.2": [
-      {
-        "disc": "COM311",
-        "nota": 7.5
-      },
-      {
-        "disc": "MAT007",
-        "nota": 7.5
-      }
-    ],
-    "2021.1": [
-      {
-        "disc": "COM211",
-        "nota": 9.6
-      },
-      {
-        "disc": "COM213",
-        "nota": 10.0
-      },
-      {
-        "disc": "MAT013",
-        "nota": 7.7
-      },
-      {
-        "disc": "MAT017",
-        "nota": 6.0
-      },
-      {
-        "disc": "SIN311",
+        "disc": "CIC310",
         "nota": 7.6
       },
       {
-        "disc": "SIN313",
-        "nota": 6.6
-      }
-    ],
-    "2021.2": [
-      {
         "disc": "COM111",
-        "nota": 7.2
+        "nota": 8.9
       },
       {
-        "disc": "COM312",
-        "nota": 9.0
-      }
-    ],
-    "2022.1": [
-      {
-        "disc": "COM212",
-        "nota": 6.8
+        "disc": "LET007",
+        "nota": 9.1
       },
       {
-        "disc": "SIN210",
+        "disc": "MAT007",
         "nota": 7.0
-      }
-    ],
-    "2023.1": [
-      {
-        "disc": "COM230",
-        "nota": 6.9
-      },
-      {
-        "disc": "COM240",
-        "nota": 6.0
-      },
-      {
-        "disc": "SIN260",
-        "nota": 7.9
-      }
-    ],
-    "2023.2": [
-      {
-        "disc": "COM221",
-        "nota": 6.5
-      }
-    ]
-  },
-  "rpvBySemester": {
-    "2018.1": [
-      {
-        "disc": "COM110",
-        "nota": 0.4
-      },
-      {
-        "disc": "MAT010",
-        "nota": 3.5
-      },
-      {
-        "disc": "SIN130",
-        "nota": 3.4
-      }
-    ],
-    "2018.2": [
-      {
-        "disc": "COM210",
-        "nota": "--"
-      },
-      {
-        "disc": "COM210",
-        "nota": "--"
       },
       {
         "disc": "SIN120",
-        "nota": "--"
-      },
-      {
-        "disc": "SIN120",
-        "nota": "--"
+        "nota": 9.4
       },
       {
         "disc": "SIN310",
-        "nota": "--"
+        "nota": 9.1
       },
       {
         "disc": "SIN411",
-        "nota": "--"
-      }
-    ],
-    "2019.1": [
-      {
-        "disc": "COM110",
-        "nota": 3.2
-      },
-      {
-        "disc": "MAT010",
-        "nota": 4.5
-      }
-    ],
-    "2019.2": [
-      {
-        "disc": "MAT001",
-        "nota": 0.0
-      }
-    ],
-    "2020.1": [
-      {
-        "disc": "COM211",
-        "nota": 1.8
-      }
-    ],
-    "2020.2": [
-      {
-        "disc": "COM111",
-        "nota": 0.8
-      }
-    ],
-    "2021.1": [
-      {
-        "disc": "COM212",
-        "nota": 1.0
-      }
-    ],
-    "2021.2": [
-      {
-        "disc": "COM212",
-        "nota": 0.0
-      },
-      {
-        "disc": "SIN312",
-        "nota": "--"
+        "nota": 7.7
       }
     ],
     "2022.1": [
       {
         "disc": "COM112",
-        "nota": 1.7
+        "nota": 7.0
+      },
+      {
+        "disc": "COM210",
+        "nota": 9.9
       },
       {
         "disc": "COM220",
-        "nota": 1.1
+        "nota": 7.0
       },
       {
-        "disc": "COM230",
-        "nota": 0.9
+        "disc": "MAT017",
+        "nota": 8.7
       }
     ],
     "2022.2": [
       {
         "disc": "COM120",
-        "nota": 6.4
+        "nota": 7.5
       },
       {
-        "disc": "COM220",
-        "nota": 3.6
+        "disc": "COM211",
+        "nota": 9.0
       },
       {
-        "disc": "COM230",
-        "nota": 2.9
+        "disc": "COM221",
+        "nota": 8.7
+      },
+      {
+        "disc": "COM311",
+        "nota": 7.7
+      },
+      {
+        "disc": "SIN110",
+        "nota": 6.0
       }
     ],
     "2023.1": [
       {
-        "disc": "COM221",
-        "nota": 4.2
+        "disc": "COM240",
+        "nota": 7.9
+      },
+      {
+        "disc": "SIN132",
+        "nota": 7.4
+      },
+      {
+        "disc": "SIN260",
+        "nota": 8.5
+      },
+      {
+        "disc": "SIN311",
+        "nota": 6.1
       }
     ],
     "2023.2": [
       {
+        "disc": "COM212",
+        "nota": 8.8
+      },
+      {
+        "disc": "COM222",
+        "nota": 9.0
+      },
+      {
         "disc": "COM241",
-        "nota": 0.0
+        "nota": 9.5
       },
       {
         "disc": "COM242",
-        "nota": 2.7
+        "nota": 6.2
+      },
+      {
+        "disc": "COM312",
+        "nota": 8.5
+      },
+      {
+        "disc": "SIN312",
+        "nota": 8.4
       }
     ],
     "2024.1": [
       {
-        "disc": "CMAC03",
-        "nota": 2.9
+        "disc": "SADG01",
+        "nota": 9.9
+      },
+      {
+        "disc": "SIN313",
+        "nota": 6.0
       },
       {
         "disc": "SIN413",
-        "nota": 2.4
+        "nota": 10.0
       },
       {
         "disc": "SIN414",
-        "nota": 4.9
+        "nota": 7.1
       },
       {
-        "disc": "SPAD02",
-        "nota": 0.9
+        "disc": "XAHC02",
+        "nota": 8.0
       },
       {
-        "disc": "XRSC07",
-        "nota": 4.3
-      },
-      {
-        "disc": "XRSC09",
-        "nota": 4.3
+        "disc": "XPAD01",
+        "nota": 6.9
       }
     ],
     "2024.2": [
       {
-        "disc": "SRSC02",
+        "disc": "IEPG04",
+        "nota": 6.3
+      },
+      {
+        "disc": "MAT013",
+        "nota": 6.0
+      },
+      {
+        "disc": "SDES07",
+        "nota": 9.6
+      }
+    ]
+  },
+  "rpvBySemester": {
+    "2022.1": [
+      {
+        "disc": "MAT013",
+        "nota": 0.0
+      }
+    ],
+    "2022.2": [
+      {
+        "disc": "COM230",
+        "nota": 3.5
+      }
+    ],
+    "2023.1": [
+      {
+        "disc": "COM231",
+        "nota": 3.9
+      }
+    ],
+    "2025.1": [
+      {
+        "disc": "CIC111",
         "nota": "--"
       },
       {
-        "disc": "XRSC09",
+        "disc": "CIC111",
+        "nota": "--"
+      },
+      {
+        "disc": "SPAD02",
+        "nota": "--"
+      },
+      {
+        "disc": "XMCO03",
+        "nota": "--"
+      },
+      {
+        "disc": "XPAD09",
         "nota": "--"
       }
     ]
   },
   "statisticsBySemester": {
-    "2018.1": {
-      "pctApr": 0.4,
+    "2021.1": {
+      "pctApr": 1.0,
       "totalMat": 5
     },
-    "2018.2": {
-      "pctApr": 0.0,
-      "totalMat": 6
+    "2021.2": {
+      "pctApr": 1.0,
+      "totalMat": 7
     },
-    "2019.1": {
-      "pctApr": 0.33,
-      "totalMat": 3
-    },
-    "2019.2": {
+    "2022.1": {
       "pctApr": 0.8,
       "totalMat": 5
     },
-    "2020.1": {
-      "pctApr": 0.67,
-      "totalMat": 3
-    },
-    "2020.2": {
-      "pctApr": 0.67,
-      "totalMat": 3
-    },
-    "2021.1": {
-      "pctApr": 0.86,
-      "totalMat": 7
-    },
-    "2021.2": {
-      "pctApr": 0.5,
-      "totalMat": 4
-    },
-    "2022.1": {
-      "pctApr": 0.4,
-      "totalMat": 5
-    },
     "2022.2": {
-      "pctApr": 0.0,
-      "totalMat": 3
+      "pctApr": 0.83,
+      "totalMat": 6
     },
     "2023.1": {
-      "pctApr": 0.75,
-      "totalMat": 4
+      "pctApr": 0.8,
+      "totalMat": 5
     },
     "2023.2": {
-      "pctApr": 0.33,
-      "totalMat": 3
+      "pctApr": 1.0,
+      "totalMat": 6
     },
     "2024.1": {
-      "pctApr": 0.0,
+      "pctApr": 1.0,
       "totalMat": 6
+    },
+    "2024.2": {
+      "pctApr": 1.0,
+      "totalMat": 3
     }
   },
   "missingDisciplines": [
-    "COM220",
-    "COM112",
-    "COM120",
-    "SIN110",
-    "SIN132",
-    "COM231",
-    "COM241",
-    "COM222",
-    "SIN312",
-    "COM242",
-    "SIN413",
-    "SIN412",
-    "SIN414"
+    "COM231"
   ]
 }
