@@ -35,8 +35,8 @@ def checkJsonExists(json_name):
     path = "./__dataset_output__/" + json_name + ".json"
     return os.path.exists(path)
 
-def saveIntoTxt(data):
-    with open("./" + "last_execute_structured.txt", "w", encoding="utf-8") as f:
+def saveIntoTxt(name , data):
+    with open("./" + name + "_last_execute_structured.txt", "w", encoding="utf-8") as f:
         f.write(json.dumps(data, indent=2, ensure_ascii=False))
 
 

@@ -4,3 +4,4 @@ my-venv/
 datasets/*.pdf
 datasets/*.xlsx
 datasets/*.txt
+*.txt

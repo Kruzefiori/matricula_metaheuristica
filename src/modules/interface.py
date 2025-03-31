@@ -14,7 +14,7 @@ def create_UI():
             messagebox.showerror("Erro", "É necessário escolher um arquivo")
             return
         try:
-            pdfParser.parser_pdf_to_json(dataset_name)
+            pdfParser.parserPdf(dataset_name , 'y')
             messagebox.showinfo("Sucesso", "Histórico importado com sucesso")
         except Exception as e:
             messagebox.showerror("Erro", f"Error: {e}")
