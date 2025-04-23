@@ -3,7 +3,7 @@
 # - Victor Kruze Fiori
 # - Augusto Lázaro
 
-from modules import interface
+# from modules import interface
 from modules import helper
 from modules import pdfParser
 from modules import printHelper
@@ -11,6 +11,7 @@ from modules import printHelper
 
 def main():
     args = helper.argsParser()
+    print(args)
     if args.run_cli_only == "y":
         try:
             structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
@@ -20,7 +21,8 @@ def main():
             return
     else:
         # Executa a interface gráfica com as mesmas funções do CLI (não há impressão dos dados ainda)
-        interface.create_UI()
+        # interface.create_UI()
+        print("Executando a interface gráfica...")
 
 
 if __name__ == "__main__":
