@@ -7,6 +7,7 @@ from modules import interface
 from modules import helper
 from modules import pdfParser
 from modules import printHelper
+from modules.Grasp import graspManager 
 
 
 def main():
@@ -14,7 +15,9 @@ def main():
     if args.run_cli_only == "y":
         try:
             structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
-            printHelper.printStructuredData(structuredPdfData)
+            #printHelper.printStructuredData(structuredPdfData)
+            # Chama a função de recomendação
+            graspManager(structuredPdfData)
         except Exception as e:
             print("Erro ao processar o arquivo PDF:", e)
             return
