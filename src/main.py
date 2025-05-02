@@ -14,53 +14,55 @@ from IPython.display import display
 
 
 def main():
-    # args = helper.argsParser()
-    # print(args)
-    # if args.run_cli_only == "y":
-    #     try:
-    #         structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
-    #         #printHelper.printStructuredData(structuredPdfData)
-    #         # Chama a função de recomendação
-    #         graspManager(structuredPdfData)
-    #     except Exception as e:
-    #         print("Erro ao processar o arquivo PDF:", e)
-    #         return
-    # else:
-    #     # Executa a interface gráfica com as mesmas funções do CLI (não há impressão dos dados ainda)
-    #     # interface.create_UI()
-    #     print("Executando a interface gráfica...")
+    args = helper.argsParser()
+    print(args)
+    if args.run_cli_only == "y":
+        try:
+            structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
+            #printHelper.printStructuredData(structuredPdfData)
+            # Chama a função de recomendação
+            graspManager(structuredPdfData)
+        except Exception as e:
+            print("Erro ao processar o arquivo PDF:", e)
+            return
+    else:
+        # Executa a interface gráfica com as mesmas funções do CLI (não há impressão dos dados ainda)
+        # interface.create_UI()
+        print("Executando a interface gráfica...")
 
-    # Load the data
-  table = load_data('data/recomendacao-grade-horarios.xlsx', 'recomendacao1')
-  display(table)
+  # # Exemplo de uso das funções do excelHandler
 
-  # # Set the first row as header
-  # table = setRowAsHeader(table, 0)
+  #   # Load the data
+  # table = load_data('data/recomendacao-grade-horarios.xlsx', 'recomendacao1')
   # display(table)
 
-  # Set the first column as index
-  table = setCollumnAsIndex(table, 'Periodos')
-  display(table)
+  # # # Set the first row as header
+  # # table = setRowAsHeader(table, 0)
+  # # display(table)
 
-  # Get column names
-  columns = getCollumnNames(table)
-  print("Column names:", columns)
+  # # Set the first column as index
+  # table = setCollumnAsIndex(table, 'Periodos')
+  # display(table)
 
-  # Get row names
-  rows = getRowNames(table)
-  print("Row names:", rows)
+  # # Get column names
+  # columns = getCollumnNames(table)
+  # print("Column names:", columns)
 
-  # Set a cell value
-  table = setCellValue(table, '1M', 'sexta', 'metaheuristica')
-  print("Updated table:")
-  display(table)
+  # # Get row names
+  # rows = getRowNames(table)
+  # print("Row names:", rows)
 
-  # Get a cell value
-  value = getCellValue(table, '1M', 'sexta')
-  print("Cell value:", value)
+  # # Set a cell value
+  # table = setCellValue(table, '1M', 'sexta', 'metaheuristica')
+  # print("Updated table:")
+  # display(table)
 
-  # Save the data
-  save_data(table, 'data/recomendacao-grade-horarios.xlsx', 'recomendacao1')
+  # # Get a cell value
+  # value = getCellValue(table, '1M', 'sexta')
+  # print("Cell value:", value)
+
+  # # Save the data
+  # save_data(table, 'data/recomendacao-grade-horarios.xlsx', 'recomendacao1')
 
 
 if __name__ == "__main__":
