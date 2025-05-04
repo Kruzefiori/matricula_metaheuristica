@@ -2,7 +2,7 @@
 import pandas as pd
 
 #
-def parseCSV(period : str):
+def parseCSVavailableDisciplines(period : str):
     if period == "24.1":
         file = "horarios - 24.1"
     elif period == "horarios - 24.2":
@@ -39,6 +39,49 @@ def parseCSV(period : str):
             "uniqueDisciplines": lista_disciplinas,
             "disciplinesByDayAndTime": results
         }        
+    except FileNotFoundError:
+        print(f"File {path} not found.")
+        return None
+    except Exception as e:
+        print(f"Error reading the CSV file: {e}")
+    return None
+
+def parseCSVequivalences():
+    path = "./datasets/equivalencias.csv"
+    try:
+        df = pd.read_csv(path)
+        # Dicionário intermediário
+        equivalencias_dict = {}
+        for _, row in df.iterrows():
+            discipline = row['CÓDIGO']
+            
+            equivalentes = []
+            for valor in row[1:]:
+                if pd.isna(valor) or valor.strip() == "--":
+                    continue
+
+                valor = valor.strip()
+
+                # If there is a + they are keep together
+                if '+' in valor:
+                    equivalentes.append(' + '.join([v.strip() for v in valor.split('+')]))
+                else:
+                    equivalentes.append(valor)
+
+            if discipline not in equivalencias_dict:
+                equivalencias_dict[discipline] = set()
+
+            # Adiciona equivalentes e a própria matéria
+            equivalencias_dict[discipline].update(equivalentes)
+            #equivalencias_dict[discipline].add(discipline)
+
+        # Converte para lista final
+        resultado = [
+            {"discipline": materia, "equivalences": sorted(list(eq))}
+            for materia, eq in equivalencias_dict.items() 
+            if len(eq) > 0
+        ]
+        return resultado
     except FileNotFoundError:
         print(f"File {path} not found.")
         return None

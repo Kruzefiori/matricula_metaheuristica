@@ -19,11 +19,27 @@ def main():
     if args.run_cli_only == "y":
         try:
             structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
-            availableDisciplines = csvParser.parseCSV(args.period)
+            availableDisciplines = csvParser.parseCSVavailableDisciplines(args.period)
+            equivalences = csvParser.parseCSVequivalences()
             pprint.pprint(structuredPdfData)
             pprint.pprint(availableDisciplines)
+            pprint.pprint(equivalences)
             #printHelper.printStructuredData(structuredPdfData)
             # Chama a função de recomendação
+            if args.constructive == 'greedy':
+                print("Executando o algoritmo guloso...")
+                # Chama a função de recomendação gulosa
+            elif args.constructive == 'ramdom':
+                print("Executando o algoritmo aleatório...")
+                # Chama a função de recomendação aleatória
+
+            if args.refinement == 'dicipline':
+                print("Executando o algoritmo de refinamento local...")
+                # Chama a função de refinamento local
+            elif args.refinement == 'score':
+                print("Executando o algoritmo de refinamento por pontuação...")
+                # Chama a função de refinamento por pontuação
+            
 
             #graspManager(structuredPdfData)
         except Exception as e:

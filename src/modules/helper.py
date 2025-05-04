@@ -34,6 +34,18 @@ def argsParser():
         help="Periodo de referência para o CSV",
         default="n",
     )
+    argsParser.add_argument(
+        "--constructive",
+        type=str,
+        help="Tipo de algoritmo construtivo a ser utilizado",
+        default="greedy",
+    )
+    argsParser.add_argument(
+        "--refinement",
+        type=str,
+        help="Tipo de algoritmo de refinamento a ser utilizado",
+        default="dicipline",
+    )
     return argsParser.parse_args()
 
 #checa se o Json já existe para não precisar criar novamente (é um processo demorado ler o pdf) 
