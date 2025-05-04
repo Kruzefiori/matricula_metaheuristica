@@ -28,6 +28,12 @@ def argsParser():
         help="Atualiza o JSON se já existir",
         default="n",
     )
+    argsParser.add_argument(
+        "--period",
+        type=str,
+        help="Periodo de referência para o CSV",
+        default="n",
+    )
     return argsParser.parse_args()
 
 #checa se o Json já existe para não precisar criar novamente (é um processo demorado ler o pdf) 
