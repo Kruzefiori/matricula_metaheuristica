@@ -22,8 +22,8 @@ def main():
             availableDisciplines = csvParser.parseCSVavailableDisciplines(args.period)
             equivalences = csvParser.parseCSVequivalences()
             pprint.pprint(structuredPdfData)
-            pprint.pprint(availableDisciplines)
-            pprint.pprint(equivalences)
+            #pprint.pprint(availableDisciplines)
+            #pprint.pprint(equivalences)
             #printHelper.printStructuredData(structuredPdfData)
             # Chama a função de recomendação
             if args.constructive == 'greedy':

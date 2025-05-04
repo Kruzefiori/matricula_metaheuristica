@@ -85,7 +85,7 @@ def parserPdf(pdf_name, update_json):
                     })
 
                 #regex para pegar o código da matéria e ignora Estágio/Enade/TCC
-                regex_pendentes = re.compile(r"(\b[A-Z]{3,4}\d{2,3}\b).*?(\d{2,3} h)") #Regex para pegar a Carga horária é adicionado para não pegar o código da matéria no final do arquivo que há as equivalências feitas
+                regex_pendentes = re.compile(r"(\b[A-Z]{3,4}\d{2,3}[A-Z]?\b).*?(\d{2,3} h)")
                 
                 # Identifica o início da tabela de pendentes
                 if "Componentes Curriculares Obrigatórios Pendentes" in text:
@@ -113,6 +113,6 @@ def parserPdf(pdf_name, update_json):
         "missingDisciplines" : json_data["pendentes"]
     }
     # save structured data to a txt file
-    helper.saveIntoTxt(json_name , structured_data)
+    #helper.saveIntoTxt(json_name , structured_data)
     statistics.bestAndWorsePeriod(structured_data)
     return structured_data

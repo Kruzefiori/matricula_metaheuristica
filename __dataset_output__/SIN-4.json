@@ -146,6 +146,7 @@
     }
   ],
   "pendentes": [
+    "MAT00A",
     "XMAC01",
     "SRSC03",
     "XDES03",
@@ -156,6 +157,7 @@
     "SMAC03",
     "IEPG14",
     "XRSC01",
+    "ADM51E",
     "SPAD03",
     "SPAD02",
     "SDES06",
@@ -165,6 +167,7 @@
     "XAHC02",
     "XAHC01",
     "XAHC03",
+    "ADM03E",
     "SADG01"
   ]
 }
