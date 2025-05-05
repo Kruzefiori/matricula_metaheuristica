@@ -78,286 +78,357 @@ ADM54H	Gestão de Carreira	"OUTRA GRADE"
 {
 	"XDES01": {
 		"name": "Fundamentos de Programação",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": true
 	},
 	"XDES02": {
 		"name": "Programação Orientada a Objetos",
-		"prerequisites": ["XDES01"]
+		"prerequisites": ["XDES01"],
+		"isMandatory": true
 	},
 	"XDES03": {
 		"name": "Programação Web",
-		"prerequisites": ["XDES02"]
+		"prerequisites": ["XDES02"],
+		"isMandatory": true
 	},
 	"XDES04": {
 		"name": "Engenharia de Software I",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": true
 	},
 	"CDES05": {
 		"name": "Programação Lógica e Funcional",
-		"prerequisites": ["XMAC01"]
+		"prerequisites": ["XMAC01"],
+		"isMandatory": true
 	},
 	"XMAC01": {
 		"name": "Matemática Discreta",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": true
 	},
 	"XMAC02": {
 		"name": "Métodos Matemáticos para Análise de Dados",
-		"prerequisites": ["MAT00A", "XMAC01", "STCO01"]
+		"prerequisites": ["MAT00A", "XMAC01", "STCO01"],
+		"isMandatory": true
 	},
 	"CMAC03": {
 		"name": "Algoritmos em Grafos",
-		"prerequisites": ["CTCO01"]
+		"prerequisites": ["CTCO01"],
+		"isMandatory": true
 	},
 	"CMAC04": {
 		"name": "Modelagem Computacional",
-		"prerequisites": ["MAT00A"]
+		"prerequisites": ["MAT00A"],
+		"isMandatory": true
 	},
 	"CMAC05": {
 		"name": "Cálculo Numérico para Computação",
-		"prerequisites": ["MAT002"]
+		"prerequisites": ["MAT002"],
+		"isMandatory": true
 	},
 	"MAT00A": {
 		"name": "Cálculo A",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": true
 	},
 	"MAT00B": {
 		"name": "Cálculo B",
-		"prerequisites": ["MAT00A"]
+		"prerequisites": ["MAT00A"],
+		"isMandatory": true
 	},
 	"XRSC01": {
 		"name": "Redes de Computadores",
-		"prerequisites": ["SRSC02"]
+		"prerequisites": ["SRSC02"],
+		"isMandatory": true
 	},
 	"CRSC02": {
 		"name": "Sistemas Operacionais",
-		"prerequisites": ["CTCO01", "CRSC04"]
+		"prerequisites": ["CTCO01", "CRSC04"],
+		"isMandatory": true
 	},
 	"CRSC03": {
 		"name": "Arquitetura de Computadores I",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": true
 	},
 	"CRSC04": {
 		"name": "Arquitetura de Computadores II",
-		"prerequisites": ["CRSC03"]
+		"prerequisites": ["CRSC03"],
+		"isMandatory": true
 	},
 	"CRSC05": {
 		"name": "Sistemas Embarcados",
-		"prerequisites": ["SRSC02"]
+		"prerequisites": ["SRSC02"],
+		"isMandatory": true
 	},
 	"CTCO01": {
 		"name": "Algoritmos e Estruturas de Dados I",
-		"prerequisites": ["XDES01"]
+		"prerequisites": ["XDES01"],
+		"isMandatory": true
 	},
 	"CTCO02": {
 		"name": "Algoritmos e Estruturas de Dados II",
-		"prerequisites": ["CTCO01"]
+		"prerequisites": ["CTCO01"],
+		"isMandatory": true
 	},
 	"CTCO03": {
 		"name": "Análise e Projeto Orientados a Objeto",
-		"prerequisites": ["XDES02"]
+		"prerequisites": ["XDES02"],
+		"isMandatory": true
 	},
 	"CTCO04": {
 		"name": "Projeto e Análise de Algoritmos",
-		"prerequisites": ["CTCO02"]
+		"prerequisites": ["CTCO02"],
+		"isMandatory": true
 	},
 	"CTCO05": {
 		"name": "Teoria da Computação",
-		"prerequisites": ["CDES05", "CTCO04"]
+		"prerequisites": ["CDES05", "CTCO04"],
+		"isMandatory": true
 	},
 	"CTCO06": {
 		"name": "Compiladores",
-		"prerequisites": ["CTCO05"]
+		"prerequisites": ["CTCO05"],
+		"isMandatory": true
 	},
 	"XPAD01": {
 		"name": "Banco de Dados I",
-		"prerequisites": ["STCO02"]
+		"prerequisites": ["STCO02"],
+		"isMandatory": true
 	},
 	"XMCO01": {
 		"name": "Inteligência Artificial",
-		"prerequisites": ["XMAC02"]
+		"prerequisites": ["XMAC02"],
+		"isMandatory": true
 	},
 	"CMCO05": {
 		"name": "Introdução à Computação Visual",
-		"prerequisites": ["XMAC02", "XDES02"]
+		"prerequisites": ["XMAC02", "XDES02"],
+		"isMandatory": true
 	},
 	"XAHC01": {
 		"name": "Computação e Sociedade",
-		"prerequisites": ["XRSC01", "XDES04", "IEPG21"]
+		"prerequisites": ["XRSC01", "XDES04", "IEPG21"],
+		"isMandatory": true
 	},
 	"XAHC02": {
 		"name": "Interação Humano-Computador",
-		"prerequisites": ["XDES03", "XDES04"]
+		"prerequisites": ["XDES03", "XDES04"],
+		"isMandatory": true
 	},
 	"XAHC03": {
 		"name": "Metodologia Científica",
-		"prerequisites": ["XRSC01", "CTCO04"]
+		"prerequisites": ["XRSC01", "CTCO04"],
+		"isMandatory": true
 	},
 	"CAHC04": {
 		"name": "Projeto Integrado",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": true
 	},
 	"SDES05": {
 		"name": "Engenharia de Software II",
-		"prerequisites": ["XDES04"]
+		"prerequisites": ["XDES04"],
+		"isMandatory": false
 	},
 	"SDES06": {
 		"name": "Gerência de Projetos de Software",
-		"prerequisites": ["XDES04"]
+		"prerequisites": ["XDES04"],
+		"isMandatory": false
 	},
 	"SDES07": {
 		"name": "Desenvolvimento de Sistemas Web",
-		"prerequisites": ["XDES04", "XPAD01", "XDES03"]
+		"prerequisites": ["XDES04", "XPAD01", "XDES03"],
+		"isMandatory": false
 	},
 	"XDES08": {
 		"name": "Arquitetura de Software",
-		"prerequisites": ["XDES04"]
+		"prerequisites": ["XDES04"],
+		"isMandatory": false
 	},
 	"XDES10": {
 		"name": "Engenharia de Software Experimental",
-		"prerequisites": ["XDES04"]
+		"prerequisites": ["XDES04"],
+		"isMandatory": false
 	},
 	"XDES11": {
 		"name": "Tópicos em Desenvolvimento e Engenharia de Software",
-		"prerequisites": ["XDES04"]
+		"prerequisites": ["XDES04"],
+		"isMandatory": false
 	},
 	"CDES13": {
 		"name": "Desenvolvimento de Jogos",
-		"prerequisites": ["XDES02"]
+		"prerequisites": ["XDES02"],
+		"isMandatory": false
 	},
 	"ECOX21": {
 		"name": "Maratona de Programação I",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"ECOX22": {
 		"name": "Maratona de Programação II",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"SPAD02": {
 		"name": "Banco de Dados II",
-		"prerequisites": ["XPAD01"]
+		"prerequisites": ["XPAD01"],
+		"isMandatory": false
 	},
 	"SPAD03": {
 		"name": "Introdução à Análise de Dados",
-		"prerequisites": ["XMAC02", "XPAD01"]
+		"prerequisites": ["XMAC02", "XPAD01"],
+		"isMandatory": false
 	},
 	"XPAD04": {
 		"name": "Banco de Dados NoSQL",
-		"prerequisites": ["XPAD01"]
+		"prerequisites": ["XPAD01"],
+		"isMandatory": false
 	},
 	"XPAD08": {
 		"name": "Tópicos em Persistência e Análise de Dados",
-		"prerequisites": ["XPAD01"]
+		"prerequisites": ["XPAD01"],
+		"isMandatory": false
 	},
 	"XPAD09": {
 		"name": "Análise e Previsão de Séries Temporais",
-		"prerequisites": ["XMAC02"]
+		"prerequisites": ["XMAC02"],
+		"isMandatory": false
 	},
 	"SADG01": {
 		"name": "Gestão e Governança de TI",
-		"prerequisites": ["IEPG22"]
+		"prerequisites": ["IEPG22"],
+		"isMandatory": false
 	},
 	"SADG02": {
 		"name": "Economia da Informação",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": false
 	},
 	"ADM03E": {
 		"name": "Empreendedorismo Tecnológico",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"IEPG01": {
 		"name": "Empreendedorismo e Inovação",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"IEPG10": {
 		"name": "Engenharia Econômica",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"IEPG14": {
 		"name": "Comportamento Organizacional I",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"IEPG20": {
 		"name": "Introdução à Economia",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"IEPG22": {
 		"name": "Administração Aplicada",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"XRSC06": {
 		"name": "Auditoria e Segurança de Sistemas",
-		"prerequisites": ["XRSC01"]
+		"prerequisites": ["XRSC01"],
+		"isMandatory": false
 	},
 	"CRSC08": {
 		"name": "Programação Paralela",
-		"prerequisites": ["XRSC01"]
+		"prerequisites": ["XRSC01"],
+		"isMandatory": false
 	},
 	"XRSC09": {
 		"name": "Sistemas Distribuídos",
-		"prerequisites": ["XRSC01"]
+		"prerequisites": ["XRSC01"],
+		"isMandatory": false
 	},
 	"XRSC07": {
 		"name": "Computação em Nuvem",
-		"prerequisites": ["XRSC01"]
+		"prerequisites": ["XRSC01"],
+		"isMandatory": false
 	},
 	"ECOS04": {
 		"name": "Simulação e Avaliação de Desempenho",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"XMCO02": {
 		"name": "Métodos Exatos",
-		"prerequisites": ["XMAC02", "CTCO02"]
+		"prerequisites": ["XMAC02", "CTCO02"],
+		"isMandatory": false
 	},
 	"XMCO03": {
 		"name": "Metaheurísticas",
-		"prerequisites": ["XMAC02", "STCO02"]
+		"prerequisites": ["XMAC02", "STCO02"],
+		"isMandatory": false
 	},
 	"XMCO04": {
 		"name": "Tópicos em Metodologias Computacionais e Otimização",
-		"prerequisites": ["XMAC02", "STCO02"]
+		"prerequisites": ["XMAC02", "STCO02"],
+		"isMandatory": false
 	},
 	"CMCO06": {
 		"name": "Modelagem Geométrica e Visual",
-		"prerequisites": ["XMAC02", "CMCO05"]
+		"prerequisites": ["XMAC02", "CMCO05"],
+		"isMandatory": false
 	},
 	"CMCO07": {
 		"name": "Visão Computacional",
-		"prerequisites": ["XMAC01", "CMCO05"]
+		"prerequisites": ["XMAC01", "CMCO05"],
+		"isMandatory": false
 	},
 	"XMCO08": {
 		"name": "Teoria dos Jogos",
-		"prerequisites": ["XMAC01"]
+		"prerequisites": ["XMAC01"],
+		"isMandatory": false
 	},
 	"XAHC06": {
 		"name": "Tópicos em Aspectos Humanos em Computação",
-		"prerequisites": []
+		"prerequisites": [],
+		"isMandatory": false
 	},
 	"XAHC07": {
 		"name": "Computação Aplicada à Educação",
-		"prerequisites": ["XDES03", "XDES04"]
+		"prerequisites": ["XDES03", "XDES04"],
+		"isMandatory": false
 	},
 	"XAHC08": {
 		"name": "Tópicos sobre UX Design",
-		"prerequisites": ["XMAC02", "XAHC02"]
+		"prerequisites": ["XMAC02", "XAHC02"],
+		"isMandatory": false
 	},
 	"IEPG21": {
 		"name": "Ciências Humanas e Sociais",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"ADM08H": {
 		"name": "Psicologia: As relações Indivíduo-Grupo",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"LET007": {
 		"name": "LIBRAS - Linguagem Brasileira de Sinais",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"ADM51H": {
 		"name": "Ciências, Tecnologias e Organizações",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	},
 	"ADM54H": {
 		"name": "Gestão de Carreira",
-		"prerequisites": ["OUTRA GRADE"]
+		"prerequisites": ["OUTRA GRADE"],
+		"isMandatory": false
 	}
 }
