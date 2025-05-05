@@ -10,6 +10,7 @@ from modules import printHelper
 from modules import csvParser
 from IPython.display import display
 from modules.heuristic.constructive import greedyConstructive
+from modules.heuristic.refinement import refineByScore
 import pprint
 
 
@@ -19,6 +20,7 @@ def main():
     print(args)
     if args.run_cli_only == "y":
         try:
+            
             structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
             availableDisciplines = csvParser.parseCSVavailableDisciplines(args.period)
             neighborDisciplines = {}
@@ -35,9 +37,12 @@ def main():
             #printHelper.printStructuredData(structuredPdfData)
             # Chama a função de recomendação
             if args.constructive == 'greedy':
+                st = helper.initiateTimer()
                 print("Executando o algoritmo guloso...")
                 # Chama a função de recomendação gulosa
-                greedyConstructive.createGreedySolution(availableDisciplines , structuredPdfData , neighborDisciplines)
+                solutions  , formatedData = greedyConstructive.createGreedySolution(availableDisciplines , structuredPdfData , neighborDisciplines)
+                #pprint.pprint(solutions)
+                
             elif args.constructive == 'ramdom':
                 print("Executando o algoritmo aleatório...")
                 # Chama a função de recomendação aleatória
@@ -48,8 +53,14 @@ def main():
             elif args.refinement == 'score':
                 print("Executando o algoritmo de refinamento por pontuação...")
                 # Chama a função de refinamento por pontuação
-            
+                refinedSolutions = refineByScore.refinement(solutions, structuredPdfData['aprBySemester'], equivalences, formatedData)
+                
+                pprint.pprint(solutions)
+                pprint.pprint(refinedSolutions)
+                helper.endTimer(st)
 
+            
+            
             #graspManager(structuredPdfData)
         except Exception as e:
             print("Erro:", e)

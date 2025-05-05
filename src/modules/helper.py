@@ -1,5 +1,6 @@
 import os
 import json
+import time
 ### Função para listar arquivos PDF na pasta datasets
 def listFiles():
     try:
@@ -58,3 +59,9 @@ def saveIntoTxt(name , data):
         f.write(json.dumps(data, indent=2, ensure_ascii=False))
 
 
+def initiateTimer():
+    return time.perf_counter()
+
+def endTimer(start):
+    end = time.perf_counter()
+    print(f"Total execution time: {end - start:.6f} seconds")

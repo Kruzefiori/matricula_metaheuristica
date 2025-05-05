@@ -68,6 +68,4 @@ def organizeData(availableDisciplines, neighborDisciplines):
             item["oneByYear"] = True
         resultado_formatado.append(item)
 
-    # Exibe resultado (opcional)
-    from pprint import pprint
-    pprint(resultado_formatado)
+    return resultado_formatado
