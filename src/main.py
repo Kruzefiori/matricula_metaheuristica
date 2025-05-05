@@ -9,6 +9,7 @@ from modules import pdfParser
 from modules import printHelper
 from modules import csvParser
 from IPython.display import display
+from modules.heuristic.constructive import greedyConstructive
 import pprint
 
 
@@ -20,8 +21,15 @@ def main():
         try:
             structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
             availableDisciplines = csvParser.parseCSVavailableDisciplines(args.period)
+            neighborDisciplines = {}
+            if args.period == "24.1" or args.period == "25.1":
+                neighborDisciplines = csvParser.parseCSVavailableDisciplines("24.2")
+            if args.period == "24.2":
+                neighborDisciplines = csvParser.parseCSVavailableDisciplines("25.1")
+            
+            print("Estrutura do JSON criada com sucesso!")
             equivalences = csvParser.parseCSVequivalences()
-            pprint.pprint(structuredPdfData)
+            #pprint.pprint(structuredPdfData)
             #pprint.pprint(availableDisciplines)
             #pprint.pprint(equivalences)
             #printHelper.printStructuredData(structuredPdfData)
@@ -29,6 +37,7 @@ def main():
             if args.constructive == 'greedy':
                 print("Executando o algoritmo guloso...")
                 # Chama a função de recomendação gulosa
+                greedyConstructive.createGreedySolution(availableDisciplines , structuredPdfData , neighborDisciplines)
             elif args.constructive == 'ramdom':
                 print("Executando o algoritmo aleatório...")
                 # Chama a função de recomendação aleatória
@@ -43,7 +52,7 @@ def main():
 
             #graspManager(structuredPdfData)
         except Exception as e:
-            print("Erro ao processar o arquivo PDF:", e)
+            print("Erro:", e)
             return
     else:
         # Executa a interface gráfica com as mesmas funções do CLI (não há impressão dos dados ainda)

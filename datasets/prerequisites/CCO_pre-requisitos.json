@@ -1,80 +1,3 @@
-/*
-// Obrigatórias
-XDES01	Fundamentos de Programação	Não tem
-XDES02	Programação Orientada a Objetos	XDES01 OU COM111 OU ECOP11A
-XDES03	Programação Web	XDES02 OU COM220 OU ( ECOP13A E ECOT03A )
-XDES04	Engenharia de Software I	Não tem
-CDES05	Programação Lógica e Funcional	XMAC01 OU MAT015 OU MAT017 OU MAT057 OU ECOM01A
-XMAC01	Matemática Discreta	Não tem
-XMAC02	Métodos Matemáticos para Análise de Dados	MAT00A E ( XMAC01 OU ECOM01A ) E ( STCO01 OU CTCO01 OU ECOP02A )
-CMAC03	Algoritmos em Grafos	CTCO01 OU STCO01 OU COM111
-CMAC04	Modelagem Computacional	MAT00A
-CMAC05	Cálculo Numérico para Computação	MAT00B OU MAT002
-MAT00A	Cálculo A	Não tem
-MAT00B	Cálculo B	MAT00A OU MAT001 OU MAT010
-XRSC01	Redes de Computadores	SRSC02 OU CRSC02 OU COM120 OU ( ECOS01A E ECOS11A )
-CRSC02	Sistemas Operacionais	( CTCO01 OU STCO01 ) E CRSC04
-CRSC03	Arquitetura de Computadores I	Não tem
-CRSC04	Arquitetura de Computadores II	CRSC03 OU CIC120
-CRSC05	Sistemas Embarcados	SRSC02 OU CRSC02 OU COM120
-CTCO01	Algoritmos e Estruturas de Dados I	XDES01 OU COM110
-CTCO02	Algoritmos e Estruturas de Dados II	CTCO01 OU STCO01 OU COM111
-CTCO03	Análise e Projeto Orientados a Objeto	XDES02 OU COM220
-CTCO04	Projeto e Análise de Algoritmos	CTCO02 OU COM112
-CTCO05	Teoria da Computação	( CDES05 E CTCO04 ) OU ( CIC110 E CIC131 ) OU ECOM03A
-CTCO06	Compiladores	CTCO05 OU CIC132 OU ECOM05A
-XPAD01	Banco de Dados I	STCO02 OU CTCO02 OU COM112 OU ( ECOT02A E ECOT12A )
-XMCO01	Inteligência Artificial	XMAC02 OU MAT013
-CMCO05	Introdução à Computação Visual	XMAC02 E ( XDES02 OU ECOP13A )
-XAHC01	Computação e Sociedade	XRSC01 E XDES04 E ( IEPG21 OU ADM08H OU ADM51H OU ADM52H OU ADM54H OU ADM58H OU LET007 )
-XAHC02	Interação Humano-Computador	( XDES03 E XDES04 ) OU ( COM210 E COM222 ) OU ECOX05
-XAHC03	Metodologia Científica	XRSC01 E ( CTCO04 OU ADM51E )
-CAHC04	Projeto Integrado	Não tem
-
-// Optativas
-SDES05	Engenharia de Software II	XDES04 OU COM210
-SDES06	Gerência de Projetos de Software	XDES04 OU COM210 OU ( ECOT01A E ECOT11A )
-SDES07	Desenvolvimento de Sistemas Web	( XDES04 E XPAD01 E XDES03 ) OU ( COM220 E COM230 E COM222 )
-XDES08	Arquitetura de Software	XDES04 OU COM210
-XDES10	Engenharia de Software Experimental	XDES04 OU COM210
-XDES11	Tópicos em Desenvolvimento e Engenharia de Software	XDES04 OU COM210
-CDES13	Desenvolvimento de Jogos	XDES02 OU ECOP13A
-ECOX21	Maratona de Programação I	"OUTRA GRADE"
-ECOX22	Maratona de Programação II	"OUTRA GRADE"
-SPAD02	Banco de Dados II	XPAD01 OU COM230
-SPAD03	Introdução à Análise de Dados	( XMAC02 OU MAT013 ) E ( XPAD01 OU COM230 )
-XPAD04	Banco de Dados NoSQL	XPAD01 OU COM230
-XPAD08	Tópicos em Persistência e Análise de Dados	XPAD01 OU COM230
-XPAD09	Análise e Previsão de Séries Temporais	XMAC02
-SADG01	Gestão e Governança de TI	IEPG22
-SADG02	Economia da Informação	Não tem
-ADM03E	Empreendedorismo Tecnológico	"OUTRA GRADE"
-IEPG01	Empreendedorismo e Inovação	"OUTRA GRADE"
-IEPG10	Engenharia Econômica	"OUTRA GRADE"
-IEPG14	Comportamento Organizacional I	"OUTRA GRADE"
-IEPG20	Introdução à Economia	"OUTRA GRADE"
-IEPG22	Administração Aplicada	"OUTRA GRADE"
-XRSC06	Auditoria e Segurança de Sistemas	XRSC01 OU COM240
-CRSC08	Programação Paralela	XRSC01 OU COM240
-XRSC09	Sistemas Distribuídos	XRSC01 OU COM240 OU ( TELC03A E TELC13A )
-XRSC07	Computação em Nuvem	XRSC01 OU COM240
-ECOS04	Simulação e Avaliação de Desempenho	"OUTRA GRADE"
-XMCO02	Métodos Exatos	( ( XMAC02 OU MAT013 ) E ( CTCO02 OU STCO02 OU COM112 ) ) OU MAT250
-XMCO03	Metaheurísticas	( XMAC02 OU MAT013 ) E ( STCO02 OU CTCO02 OU COM112 )
-XMCO04	Tópicos em Metodologias Computacionais e Otimização	( XMAC02 OU MAT013 ) E ( STCO02 OU CTCO02 OU COM112 )
-CMCO06	Modelagem Geométrica e Visual	( XMAC02 OU MAT013 ) E CMCO05
-CMCO07	Visão Computacional	XMAC01 E CMCO05
-XMCO08	Teoria dos Jogos	XMAC01 OU MAT015 OU MAT017 OU MAT057 OU ( ECOM01A E ECOM11A ) OU ( ECOM01 E ECOM11 )
-XAHC06	Tópicos em Aspectos Humanos em Computação	Não tem
-XAHC07	Computação Aplicada à Educação	XDES03 E XDES04
-XAHC08	Tópicos sobre UX Design	XMAC02 E XAHC02
-IEPG21	Ciências Humanas e Sociais	"OUTRA GRADE"
-ADM08H	Psicologia: As relações Indivíduo-Grupo	"OUTRA GRADE"
-LET007	LIBRAS - Linguagem Brasileira de Sinais	"OUTRA GRADE"
-ADM51H	Ciências, Tecnologias e Organizações	"OUTRA GRADE"
-ADM54H	Gestão de Carreira	"OUTRA GRADE"
-*/
-// Dos pré-requisitos, quando houver uma relação "OU" entre disciplinas, apenas uma delas é necessária para cumprir o pré-requisito. Quando houver uma relação "E", todas as disciplinas listadas são necessárias para cumprir o pré-requisito.
 {
 	"XDES01": {
 		"name": "Fundamentos de Programação",
@@ -263,12 +186,12 @@ ADM54H	Gestão de Carreira	"OUTRA GRADE"
 	},
 	"ECOX21": {
 		"name": "Maratona de Programação I",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"ECOX22": {
 		"name": "Maratona de Programação II",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"SPAD02": {
@@ -308,32 +231,32 @@ ADM54H	Gestão de Carreira	"OUTRA GRADE"
 	},
 	"ADM03E": {
 		"name": "Empreendedorismo Tecnológico",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"IEPG01": {
 		"name": "Empreendedorismo e Inovação",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"IEPG10": {
 		"name": "Engenharia Econômica",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"IEPG14": {
 		"name": "Comportamento Organizacional I",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"IEPG20": {
 		"name": "Introdução à Economia",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"IEPG22": {
 		"name": "Administração Aplicada",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"XRSC06": {
@@ -358,7 +281,7 @@ ADM54H	Gestão de Carreira	"OUTRA GRADE"
 	},
 	"ECOS04": {
 		"name": "Simulação e Avaliação de Desempenho",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"XMCO02": {
@@ -408,27 +331,27 @@ ADM54H	Gestão de Carreira	"OUTRA GRADE"
 	},
 	"IEPG21": {
 		"name": "Ciências Humanas e Sociais",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"ADM08H": {
 		"name": "Psicologia: As relações Indivíduo-Grupo",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"LET007": {
 		"name": "LIBRAS - Linguagem Brasileira de Sinais",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"ADM51H": {
 		"name": "Ciências, Tecnologias e Organizações",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	},
 	"ADM54H": {
 		"name": "Gestão de Carreira",
-		"prerequisites": ["OUTRA GRADE"],
+		"prerequisites": [],
 		"isMandatory": false
 	}
 }

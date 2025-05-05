@@ -3,9 +3,10 @@ import pandas as pd
 
 #
 def parseCSVavailableDisciplines(period : str):
+    print(period)
     if period == "24.1":
         file = "horarios - 24.1"
-    elif period == "horarios - 24.2":
+    elif period == "24.2":
         file = "horarios - 24.2"
     elif period == "25.1":
         file = "horarios - 25.1"
