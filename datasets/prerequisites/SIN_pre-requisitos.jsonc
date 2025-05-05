@@ -1,0 +1,318 @@
+/*
+// Obrigatórias
+XDES01	Fundamentos de Programação	Não tem
+XDES02	Programação Orientada a Objetos	XDES01 OU COM111 OU ECOP11A
+XDES03	Programação Web	XDES02 OU COM220 OU ( ECOP13A E ECOT03A )
+XDES04	Engenharia de Software I	Não tem
+SDES05	Engenharia de Software II	XDES04 OU COM210
+SDES06	Gerência de Projetos de Software	XDES04 OU COM210 OU ( ECOT01A E ECOT11A )
+SDES07	Desenvolvimento de Sistemas Web	( XDES04 E XPAD01 E XDES03 ) OU ( COM220 E COM230 E COM222 )
+SADG01	Gestão e Governança de TI	IEPG22
+ADM03E	Empreendedorismo Tecnológico	"OUTRA GRADE"
+ADM51E	Gestão do Conhecimento	"OUTRA GRADE"
+IEPG01	Empreendedorismo e Inovação	"OUTRA GRADE"
+IEPG04	Mapeamento de Processos	"OUTRA GRADE"
+IEPG10	Engenharia Econômica	"OUTRA GRADE"
+IEPG14	Comportamento Organizacional I	"OUTRA GRADE"
+IEPG20	Introdução à Economia	"OUTRA GRADE"
+IEPG22	Administração Aplicada	"OUTRA GRADE"
+XMAC01	Matemática Discreta	Não tem
+XMAC02	Métodos Matemáticos para Análise de Dados	MAT00A E ( XMAC01 OU ECOM01A ) E ( STCO01 OU CTCO01 OU ECOP02A )
+SMAC03	Grafos	STCO01 OU CTCO01 OU COM111
+MAT00A	Cálculo A	Não tem
+XRSC01	Redes de Computadores	SRSC02 OU CRSC02 OU COM120 OU ( ECOS01A E ECOS11A )
+SRSC02	Sistemas Operacionais	( ( STCO01 OU CTCO01 ) E SRSC03 ) OU SIN120 OU ( ECOP02A E ECOX01 )
+SRSC03	Organização e Arquitetura de Computadores	Não tem
+STCO01	Algoritmos e Programação I	CTCO01 OU COM111 OU ( ECOP02 E ECOP12 ) OU ECOP02A
+STCO02	Algoritmos e Programação II	STCO01 OU CTCO01 OU COM111
+XPAD01	Banco de Dados I	STCO02 OU CTCO02 OU COM112 OU ( ECOT02A E ECOT12A )
+SPAD02	Banco de Dados II	XPAD01 OU COM230
+SPAD03	Introdução à Análise de Dados	( XMAC02 OU MAT013 ) E ( XPAD01 OU COM230 )
+XMCO01	Inteligência Artificial	XMAC02 OU MAT013
+XAHC01	Computação e Sociedade	XRSC01 E XDES04 E ( IEPG21 OU ADM08H OU ADM51H OU ADM52H OU ADM54H OU ADM58H OU LET007 )
+XAHC02	Interação Humano-Computador	( XDES03 E XDES04 ) OU ( COM210 E COM222 ) OU ECOX05
+XAHC03	Metodologia Científica	XRSC01 E ( CTCO04 OU ADM51E )
+SAHC04	Projeto Integrado	Não tem
+SAHC05	Fundamentos de Sistemas de Informação	Não tem
+
+// Optativas
+XDES08	Arquitetura de Software	XDES04 OU COM210
+XDES10	Engenharia de Software Experimental	XDES04 OU COM210
+XDES11	Tópicos em Desenvolvimento e Engenharia de Software	XDES04 OU COM210
+XPAD04	Banco de Dados NoSQL	XPAD01 OU COM230
+SPAD05	Análise de Dados Geoespaciais	( XPAD01 E XDES03 ) OU ( COM230 E COM222 )
+SPAD06	Mineração de Dados	XMAC02
+XPAD08	Tópicos em Persistência e Análise de Dados	XPAD01 OU COM230
+XPAD09	Análise e Previsão de Séries Temporais	XMAC02
+XMCO02	Métodos Exatos	( ( XMAC02 OU MAT013 ) E ( CTCO02 OU STCO02 OU COM112 ) ) OU MAT250
+XMCO03	Metaheurísticas	( XMAC02 OU MAT013 ) E ( STCO02 OU CTCO02 OU COM112 )
+XMCO04	Tópicos em Metodologias Computacionais e Otimização	( XMAC02 OU MAT013 ) E ( STCO02 OU CTCO02 OU COM112 )
+XMCO08	Teoria dos Jogos	XMAC01 OU MAT015 OU MAT017 OU MAT057 OU ( ECOM01A E ECOM11A ) OU ( ECOM01 E ECOM11 )
+XRSC06	Auditoria e Segurança de Sistemas	XRSC01 OU COM240
+XRSC07	Computação em Nuvem	XRSC01 OU COM240
+XRSC09	Sistemas Distribuídos	XRSC01 OU COM240 OU ( TELC03A E TELC13A )
+ECOS04	Simulação e Avaliação de Desempenho	"OUTRA GRADE"
+XAHC06	Tópicos em Aspectos Humanos em Computação	Não tem
+XAHC07	Computação Aplicada à Educação	XDES03 E XDES04
+XAHC08	Tópicos sobre UX Design	XMAC02 E XAHC02
+IEPG21	Ciências Humanas e Sociais	"OUTRA GRADE"
+LET007	LIBRAS - Linguagem Brasileira de Sinais	"OUTRA GRADE"
+ADM08H	Psicologia: As relações Indivíduo-Grupo	"OUTRA GRADE"
+ADM51H	Ciências, Tecnologias e Organizações	"OUTRA GRADE"
+ADM54H	Gestão de Carreira	"OUTRA GRADE"
+SADG02	Economia da Informação	Não tem
+IEPG05	Finanças para Executivos	"OUTRA GRADE"
+IEPG13	Custos Empresariais	"OUTRA GRADE"
+IEPG15	Logística e Gestão da Cadeia de Suprimentos	"OUTRA GRADE"
+*/
+// Dos pré-requisitos, quando houver uma relação "OU" entre disciplinas, apenas uma delas é necessária para cumprir o pré-requisito. Quando houver uma relação "E", todas as disciplinas listadas são necessárias para cumprir o pré-requisito.
+{
+	"XDES01": {
+		"name": "Fundamentos de Programação",
+		"prerequisites": []
+	},
+	"XDES02": {
+		"name": "Programação Orientada a Objetos",
+		"prerequisites": ["XDES01"]
+	},
+	"XDES03": {
+		"name": "Programação Web",
+		"prerequisites": ["XDES02"]
+	},
+	"XDES04": {
+		"name": "Engenharia de Software I",
+		"prerequisites": []
+	},
+	"SDES05": {
+		"name": "Engenharia de Software II",
+		"prerequisites": ["XDES04"]
+	},
+	"SDES06": {
+		"name": "Gerência de Projetos de Software",
+		"prerequisites": ["XDES04"]
+	},
+	"SDES07": {
+		"name": "Desenvolvimento de Sistemas Web",
+		"prerequisites": ["XDES04", "XPAD01", "XDES03"]
+	},
+	"SADG01": {
+		"name": "Gestão e Governança de TI",
+		"prerequisites": ["IEPG22"]
+	},
+	"ADM03E": {
+		"name": "Empreendedorismo Tecnológico",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"ADM51E": {
+		"name": "Gestão do Conhecimento",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG01": {
+		"name": "Empreendedorismo e Inovação",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG04": {
+		"name": "Mapeamento de Processos",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG10": {
+		"name": "Engenharia Econômica",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG14": {
+		"name": "Comportamento Organizacional I",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG20": {
+		"name": "Introdução à Economia",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG22": {
+		"name": "Administração Aplicada",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"XMAC01": {
+		"name": "Matemática Discreta",
+		"prerequisites": []
+	},
+	"XMAC02": {
+		"name": "Métodos Matemáticos para Análise de Dados",
+		"prerequisites": ["MAT00A", "XMAC01", "STCO01"]
+	},
+	"SMAC03": {
+		"name": "Grafos",
+		"prerequisites": ["STCO01"]
+	},
+	"MAT00A": {
+		"name": "Cálculo A",
+		"prerequisites": []
+	},
+	"XRSC01": {
+		"name": "Redes de Computadores",
+		"prerequisites": ["SRSC02"]
+	},
+	"SRSC02": {
+		"name": "Sistemas Operacionais",
+		"prerequisites": ["STCO01", "SRSC03"]
+	},
+	"SRSC03": {
+		"name": "Organização e Arquitetura de Computadores",
+		"prerequisites": []
+	},
+	"STCO01": {
+		"name": "Algoritmos e Programação I",
+		"prerequisites": ["CTCO01"]
+	},
+	"STCO02": {
+		"name": "Algoritmos e Programação II",
+		"prerequisites": ["STCO01"]
+	},
+	"XPAD01": {
+		"name": "Banco de Dados I",
+		"prerequisites": ["STCO02"]
+	},
+	"SPAD02": {
+		"name": "Banco de Dados II",
+		"prerequisites": ["XPAD01"]
+	},
+	"SPAD03": {
+		"name": "Introdução à Análise de Dados",
+		"prerequisites": ["XMAC02", "XPAD01"]
+	},
+	"XMCO01": {
+		"name": "Inteligência Artificial",
+		"prerequisites": ["XMAC02"]
+	},
+	"XAHC01": {
+		"name": "Computação e Sociedade",
+		"prerequisites": ["XRSC01", "XDES04", "IEPG21"]
+	},
+	"XAHC02": {
+		"name": "Interação Humano-Computador",
+		"prerequisites": ["XDES03", "XDES04"]
+	},
+	"XAHC03": {
+		"name": "Metodologia Científica",
+		"prerequisites": ["XRSC01", "CTCO04"]
+	},
+	"SAHC04": {
+		"name": "Projeto Integrado",
+		"prerequisites": []
+	},
+	"SAHC05": {
+		"name": "Fundamentos de Sistemas de Informação",
+		"prerequisites": []
+	},
+	"XDES08": {
+		"name": "Arquitetura de Software",
+		"prerequisites": ["XDES04"]
+	},
+	"XDES10": {
+		"name": "Engenharia de Software Experimental",
+		"prerequisites": ["XDES04"]
+	},
+	"XDES11": {
+		"name": "Tópicos em Desenvolvimento e Engenharia de Software",
+		"prerequisites": ["XDES04"]
+	},
+	"XPAD04": {
+		"name": "Banco de Dados NoSQL",
+		"prerequisites": ["XPAD01"]
+	},
+	"SPAD05": {
+		"name": "Análise de Dados Geoespaciais",
+		"prerequisites": ["XPAD01", "XDES03"]
+	},
+	"SPAD06": {
+		"name": "Mineração de Dados",
+		"prerequisites": ["XMAC02"]
+	},
+	"XPAD08": {
+		"name": "Tópicos em Persistência e Análise de Dados",
+		"prerequisites": ["XPAD01"]
+	},
+	"XPAD09": {
+		"name": "Análise e Previsão de Séries Temporais",
+		"prerequisites": ["XMAC02"]
+	},
+	"XMCO02": {
+		"name": "Métodos Exatos",
+		"prerequisites": ["XMAC02", "CTCO02"]
+	},
+	"XMCO03": {
+		"name": "Metaheurísticas",
+		"prerequisites": ["XMAC02", "STCO02"]
+	},
+	"XMCO04": {
+		"name": "Tópicos em Metodologias Computacionais e Otimização",
+		"prerequisites": ["XMAC02", "STCO02"]
+	},
+	"XMCO08": {
+		"name": "Teoria dos Jogos",
+		"prerequisites": ["XMAC01"]
+	},
+	"XRSC06": {
+		"name": "Auditoria e Segurança de Sistemas",
+		"prerequisites": ["XRSC01"]
+	},
+	"XRSC07": {
+		"name": "Computação em Nuvem",
+		"prerequisites": ["XRSC01"]
+	},
+	"XRSC09": {
+		"name": "Sistemas Distribuídos",
+		"prerequisites": ["XRSC01"]
+	},
+	"ECOS04": {
+		"name": "Simulação e Avaliação de Desempenho",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"XAHC06": {
+		"name": "Tópicos em Aspectos Humanos em Computação",
+		"prerequisites": []
+	},
+	"XAHC07": {
+		"name": "Computação Aplicada à Educação",
+		"prerequisites": ["XDES03", "XDES04"]
+	},
+	"XAHC08": {
+		"name": "Tópicos sobre UX Design",
+		"prerequisites": ["XMAC02", "XAHC02"]
+	},
+	"IEPG21": {
+		"name": "Ciências Humanas e Sociais",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"LET007": {
+		"name": "LIBRAS - Linguagem Brasileira de Sinais",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"ADM08H": {
+		"name": "Psicologia: As relações Indivíduo-Grupo",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"ADM51H": {
+		"name": "Ciências, Tecnologias e Organizações",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"ADM54H": {
+		"name": "Gestão de Carreira",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"SADG02": {
+		"name": "Economia da Informação",
+		"prerequisites": []
+	},
+	"IEPG05": {
+		"name": "Finanças para Executivos",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG13": {
+		"name": "Custos Empresariais",
+		"prerequisites": ["OUTRA GRADE"]
+	},
+	"IEPG15": {
+		"name": "Logística e Gestão da Cadeia de Suprimentos",
+		"prerequisites": ["OUTRA GRADE"]
+	}
+}
