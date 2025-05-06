@@ -43,7 +43,7 @@ def main():
                 solutions  , formatedData = greedyConstructive.createGreedySolution(availableDisciplines , structuredPdfData , neighborDisciplines)
                 #pprint.pprint(solutions)
                 
-            elif args.constructive == 'ramdom':
+            elif args.constructive == 'random':
                 print("Executando o algoritmo aleatório...")
                 # Chama a função de recomendação aleatória
                 # obtém as disciplinas com pré-requisitos de dois arquivos JSON: um do curso de CCO e outro do curso de SIN
@@ -59,17 +59,19 @@ def main():
 
                 # Chama a função de recomendação aleatória
                 # randomizedConstructive.random_constructive(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites)
-                randomBestSolution, randomBestScore = randomizedConstructive.random_constructive(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites)
-                print("Melhor solução encontrada:", randomBestSolution)
-                print("Pontuação da melhor solução:", randomBestScore)
+                randomBestSolution, randomBestScore, randomExcecutionTime = randomizedConstructive.random_constructive(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites)
+                print('Melhor solução encontrada:', randomBestSolution)
+                print('Pontuação da melhor solução:', randomBestScore)
+                print('Tempo de execução:', randomExcecutionTime)
                 
 
             if args.refinement == 'dicipline':
                 print("Executando o algoritmo de refinamento local...")
                 # Chama a função de refinamento local
-                discRefinedSolutions, discRefinedScore = refineByDisciplineAvailable.local_search(randomBestSolution, randomBestScore, structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites, 1000, 50)
-                print("Melhor solução encontrada:", discRefinedSolutions)
-                print("Pontuação da melhor solução:", discRefinedScore)
+                discRefinedSolutions, discRefinedScore, discExecutionTime = refineByDisciplineAvailable.local_search(randomBestSolution, randomBestScore, structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites, 1000, 50)
+                print('Melhor solução encontrada:', discRefinedSolutions)
+                print('Pontuação da melhor solução:', discRefinedScore)
+                print('Tempo de execução:', discExecutionTime)
             elif args.refinement == 'score':
                 print("Executando o algoritmo de refinamento por pontuação...")
                 # Chama a função de refinamento por pontuação

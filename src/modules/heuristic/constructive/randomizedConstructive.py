@@ -1,4 +1,5 @@
 import random
+from time import time as Time
 from typing import List, Dict, Set
 
 def calculate_max_disciplines(student_data: Dict) -> int:
@@ -57,6 +58,7 @@ def random_constructive(
     max_attempts: int = 100
 ) -> tuple:
     """Heurística construtiva aleatória"""
+    initTimer = Time()
     # Pré-processamento dos dados
     max_disc = calculate_max_disciplines(student_data)
     
@@ -99,5 +101,9 @@ def random_constructive(
         if current_score > best_score:
             best_solution = current_solution
             best_score = current_score
+
+    # Finaliza o temporizador
+    endTimer = Time()
+    elapsed_time = endTimer - initTimer
     
-    return best_solution, best_score
+    return best_solution, best_score, elapsed_time

@@ -1,4 +1,5 @@
 import random
+from time import time as Time
 from typing import List, Dict, Set
 
 
@@ -63,6 +64,9 @@ def local_search(
     max_no_improve: int = 50
 ) -> tuple:
     """Heurística de refinamento por busca local"""
+    
+    initTimer = Time()
+
     # Pré-processamento dos dados
     max_disc = calculate_max_disciplines(student_data)
     
@@ -175,5 +179,10 @@ def local_search(
                 best_score = current_score
         else:
             no_improve += 1
+
+
+    # Finaliza o temporizador
+    endTimer = Time()
+    elapsed_time = endTimer - initTimer
     
-    return best_solution, best_score
+    return best_solution, best_score, elapsed_time
