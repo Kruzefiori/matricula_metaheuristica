@@ -10,7 +10,7 @@ from modules import printHelper
 from modules import csvParser
 from IPython.display import display
 from modules.heuristic.constructive import greedyConstructive
-from modules.heuristic.refinement import refineByScore
+from modules.heuristic.refinement import refineByEquivalence
 import pprint
 
 
@@ -20,7 +20,7 @@ def main():
     print(args)
     if args.run_cli_only == "y":
         try:
-            
+            st = helper.initiateTimer()
             structuredPdfData = pdfParser.parserPdf(args.dataset_name , args.update_json)
             availableDisciplines = csvParser.parseCSVavailableDisciplines(args.period)
             neighborDisciplines = {}
@@ -37,7 +37,6 @@ def main():
             #printHelper.printStructuredData(structuredPdfData)
             # Chama a função de recomendação
             if args.constructive == 'greedy':
-                st = helper.initiateTimer()
                 print("Executando o algoritmo guloso...")
                 # Chama a função de recomendação gulosa
                 solutions  , formatedData = greedyConstructive.createGreedySolution(availableDisciplines , structuredPdfData , neighborDisciplines)
@@ -53,7 +52,7 @@ def main():
             elif args.refinement == 'score':
                 print("Executando o algoritmo de refinamento por pontuação...")
                 # Chama a função de refinamento por pontuação
-                refinedSolutions = refineByScore.refinement(solutions, structuredPdfData['aprBySemester'], equivalences, formatedData)
+                refinedSolutions = refineByEquivalence.refinement(solutions, structuredPdfData['aprBySemester'], equivalences, formatedData)
                 
                 pprint.pprint(solutions)
                 pprint.pprint(refinedSolutions)
