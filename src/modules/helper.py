@@ -18,12 +18,6 @@ def argsParser():
         help="Nome do arquivo PDF a ser lido"
     )
     argsParser.add_argument(
-        "--run_cli_only",
-        type=str,
-        help="O código deve ser executado apenas no terminal",
-        default="y",
-    )
-    argsParser.add_argument(
         "--update_json",
         type=str,
         help="Atualiza o JSON se já existir",
@@ -36,16 +30,22 @@ def argsParser():
         default="n",
     )
     argsParser.add_argument(
-        "--constructive",
+        "--mh",
         type=str,
-        help="Tipo de algoritmo construtivo a ser utilizado",
-        default="greedy",
+        help="Metaheurística a ser utilizada",
+        default="grasp",
     )
     argsParser.add_argument(
-        "--refinement",
+        "--k",
         type=str,
-        help="Tipo de algoritmo de refinamento a ser utilizado",
-        default="dicipline",
+        help="k para o GRASP",
+        default=3,
+    )
+    argsParser.add_argument(
+        "--i",
+        type=str,
+        help="iterações para o GRASP",
+        default=100
     )
     return argsParser.parse_args()
 
