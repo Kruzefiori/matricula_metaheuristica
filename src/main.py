@@ -54,13 +54,12 @@ def main():
         return
     if args.mh == 'AIS':
         print("Executando o algoritmo AIS...")
-        # Implementar o algoritmo AIS aqui - Augusto
-        # Exemplo de chamada:
-        # best_solution, best_score = ais_algorithm(...)
-        # print("Melhor solução encontrada:")
-        # pprint.pprint(best_solution)
-        # print(f"Pontuação: {best_score}")
 
+        best_solution, best_score = ais_algorithm(...)
+        print("Melhor solução encontrada:")
+        pprint.pprint(best_solution)
+        print(f"Pontuação: {best_score}")
+        helper.endTimer(st)
 
 
 if __name__ == "__main__":
