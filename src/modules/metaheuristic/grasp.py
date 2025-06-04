@@ -11,14 +11,12 @@ def build_discipline_schedule_map(catalog):
                 schedule_map[disc].add((day, time))
     return schedule_map
 
-def has_prerequisites(discipline, selected, prerequisites):
-    if discipline not in prerequisites:
-        return False
-    prereqs = prerequisites[discipline].get('prerequisites', [])
-    is_mandatory = prerequisites[discipline].get('isMandatory', True)
-    if not is_mandatory:
-        return True
-    return all(pr in selected for pr in prereqs)
+def has_prerequisites(disc, current_solution, prerequisites, missing_disciplines):
+    for prereq in prerequisites.get(disc, []):
+        # Se o pré-requisito não está na solução nem nas pendentes, assume que já foi feito
+        if prereq not in current_solution and prereq in missing_disciplines:
+            return False
+    return True
 
 def disciplines_equivalences_map(equivalences):
     mapping = {}
@@ -28,18 +26,17 @@ def disciplines_equivalences_map(equivalences):
         mapping[disc] = eqs
     return mapping
 
-def can_add_discipline(discipline, solution, schedule_map, prerequisites):
-    # Verifica se disciplina existe no catálogo
-    if discipline not in schedule_map:
-        return False
-    if not has_prerequisites(discipline, solution, prerequisites):
-        return False
-    disc_schedule = schedule_map.get(discipline, set())
-    for sol_disc in solution:
+def can_add_discipline(candidate_disc, current_solution, schedule_map, prerequisites, missing_disciplines):
+    # Checar conflito de horários
+    candidate_schedule = schedule_map.get(candidate_disc, set())
+    for sol_disc in current_solution:
         sol_schedule = schedule_map.get(sol_disc, set())
-        if disc_schedule.intersection(sol_schedule):
+        if candidate_schedule.intersection(sol_schedule):
             return False
-    return True
+
+    # Checar pré-requisitos
+    return has_prerequisites(candidate_disc, current_solution, prerequisites, missing_disciplines)
+
 
 def construct_solution(missing_disciplines, catalog, prerequisites, equivalences_map, schedule_map, k):
     solution = []
@@ -47,25 +44,32 @@ def construct_solution(missing_disciplines, catalog, prerequisites, equivalences
 
     while candidates:
         feasible_candidates = []
+
         for disc in candidates:
             equivs = equivalences_map.get(disc, [disc])
+
             for candidate_disc in equivs:
                 if candidate_disc not in schedule_map:
                     continue  # Ignora equivalentes que não existem no catálogo
-                if candidate_disc not in solution and can_add_discipline(candidate_disc, solution, schedule_map, prerequisites):
+
+                if candidate_disc not in solution and can_add_discipline(candidate_disc, solution, schedule_map, prerequisites, missing_disciplines):
                     feasible_candidates.append(candidate_disc)
-                    break
+                    break  # Não precisa checar outras equivalências
+
         if not feasible_candidates:
             break
+
         rcl = feasible_candidates[:k] if len(feasible_candidates) >= k else feasible_candidates
         chosen = random.choice(rcl)
         solution.append(chosen)
 
+        # Remove da lista de candidatos todas as equivalentes à escolhida
         to_remove = set()
         for disc in candidates:
             eqs = equivalences_map.get(disc, [disc])
             if chosen in eqs:
                 to_remove.add(disc)
+
         candidates -= to_remove
 
     return solution
@@ -110,9 +114,9 @@ def local_search(solution, missing_disciplines, catalog, prerequisites, equivale
 
                 if conflict_disc:
                     new_solution = [d for d in best_solution if d != conflict_disc]
-                    if can_add_discipline(candidate_disc, new_solution, schedule_map, prerequisites):
+                    if can_add_discipline(candidate_disc, new_solution, schedule_map, prerequisites, missing_disciplines):
                         new_solution.append(candidate_disc)
-                        if all(has_prerequisites(d, new_solution, prerequisites) for d in new_solution):
+                        if all(has_prerequisites(d, new_solution, prerequisites, missing_disciplines) for d in new_solution):
                             new_score = score(new_solution, rare_disciplines)
                             if new_score > best_score:
                                 best_solution = new_solution
@@ -120,9 +124,9 @@ def local_search(solution, missing_disciplines, catalog, prerequisites, equivale
                                 improved = True
                                 break
                 else:
-                    if can_add_discipline(candidate_disc, best_solution, schedule_map, prerequisites):
+                    if can_add_discipline(candidate_disc, best_solution, schedule_map, prerequisites, missing_disciplines):
                         new_solution = best_solution + [candidate_disc]
-                        if all(has_prerequisites(d, new_solution, prerequisites) for d in new_solution):
+                        if all(has_prerequisites(d, new_solution, prerequisites, missing_disciplines) for d in new_solution):
                             new_score = score(new_solution, rare_disciplines)
                             if new_score > best_score:
                                 best_solution = new_solution
@@ -134,6 +138,7 @@ def local_search(solution, missing_disciplines, catalog, prerequisites, equivale
                 break
 
     return best_solution
+
 
 
 def quality_score(solution, catalog_current, catalog_previous):
