@@ -10,6 +10,7 @@ from modules import pdfParser
 from modules import printHelper
 from modules import csvParser
 from modules.metaheuristic import grasp
+from modules.metaheuristic import AIS
 from IPython.display import display
 import pprint
 
@@ -55,10 +56,11 @@ def main():
     if args.mh == 'AIS':
         print("Executando o algoritmo AIS...")
 
-        best_solution, best_score = ais_algorithm(...)
-        print("Melhor solução encontrada:")
-        pprint.pprint(best_solution)
-        print(f"Pontuação: {best_score}")
+        # best_solution, best_score = AIS.ais_algorithm(...)
+        # print("Melhor solução encontrada:")
+        # pprint.pprint(best_solution)
+        # print(f"Pontuação: {best_score}")
+        AIS.ais_algorithm(structuredPdfData, availableDisciplines)
         helper.endTimer(st)
 
 
