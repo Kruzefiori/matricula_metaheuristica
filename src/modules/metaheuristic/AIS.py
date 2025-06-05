@@ -50,48 +50,60 @@
 # }
 
 import random
+import copy
 
-def ais_algorithm(studentHistory, offers):
+def ais_algorithm(studentHistory, offers, initialPopulation):
     bestPeriod = studentHistory.get('generalStatistics', {}).get('bestSemester', {}).get('period', 'N/A')
-    maxRecommendationLegth = studentHistory.get('statisticsBySemester', {}).get(bestPeriod, {}).get('totalMat', 0)
-    missingDisciplines = set(studentHistory.get('missingDisciplines', []))
-    availableDisciplines = set(offers.get('uniqueDisciplines', []))
+    maxRecommendationLength = studentHistory.get('statisticsBySemester', {}).get(bestPeriod, {}).get('totalMat', 0)
+    missingDisciplines = studentHistory.get('missingDisciplines', [])
+    availableDisciplines = offers.get('uniqueDisciplines', [])
     disciplinesByDayAndTime = offers.get('disciplinesByDayAndTime', {})
 
     # Disciplinas candidatas: pendentes e disponíveis
-    candidate_disciplines = list(missingDisciplines & availableDisciplines)
-    print("Disciplinas candidatas: ", candidate_disciplines)
-    
-    # Embaralha para construir soluções aleatórias
-    random.shuffle(candidate_disciplines)
-    
-    solution = []  # Disciplinas recomendadas
-    occupied_slots = set()  # Slots já ocupados: (dia, hora)
+    candidateDisciplines = list(set(missingDisciplines) & set(availableDisciplines))
+    print(f"Disciplinas candidatas: {candidateDisciplines}")
 
-    for disc in candidate_disciplines:
-        has_conflict = False
-        
-        # Verifica se a disciplina está alocada em algum dia e horário
-        for day, times in disciplinesByDayAndTime.items():
-            for time, disciplines in times.items():
-                if disc in disciplines:
-                    slot = (day, time)
-                    if slot in occupied_slots:
-                        has_conflict = True
-                        break
-            if has_conflict:
-                break
-        
-        if not has_conflict:
-            solution.append(disc)
+    all_solutions = []
 
-            # Marca os slots ocupados por essa disciplina
+    for _ in range(initialPopulation):
+        # Embaralhar as candidatas
+        random.shuffle(candidateDisciplines)
+
+        solution = []
+        occupied_slots = set()
+
+        for disc in candidateDisciplines:
+            # Verifica se a disciplina entra sem conflito
+            conflict = False
+
             for day, times in disciplinesByDayAndTime.items():
-                for time, disciplines in times.items():
-                    if disc in disciplines:
-                        occupied_slots.add((day, time))
+                for time, disciplines_at_time in times.items():
+                    if disc in disciplines_at_time:
+                        slot = f"{day}-{time}"
+                        if slot in occupied_slots:
+                            conflict = True
+                            break
+                if conflict:
+                    break
 
-        if len(solution) >= maxRecommendationLegth:
-            break
+            if not conflict:
+                solution.append(disc)
 
-    print("Solução recomendada: ", solution)
+                # Marca os horários como ocupados
+                for day, times in disciplinesByDayAndTime.items():
+                    for time, disciplines_at_time in times.items():
+                        if disc in disciplines_at_time:
+                            slot = f"{day}-{time}"
+                            occupied_slots.add(slot)
+
+            # Respeita o limite máximo de disciplinas
+            if len(solution) >= maxRecommendationLength:
+                break
+
+        all_solutions.append(solution)
+
+    for i, solution in enumerate(all_solutions):
+        print(f"Solução {i + 1}: {solution} (Tamanho: {len(solution)})")
+        
+    return all_solutions
+

@@ -60,7 +60,7 @@ def main():
         # print("Melhor solução encontrada:")
         # pprint.pprint(best_solution)
         # print(f"Pontuação: {best_score}")
-        AIS.ais_algorithm(structuredPdfData, availableDisciplines)
+        AIS.ais_algorithm(structuredPdfData, availableDisciplines, 10)
         helper.endTimer(st)
 
 
