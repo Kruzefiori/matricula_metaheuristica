@@ -49,10 +49,20 @@
 #   };
 # }
 
+# Example of architecture of functions:
+# def generate_initial_population(...)
+# evaluate_fitness(solution, prerequisites, available_disc, neighbor_disc): ...
+# def mutate_solution(solution, candidateDisciplines, constraints): ...
+# def select_best_solutions(population, scores, n_best): ...
+# def ais_algorithm(studentHistory, offers, initialPopulation=20, generations=10, clones_per_solution=3): ...
+
 import random
 import copy
 
-def ais_algorithm(studentHistory, offers, initialPopulation):
+# Auxiliary functions
+
+# Generates an initial population of solutions.
+def generate_initial_population(studentHistory, offers, initialPopulation):
     bestPeriod = studentHistory.get('generalStatistics', {}).get('bestSemester', {}).get('period', 'N/A')
     maxRecommendationLength = studentHistory.get('statisticsBySemester', {}).get(bestPeriod, {}).get('totalMat', 0)
     missingDisciplines = studentHistory.get('missingDisciplines', [])
@@ -61,8 +71,7 @@ def ais_algorithm(studentHistory, offers, initialPopulation):
 
     # Disciplinas candidatas: pendentes e disponíveis
     candidateDisciplines = list(set(missingDisciplines) & set(availableDisciplines))
-    print(f"Disciplinas candidatas: {candidateDisciplines}")
-
+    
     all_solutions = []
 
     for _ in range(initialPopulation):
@@ -102,8 +111,80 @@ def ais_algorithm(studentHistory, offers, initialPopulation):
 
         all_solutions.append(solution)
 
-    for i, solution in enumerate(all_solutions):
-        print(f"Solução {i + 1}: {solution} (Tamanho: {len(solution)})")
-        
     return all_solutions
 
+def evaluate_fitness(solution, prerequisites, available_disc, neighbor_disc):
+    score = 0
+    # Avalia a solução com base em critérios como:
+    # - Tipo de disciplina (obrigatória, optativa)
+    # - Duração (anual ou semestral)
+    # - Dependências (disciplinas que esta destrava)
+    # - Período ideal (simplificação - assumindo que todas são compatíveis)
+
+    for disc in solution:
+      # Tipo da disciplina
+      disc_prerequisites = prerequisites.get(disc, {})
+      discType = 1.0 if disc_prerequisites.get('isMandatory', False) else 0.5
+
+      # Duração da disciplina (anual se oferecida em ambos semestres)
+      is_annual = disc in available_disc.get('uniqueDisciplines', []) and disc in neighbor_disc.get('uniqueDisciplines', [])
+      duration = 1.0 if is_annual else 0.5
+
+      # Dependências (disciplinas que esta destrava)
+      blocking = 0
+      for other_disc, other_info in prerequisites.items():
+          if disc in other_info.get('prerequisites', []):
+              blocking += 0.2
+
+      # Período ideal (simplificação - assumindo que todas são compatíveis)
+      period = 0.5
+      score += discType + duration - blocking + period
+    return score
+
+
+
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# Main function to run the AIS algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def mutate_solution(solution, candidateDisciplines, constraints): ...
+def select_best_solutions(population, scores, n_best): ...
+
+
+# Main function to run the AIS algorithm
+def ais_algorithm(studentHistory, offers, neighborOffers, prerequisites, initialPopulation, generations, clones_per_solution):
+      population = generate_initial_population(studentHistory, offers, initialPopulation)
+    
+      for gen in range(generations):
+          scored_population = [(sol, evaluate_fitness(sol, prerequisites, offers, neighborOffers)) for sol in population]
+          scored_population.sort(key=lambda x: x[1], reverse=True)
+          for sol, score in scored_population:
+              print(f"Solution: {sol}, Score: {score}")
+          
+          top_solutions = [sol for sol, score in scored_population[:initialPopulation // 2]]
+
+      #     clones = []
+      #     for sol in top_solutions:
+      #         for _ in range(clones_per_solution):
+      #             mutated = mutate_solution(sol, candidateDisciplines, constraints)
+      #             clones.append(mutated)
+
+      #     all_solutions = top_solutions + clones
+      #     population = select_best_solutions(all_solutions, studentHistory, initialPopulation)
+
+      # best_solution = max(population, key=lambda sol: evaluate_solution(sol, studentHistory))
+      # return best_solution

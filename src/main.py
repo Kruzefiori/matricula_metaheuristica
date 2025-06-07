@@ -60,7 +60,10 @@ def main():
         # print("Melhor solução encontrada:")
         # pprint.pprint(best_solution)
         # print(f"Pontuação: {best_score}")
-        AIS.ais_algorithm(structuredPdfData, availableDisciplines, 10)
+        initialPopulation = 5
+        generations = 1
+        clones_per_solution = 3
+        AIS.ais_algorithm(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites, initialPopulation, generations, clones_per_solution)
         helper.endTimer(st)
 
 
