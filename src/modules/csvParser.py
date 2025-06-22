@@ -3,7 +3,6 @@ import pandas as pd
 
 #
 def parseCSVavailableDisciplines(period : str):
-    print(period)
     if period == "24.1":
         file = "horarios - 24.1"
     elif period == "24.2":

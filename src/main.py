@@ -36,8 +36,9 @@ def main():
     # Chama a função de recomendação escolhida
     if args.mh == 'grasp':  # Se o usuário escolheu GRASP
         print("Executando o algoritmo Grasp...")
-        pprint.pprint(structuredPdfData.get('statisticsBySemester'))
         # Extrair missing disciplines e histórico do structuredPdfData
+        #pprint.pprint(prerequisites)
+
         missing_disciplines = structuredPdfData.get('missingDisciplines', [])       
         best_solution, best_score = grasp.grasp(
             missing_disciplines,
@@ -47,7 +48,8 @@ def main():
             iterations=int(args.i),
             k=int(args.k),
             equivalences=equivalences,
-            statistics_by_semester = structuredPdfData.get('statisticsBySemester')
+            statistics_by_semester = structuredPdfData.get('statisticsBySemester'),
+            rpv = structuredPdfData.get('rpvBySemester')
         )
         print("Melhor solução encontrada:")
         pprint.pprint(best_solution)
