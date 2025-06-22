@@ -1,6 +1,35 @@
 import random
 from copy import deepcopy
 
+def recommend_max_disciplines(statistics_by_semester, max_limit=7):
+    if not statistics_by_semester:
+        return 4  # default se não houver histórico
+
+    # Ordena os semestres cronologicamente
+    sorted_semesters = sorted(statistics_by_semester.items())
+
+    total_weight = 0
+    weighted_sum = 0
+
+    for i, (_, stats) in enumerate(sorted_semesters):
+        total_mat = stats.get("totalMat", 0)
+        pct_apr = stats.get("pctApr", 0)
+        perf = total_mat * pct_apr
+
+        # Peso maior para os semestres mais recentes
+        weight = i + 1  # Ex: 1 para o mais antigo, 2, ..., N para o mais recente
+        total_weight += weight
+        weighted_sum += weight * perf
+
+    # Média ponderada de disciplinas aprovadas por semestre
+    avg_approved = weighted_sum / total_weight
+
+    # Arredondar para cima para ser menos conservador
+    recommended = round(avg_approved)
+
+    return max(2, min(recommended, max_limit))  # Limita entre 2 e 7
+
+
 def build_discipline_schedule_map(catalog):
     schedule_map = {}
     for day, times in catalog['disciplinesByDayAndTime'].items():
@@ -19,12 +48,34 @@ def has_prerequisites(disc, current_solution, prerequisites, missing_disciplines
     return True
 
 def disciplines_equivalences_map(equivalences):
-    mapping = {}
-    for eq in equivalences:
-        disc = eq['discipline']
-        eqs = eq['equivalences']
-        mapping[disc] = eqs
-    return mapping
+    bidirectional_map = {}
+
+    for group in equivalences:
+        all_equivs = group["equivalences"] + [group["discipline"]]
+
+        # Processa equivalências: transforma 'A + B' → ['A', 'B']
+        processed = []
+        for item in all_equivs:
+            parts = [part.strip() for part in item.split('+')]
+            if len(parts) > 1:
+                processed.append(parts)
+            else:
+                processed.append(parts[0])
+
+        # Para cada item no grupo, associe os demais como equivalentes
+        for item in processed:
+            key = tuple(item) if isinstance(item, list) else item
+            if key not in bidirectional_map:
+                bidirectional_map[key] = set()
+
+            for other in processed:
+                other_key = tuple(other) if isinstance(other, list) else other
+                bidirectional_map[key].add(other_key)
+
+    # Converte sets em listas para saída padronizada
+    return {k: list(v) for k, v in bidirectional_map.items()}
+
+
 
 def can_add_discipline(candidate_disc, current_solution, schedule_map, prerequisites, missing_disciplines):
     # Checar conflito de horários
@@ -38,11 +89,11 @@ def can_add_discipline(candidate_disc, current_solution, schedule_map, prerequis
     return has_prerequisites(candidate_disc, current_solution, prerequisites, missing_disciplines)
 
 
-def construct_solution(missing_disciplines, catalog, prerequisites, equivalences_map, schedule_map, k):
+def construct_solution(missing_disciplines, catalog, prerequisites, equivalences_map, schedule_map, k, max_disciplines):
     solution = []
     candidates = set(missing_disciplines)
 
-    while candidates:
+    while candidates and len(solution) < max_disciplines:
         feasible_candidates = []
 
         for disc in candidates:
@@ -50,29 +101,48 @@ def construct_solution(missing_disciplines, catalog, prerequisites, equivalences
 
             for candidate_disc in equivs:
                 if candidate_disc not in schedule_map:
-                    continue  # Ignora equivalentes que não existem no catálogo
+                    continue
 
                 if candidate_disc not in solution and can_add_discipline(candidate_disc, solution, schedule_map, prerequisites, missing_disciplines):
                     feasible_candidates.append(candidate_disc)
-                    break  # Não precisa checar outras equivalências
+                    break
 
         if not feasible_candidates:
             break
 
-        rcl = feasible_candidates[:k] if len(feasible_candidates) >= k else feasible_candidates
+        # Embaralha candidatos viáveis
+        random.shuffle(feasible_candidates)
+        n = len(feasible_candidates)
+
+        if n < 2:
+            slice_candidates = feasible_candidates
+        else:
+            i, j = sorted(random.sample(range(n), 2))  # dois pontos de corte
+            slice_candidates = feasible_candidates[i:j+1]
+
+        # Lista restrita dos melhores K candidatos nessa faixa (ordenado por raridade e prioridade)
+        def sort_key(disc):
+            return -int(disc in missing_disciplines)  # ou outro critério de prioridade
+
+        slice_candidates.sort(key=sort_key)
+        rcl = slice_candidates[:k] if len(slice_candidates) >= k else slice_candidates
+
+        if not rcl:
+            break
+
         chosen = random.choice(rcl)
         solution.append(chosen)
 
-        # Remove da lista de candidatos todas as equivalentes à escolhida
         to_remove = set()
         for disc in candidates:
-            eqs = equivalences_map.get(disc, [disc])
-            if chosen in eqs:
+            if chosen in equivalences_map.get(disc, [disc]):
                 to_remove.add(disc)
 
         candidates -= to_remove
 
     return solution
+
+
 
 def score(solution, rare_disciplines):
     total = 0
@@ -85,7 +155,7 @@ def score(solution, rare_disciplines):
 
 
 
-def local_search(solution, missing_disciplines, catalog, prerequisites, equivalences_map, schedule_map, rare_disciplines):
+def local_search(solution, missing_disciplines, catalog, prerequisites, equivalences_map, schedule_map, rare_disciplines, max_disciplines):
     best_solution = solution[:]
     best_score = score(best_solution, rare_disciplines)
     improved = True
@@ -98,13 +168,11 @@ def local_search(solution, missing_disciplines, catalog, prerequisites, equivale
             equivs = equivalences_map.get(cand, [cand])
 
             for candidate_disc in equivs:
-                if candidate_disc not in schedule_map:
-                    continue  # Ignorar equivalentes fora do catálogo
-                if candidate_disc in best_solution:
+                if candidate_disc not in schedule_map or candidate_disc in best_solution:
                     continue
 
-                conflict_disc = None
                 candidate_schedule = schedule_map.get(candidate_disc, set())
+                conflict_disc = None
 
                 for sol_disc in best_solution:
                     sol_schedule = schedule_map.get(sol_disc, set())
@@ -112,9 +180,10 @@ def local_search(solution, missing_disciplines, catalog, prerequisites, equivale
                         conflict_disc = sol_disc
                         break
 
+                # Troca com disciplina em conflito
                 if conflict_disc:
                     new_solution = [d for d in best_solution if d != conflict_disc]
-                    if can_add_discipline(candidate_disc, new_solution, schedule_map, prerequisites, missing_disciplines):
+                    if len(new_solution) < max_disciplines and can_add_discipline(candidate_disc, new_solution, schedule_map, prerequisites, missing_disciplines):
                         new_solution.append(candidate_disc)
                         if all(has_prerequisites(d, new_solution, prerequisites, missing_disciplines) for d in new_solution):
                             new_score = score(new_solution, rare_disciplines)
@@ -124,7 +193,8 @@ def local_search(solution, missing_disciplines, catalog, prerequisites, equivale
                                 improved = True
                                 break
                 else:
-                    if can_add_discipline(candidate_disc, best_solution, schedule_map, prerequisites, missing_disciplines):
+                    # Adiciona nova, mas só se respeitar limite
+                    if len(best_solution) < max_disciplines and can_add_discipline(candidate_disc, best_solution, schedule_map, prerequisites, missing_disciplines):
                         new_solution = best_solution + [candidate_disc]
                         if all(has_prerequisites(d, new_solution, prerequisites, missing_disciplines) for d in new_solution):
                             new_score = score(new_solution, rare_disciplines)
@@ -175,30 +245,35 @@ def get_rare_disciplines(current_catalog, previous_catalog):
     return rare
 
 
-def grasp(missing_disciplines, catalog_current, prerequisites, catalog_previous=None, iterations=100, k=3, equivalences=None):
-    equivalences_map = {}
-    if equivalences:
-        equivalences_map = disciplines_equivalences_map(equivalences)
-    else:
-        equivalences_map = {d: [d] for d in missing_disciplines}
-
+def grasp(missing_disciplines, catalog_current, prerequisites, catalog_previous=None, iterations=100, k=3, equivalences=None, statistics_by_semester=None):
+    equivalences_map = disciplines_equivalences_map(equivalences) if equivalences else {d: [d] for d in missing_disciplines}
     schedule_map = build_discipline_schedule_map(catalog_current)
 
+    max_disciplines = recommend_max_disciplines(statistics_by_semester) if statistics_by_semester else 4
     best_solution = []
     best_score = -1
 
     for _ in range(iterations):
-        
-        solution = construct_solution(missing_disciplines, catalog_current, prerequisites, equivalences_map, schedule_map, k)
-        solution = local_search(solution, missing_disciplines, catalog_current, prerequisites, equivalences_map, schedule_map , get_rare_disciplines(catalog_current, catalog_previous))
+        solution = construct_solution(missing_disciplines, catalog_current, prerequisites, equivalences_map, schedule_map, k, max_disciplines)
 
-        if catalog_previous is not None:
-            scoreS =  score(solution, get_rare_disciplines(catalog_current, catalog_previous))# Se tiver catálogo anterior, usa a função de score
+        solution = local_search(
+            solution,
+            missing_disciplines,
+            catalog_current,
+            prerequisites,
+            equivalences_map,
+            schedule_map,
+            get_rare_disciplines(catalog_current, catalog_previous),
+            max_disciplines
+        )
+
+        if catalog_previous:
+            scoreS = score(solution, get_rare_disciplines(catalog_current, catalog_previous))
         else:
-            scoreS = len(solution)  # Se não tiver catálogo anterior, usa tamanho da solução
+            scoreS = len(solution)
 
         if scoreS > best_score:
             best_score = scoreS
             best_solution = solution
 
-    return best_solution, score(solution, get_rare_disciplines(catalog_current, catalog_previous))
+    return best_solution, best_score

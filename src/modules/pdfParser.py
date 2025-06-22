@@ -113,6 +113,6 @@ def parserPdf(pdf_name, update_json):
         "missingDisciplines" : json_data["pendentes"]
     }
     # save structured data to a txt file
-    #helper.saveIntoTxt(json_name , structured_data)
+    helper.saveIntoTxt(json_name , structured_data)
     statistics.bestAndWorsePeriod(structured_data)
     return structured_data

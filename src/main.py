@@ -3,7 +3,6 @@
 # - Victor Kruze Fiori
 # - Augusto Lázaro
 
-# from modules import interface
 import json
 from modules import helper
 from modules import pdfParser
@@ -28,7 +27,7 @@ def main():
     if args.period == "24.2":
         neighborDisciplines = csvParser.parseCSVavailableDisciplines("25.1")
     with open('datasets/prerequisites/SIN_pre-requisitos.json', 'r', encoding='utf-8') as f:
-            sin = json.load(f)
+        sin = json.load(f)
     with open('datasets/prerequisites/CCO_pre-requisitos.json', 'r', encoding='utf-8') as f:
         cco = json.load(f)
     # Combinar as disciplinas (o último dicionário sobrescreve as chaves duplicadas)
@@ -37,6 +36,7 @@ def main():
     # Chama a função de recomendação escolhida
     if args.mh == 'grasp':  # Se o usuário escolheu GRASP
         print("Executando o algoritmo Grasp...")
+        pprint.pprint(structuredPdfData.get('statisticsBySemester'))
         # Extrair missing disciplines e histórico do structuredPdfData
         missing_disciplines = structuredPdfData.get('missingDisciplines', [])       
         best_solution, best_score = grasp.grasp(
@@ -46,7 +46,8 @@ def main():
             catalog_previous=neighborDisciplines,  # catálogo anterior para priorizar disciplinas unicas no ano
             iterations=int(args.i),
             k=int(args.k),
-            equivalences=equivalences
+            equivalences=equivalences,
+            statistics_by_semester = structuredPdfData.get('statisticsBySemester')
         )
         print("Melhor solução encontrada:")
         pprint.pprint(best_solution)
