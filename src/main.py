@@ -10,6 +10,8 @@ from modules import printHelper
 from modules import csvParser
 from modules.metaheuristic import grasp
 from modules.metaheuristic import AIS
+from modules.heuristic.constructive import greedyConstructive , randomizedConstructive
+from modules.heuristic.refinement import refineByDisciplineAvailable , refineByEquivalence
 from IPython.display import display
 import pprint
 import matplotlib.pyplot as plt
@@ -51,6 +53,52 @@ def main():
     prerequisites = {**sin, **cco}
     equivalences = csvParser.parseCSVequivalences()
     max_disciplines = helper.recommend_max_disciplines(structuredPdfData.get('statisticsBySemester', {}))
+
+    if args.constructive == 'greedy':
+        print("Executando o algoritmo guloso...")
+        # Chama a função de recomendação gulosa
+        solutions  , formatedData = greedyConstructive.createGreedySolution(availableDisciplines , structuredPdfData , neighborDisciplines)
+        pprint.pprint(solutions[0])
+        
+    elif args.constructive == 'random':
+        print("Executando o algoritmo aleatório...")
+        # Chama a função de recomendação aleatória
+        # obtém as disciplinas com pré-requisitos de dois arquivos JSON: um do curso de CCO e outro do curso de SIN
+        # Carregar os arquivos JSON
+        with open('datasets/prerequisites/SIN_pre-requisitos.json', 'r', encoding='utf-8') as f:
+            sin = json.load(f)
+
+        with open('datasets/prerequisites/CCO_pre-requisitos.json', 'r', encoding='utf-8') as f:
+            cco = json.load(f)
+
+        # Combinar as disciplinas (o último dicionário sobrescreve as chaves duplicadas)
+        prerequisites = {**sin, **cco}
+
+        # Chama a função de recomendação aleatória
+        # randomizedConstructive.random_constructive(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites)
+        randomBestSolution, randomBestScore, randomExcecutionTime = randomizedConstructive.random_constructive(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites)
+        print('Melhor solução encontrada:', randomBestSolution)
+        print('Pontuação da melhor solução:', randomBestScore)
+        print('Tempo de execução:', randomExcecutionTime)
+        
+
+    if args.refinement == 'discipline':
+        print("Executando o algoritmo de refinamento local...")
+        # Chama a função de refinamento local
+        discRefinedSolutions, discRefinedScore, discExecutionTime = refineByDisciplineAvailable.local_search(randomBestSolution, randomBestScore, structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites, 1000, 50)
+        print('Melhor solução encontrada:', discRefinedSolutions)
+        print('Pontuação da melhor solução:', discRefinedScore)
+        print('Tempo de execução:', discExecutionTime)
+    elif args.refinement == 'score':
+        print("Executando o algoritmo de refinamento por pontuação...")
+        # Chama a função de refinamento por pontuação
+        refinedSolutions = refineByEquivalence.refinement(solutions, structuredPdfData['aprBySemester'], equivalences, formatedData)
+        
+        pprint.pprint(solutions)
+        pprint.pprint(refinedSolutions)
+        helper.endTimer(st)
+
+
     # Chama a função de recomendação escolhida
     if args.mh == 'grasp':  # Se o usuário escolheu GRASP
         #python src/main.py --period "25.1" --mh "grasp" --update_json "y" --dataset_name "historico_SIN-5"
@@ -103,7 +151,7 @@ def main():
         )
         helper.endTimer(st)
         
-        print("Best solution found by AIS:")
+        print("Melhor solução encontrada:")
         pprint.pprint(best_solution_AIS)
         print(f"Score: {best_score_AIS}")
 

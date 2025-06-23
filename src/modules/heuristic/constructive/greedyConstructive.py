@@ -1,13 +1,11 @@
 import json
 from collections import defaultdict
 from modules.heuristic.helpers import helper
-import pprint
 import itertools
 
 def createGreedySolution(availableDisciplines, structuredPdfData , neighborDisciplines):
     formatedData = helper.organizeData(availableDisciplines, neighborDisciplines)
     recomendations = getDisciplinesGreedly(structuredPdfData, formatedData)
-    pprint.pprint(formatedData)
     return recomendations , formatedData
 
 
