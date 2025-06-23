@@ -12,7 +12,24 @@ from modules.metaheuristic import grasp
 from modules.metaheuristic import AIS
 from IPython.display import display
 import pprint
+import matplotlib.pyplot as plt
 
+import json
+
+def extract_all_disciplines(disciplinas_com_equivalencias):
+    todas = set()
+
+    for item in disciplinas_com_equivalencias:
+        # Adiciona o código principal
+        todas.add(item["discipline"])
+
+        # Processa cada código de equivalência
+        for equivalencia in item["equivalences"]:
+            # Substitui '+' por ',' e divide tudo em códigos individuais
+            codigos = equivalencia.replace("+", ",").replace(" ", "").split(",")
+            todas.update(codigos)
+
+    return sorted(todas)
 
 
 def main():
@@ -61,16 +78,72 @@ def main():
     if args.mh == 'AIS':
         print("Executando o algoritmo AIS...")
 
-        # best_solution, best_score = AIS.ais_algorithm(...)
-        # print("Melhor solução encontrada:")
-        # pprint.pprint(best_solution)
-        # print(f"Pontuação: {best_score}")
-        initialPopulation = 5
-        generations = 1
-        clones_per_solution = 3
-        AIS.ais_algorithm(structuredPdfData, availableDisciplines, neighborDisciplines, prerequisites, initialPopulation, generations, clones_per_solution)
-        helper.endTimer(st)
+        initialPopulation = int(args.initial_population)
+        generations = int(args.generations)
+        clones_per_solution = int(args.clones_per_solution)
+        diversification_rate = float(args.diversification_rate)
+        convergence_factor = float(args.convergence_factor)
+        supress_factor = float(args.supress_factor)
 
+        all_disciplines = extract_all_disciplines(equivalences)
+
+        best_solution_AIS, best_score_AIS, best_scores_per_generation = AIS.ais_algorithm(
+            studentHistory=structuredPdfData,
+            allDisciplines=all_disciplines,
+            offers=availableDisciplines,
+            neighborOffers=neighborDisciplines,
+            prerequisites=prerequisites,
+            maxRecommendationLength= max_disciplines,
+            initialPopulation=initialPopulation,
+            generations=generations,
+            clones_per_solution=clones_per_solution,
+            diversification_rate=diversification_rate,
+            convergence_factor=convergence_factor,
+            suppress_factor=supress_factor
+        )
+        helper.endTimer(st)
+        
+        print("Best solution found by AIS:")
+        pprint.pprint(best_solution_AIS)
+        print(f"Score: {best_score_AIS}")
+
+        print("Best scores per generation:")
+        for i, score in enumerate(best_scores_per_generation):
+            if i == len(best_scores_per_generation) - 1:
+                print(f"{score:.2f}")
+            else:
+                print(f"{score:.2f}, ", end="")
+
+        # Número de iterações (eixo x)
+        iterations = list(range(1, len(best_scores_per_generation) + 1))
+
+        # Criando o gráfico
+        plt.plot(iterations, best_scores_per_generation, marker='o', linestyle='-', color='blue')
+        plt.title('Progresso do Score ao Longo das gerações')
+        plt.xlabel('Iteração')
+        plt.ylabel('Score')
+        plt.grid(True)
+        plt.tight_layout()
+
+        # Exibe o gráfico
+        plt.show()
+        
+        # Adicionar os resultados ao arquivo de texto AIS_results.txt. Para cada nova execução, os resultados serão adicionados ao final do arquivo.
+        # with open("AIS_results.txt", "a", encoding="utf-8") as f:
+        #     f.write(f"Dataset: {args.dataset_name}\n\n")
+        #     f.write(f"Parâmetros utilizados: População Inicial:\n{initialPopulation}\n Gerações: {generations}\n Clones por Solução: {clones_per_solution}\n Taxa de Diversificação: {diversification_rate}\n Limite de Convergência: {convergence_factor}\n Fator de Supressão: {supress_factor}\n")
+        #     f.write("Melhor solução encontrada pelo AIS: ")
+        #     f.write(f"{best_solution_AIS}\n")
+        #     f.write(f"Pontuação: {best_score_AIS}\n")
+        #     f.write("Histórico de pontuações por geração: [")
+        #     for i, score in enumerate(best_scores_per_generation):
+        #         # f.write(f"{score:.2f}, ")
+        #         if i == len(best_scores_per_generation) - 1:
+        #             f.write(f"{score:.2f}")
+        #         else:
+        #             f.write(f"{score:.2f}, ")
+        #     f.write("]\n")
+        #     f.write("-" * 50 + "\n\n")
 
 if __name__ == "__main__":
     main()

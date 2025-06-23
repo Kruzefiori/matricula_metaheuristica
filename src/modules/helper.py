@@ -47,6 +47,46 @@ def argsParser():
         help="iterações para o GRASP",
         default=100
     )
+    # args.initial_population
+    # args.generations
+    # args.clones_per_solution
+    # args.diversification_rate
+    argsParser.add_argument(
+        "--initial_population",
+        type=str,
+        help="Tamanho da população inicial para o AIS",
+        default=20
+    )
+    argsParser.add_argument(
+        "--generations",
+        type=str,
+        help="Número de gerações para o AIS",
+        default=100
+    )
+    argsParser.add_argument(
+        "--clones_per_solution",
+        type=str,
+        help="Número de clones por solução para o AIS",
+        default=3
+    )
+    argsParser.add_argument(
+        "--diversification_rate",
+        type=str,
+        help="Taxa de diversificação para o AIS",
+        default=0.2
+    )
+    argsParser.add_argument(
+        "--convergence_factor",
+        type=str,
+        help="Limite de convergência para o AIS",
+        default=0.01
+    )
+    argsParser.add_argument(
+        "--supress_factor",
+        type=str,
+        help="Fator de supressão para o AIS",
+        default=0.9
+    )
     return argsParser.parse_args()
 
 #checa se o Json já existe para não precisar criar novamente (é um processo demorado ler o pdf) 

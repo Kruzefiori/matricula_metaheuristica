@@ -51,89 +51,59 @@
 
 import random
 import copy
+from modules.metaheuristic import score
 
 # Auxiliary functions
 
 # Generates an initial population of solutions.
-def generate_initial_population(studentHistory, offers, initialPopulation):
+def generate_initial_population(studentHistory, allDisciplines, initialPopulation):
     bestPeriod = studentHistory.get('generalStatistics', {}).get('bestSemester', {}).get('period', 'N/A')
     maxRecommendationLength = studentHistory.get('statisticsBySemester', {}).get(bestPeriod, {}).get('totalMat', 0)
-    missingDisciplines = studentHistory.get('missingDisciplines', [])
-    availableDisciplines = offers.get('uniqueDisciplines', [])
-    disciplinesByDayAndTime = offers.get('disciplinesByDayAndTime', {})
 
-    # Disciplinas candidatas: pendentes e disponíveis
-    candidateDisciplines = list(set(missingDisciplines) & set(availableDisciplines))
-    
     all_solutions = []
 
     for _ in range(initialPopulation):
-        # Embaralhar as candidatas
-        random.shuffle(candidateDisciplines)
+        # Define aleatoriamente quantas disciplinas essa solução terá (entre 1 e o máximo)
+        num_disciplines = random.randint(1, maxRecommendationLength)
 
-        solution = []
-        occupied_slots = set()
-
-        for disc in candidateDisciplines:
-            # Verifica se a disciplina entra sem conflito
-            conflict = False
-
-            for day, times in disciplinesByDayAndTime.items():
-                for time, disciplines_at_time in times.items():
-                    if disc in disciplines_at_time:
-                        slot = f"{day}-{time}"
-                        if slot in occupied_slots:
-                            conflict = True
-                            break
-                if conflict:
-                    break
-
-            if not conflict:
-                solution.append(disc)
-
-                # Marca os horários como ocupados
-                for day, times in disciplinesByDayAndTime.items():
-                    for time, disciplines_at_time in times.items():
-                        if disc in disciplines_at_time:
-                            slot = f"{day}-{time}"
-                            occupied_slots.add(slot)
-
-            # Respeita o limite máximo de disciplinas
-            if len(solution) >= maxRecommendationLength:
-                break
+        # Escolhe disciplinas aleatórias, sem se preocupar com conflitos ou restrições
+        solution = random.sample(allDisciplines, min(num_disciplines, len(allDisciplines)))
 
         all_solutions.append(solution)
 
     return all_solutions
 
+def get_rare_disciplines(current_catalog, previous_catalog):
+    current_set = set(current_catalog)
+    previous_set = set(previous_catalog)
+    return current_set - previous_set
+
+def get_disciplines_intersection(rpvBySemester, other_list):
+    all_disciplines = set()
+    for semestre, disciplinas in rpvBySemester.items():
+        for item in disciplinas:
+            all_disciplines.add(item['disc'])
+
+    resultado = list(all_disciplines.intersection(set(other_list)))
+    return resultado
+
+def count_prerequisite_frequency(prerequisites):
+    freq = {}
+    for disc_info in prerequisites.values():
+        for prereq in disc_info.get('prerequisites', []):
+            freq[prereq] = freq.get(prereq, 0) + 1
+    return freq
+
+
 # Evaluates the fitness of a solution based on various criteria.
-def evaluate_fitness(solution, prerequisites, available_disc, neighbor_disc):
-    score = 0
+def evaluate_fitness(solution, catalog_current, catalog_previous, rpv, missing_disciplines, prerequisites):
+    rare = get_rare_disciplines(catalog_current, catalog_previous)
+    reproved = get_disciplines_intersection(rpv, missing_disciplines) if rpv else []
+    prereq_freq = count_prerequisite_frequency(prerequisites)
+    fitness = score.score(solution=solution, rare_disciplines=rare, reproved=reproved, prereq_freq=prereq_freq)
 
-    # Avalia a solução com base em critérios como tipo de disciplina, duração, dependências e período ideal
+    return fitness
 
-    # Itera sobre as disciplinas na solução
-    for disc in solution:
-      # Tipo da disciplina
-      disc_prerequisites = prerequisites.get(disc, {})
-      discType = 1.0 if disc_prerequisites.get('isMandatory', False) else 0.5
-
-      # Duração da disciplina (anual se oferecida em ambos semestres)
-      is_annual = disc in available_disc.get('uniqueDisciplines', []) and disc in neighbor_disc.get('uniqueDisciplines', [])
-      duration = 1.0 if is_annual else 0.5
-
-      # Dependências (disciplinas que esta destrava)
-      blocking = 0
-      for other_disc, other_info in prerequisites.items():
-          if disc in other_info.get('prerequisites', []):
-              blocking += 0.2
-
-      # Período ideal (simplificação - assumindo que todas são compatíveis)
-      period = 0.5
-      score += discType + duration - blocking + period
-
-    # Retorna a pontuação total da solução
-    return score
 
 # Gets the occupied slots from a solution based on the disciplines and their schedule.
 def get_occupied_slots(solution, disciplinesByDayAndTime):
@@ -197,65 +167,94 @@ def mutate_solution(solution, studentHistory, offers, maxRecommendationLength):
     return mutated
 
 # Selects the best solutions from a list of all solutions based on their fitness scores.
-def select_best_solutions(all_solutions, prerequisites, offers, neighborOffers, population_size):
-    # Avalia todas as soluções
-    scored = [(sol, evaluate_fitness(sol, prerequisites, offers, neighborOffers)) for sol in all_solutions]
-    
-    # Ordena por score (maior primeiro)
+def select_best_solutions(all_solutions, prerequisites, offers, neighborOffers, rpv, missing_disciplines, population_size):
+    scored = [
+        (sol, evaluate_fitness(sol, offers, neighborOffers, rpv, missing_disciplines, prerequisites))
+        for sol in all_solutions
+    ]
     scored.sort(key=lambda x: x[1], reverse=True)
-
-    # Retorna apenas as soluções, sem o score
-    best_solutions = [sol for sol, score in scored[:population_size]]
-
+    best_solutions = [sol for sol, _ in scored[:population_size]]
     return best_solutions
+
+
+def similarity(sol1, sol2):
+    set1, set2 = set(sol1), set(sol2)
+    intersection = len(set1 & set2)
+    union = len(set1 | set2)
+    return intersection / union if union else 1.0  # Similaridade de Jaccard
+
+
+def suppress_similar_solutions(solutions, threshold=0.9):
+    suppressed = []
+    for sol in solutions:
+        if all(similarity(sol, other) < threshold for other in suppressed):
+            suppressed.append(sol)
+    return suppressed
 
 
 # --------------------------------------------------------------------------------------------------------------------
 # Main function to run the AIS algorithm
-def ais_algorithm(studentHistory, offers, neighborOffers, prerequisites, initialPopulation, generations, clones_per_solution):
-    """
-    Runs the Artificial Immune System (AIS) algorithm to optimize course recommendations.
-    The AIS algorithm follows these steps:
-    * INITIALIZATION: Generate an initial population of solutions based on the student's history and available courses.
-    * EVALUATION: Evaluate the fitness of each solution based on criteria such as course type, duration, dependencies, and ideal period.
-    * SELECTION: Select the best solutions based on their fitness scores.
-    * CLONING and MUTATION: For each selected solution, create clones with slight mutations to explore the solution space.
-    ...
-    """
+
+def ais_algorithm(studentHistory, allDisciplines, offers, neighborOffers, prerequisites, maxRecommendationLength, initialPopulation=20, generations=100, clones_per_solution=3, diversification_rate=0.9, convergence_factor=0, suppress_factor=0.9):
     bestPeriod = studentHistory.get('generalStatistics', {}).get('bestSemester', {}).get('period', 'N/A')
-    maxRecommendationLength = studentHistory.get('statisticsBySemester', {}).get(bestPeriod, {}).get('totalMat', 0)
+    rpv = studentHistory.get('rpvBySemester')
+    missing_disciplines = studentHistory.get('missingDisciplines', [])
 
-    # INITIANIZATION
-    population = generate_initial_population(studentHistory, offers, initialPopulation)
-  
+
+    population = generate_initial_population(studentHistory, allDisciplines, initialPopulation)
+
+    # Lista para armazenar as melhores soluções encontradas (e sua pontuação) a cada geração
+    best_solutions_per_generation = []
+
     for gen in range(generations):
-        
-        # EVALUATION
-        scored_population = [(sol, evaluate_fitness(sol, prerequisites, offers, neighborOffers)) for sol in population]
-        print(f"Generation {gen+1} scored population:")
-        for i, (sol, score) in enumerate(scored_population):
-            print(f"Solution {i+1}: {sol} - Score: {score}")
-        
-        # SELECTION
+        # Avaliação
+        scored_population = [(sol, evaluate_fitness(sol, offers, neighborOffers, rpv, missing_disciplines, prerequisites)) for sol in population]
         scored_population.sort(key=lambda x: x[1], reverse=True)
-        top_solutions = [sol for sol, score in scored_population[:initialPopulation // 2]] # Change this if you want a different selection size
 
+        # Seleção
+        top_solutions = [sol for sol, score in scored_population[:initialPopulation // 2]]
+
+        # Clonagem + Mutação
         clones = []
-        # CLONING and MUTATION
         for sol in top_solutions:
             for _ in range(clones_per_solution):
                 mutated = mutate_solution(sol, studentHistory, offers, maxRecommendationLength)
+
                 clones.append(mutated)
 
-        all_solutions = top_solutions + clones
-        print(f"All solutions after generation {gen+1}:")
-        for i, sol in enumerate(all_solutions):
-            print(f"Solution {i+1}: {sol} - Score: {evaluate_fitness(sol, prerequisites, offers, neighborOffers)}")
-        
-        # REPLACEMENT
-        population = select_best_solutions(all_solutions, prerequisites, offers, neighborOffers, population_size=initialPopulation)
+        # Diversificação: gera novas soluções aleatórias
+        diversification_count = int(initialPopulation * diversification_rate) 
+        new_random_solutions = generate_initial_population(studentHistory, allDisciplines, diversification_count)
 
-    best_solution = max(population, key=lambda sol: evaluate_fitness(sol, prerequisites, offers, neighborOffers))
-    print(f"Best solution found: {best_solution} - Score: {evaluate_fitness(best_solution, prerequisites, offers, neighborOffers)}")
-    return best_solution
+        # Substituição: nova população é composta pelos melhores + clones + novos aleatórios
+        all_solutions = top_solutions + clones + new_random_solutions
 
+        # Aplica supressão à população antes de selecionar os melhores
+        unique_solutions = suppress_similar_solutions(all_solutions, threshold=suppress_factor)
+        population = select_best_solutions(unique_solutions, prerequisites, offers,neighborOffers, rpv, missing_disciplines, population_size=initialPopulation)
+
+
+        # Armazena a melhor solução da geração atual
+        best_solution = max(population, key=lambda sol: evaluate_fitness(sol, offers, neighborOffers, rpv, missing_disciplines, prerequisites))
+        best_solutions_per_generation.append((best_solution, evaluate_fitness(best_solution, offers, neighborOffers, rpv, missing_disciplines, prerequisites)))
+
+        # Critério de convergência (aplicado apenas se convergence_factor > 0)
+        if convergence_factor > 0:
+            # Calcula o tamanho da janela de convergência
+            window_size = max(1, int(generations * convergence_factor))
+
+            # Verifica se houve convergência nas últimas window_size gerações
+            if len(best_solutions_per_generation) >= window_size:
+              last_scores = [score for _, score in best_solutions_per_generation[-window_size:]]
+              if max(last_scores) - min(last_scores) < 0.001:  # tolerância pequena
+                break
+
+
+
+    # Critério de parada: número de gerações
+    best_solution = max(population, key=lambda sol: evaluate_fitness(sol, offers, neighborOffers, rpv, missing_disciplines, prerequisites))
+    best_score = evaluate_fitness(best_solution, offers, neighborOffers, rpv, missing_disciplines, prerequisites)
+
+    # Retorna a melhor solução encontrada, sua pontuação e o histórico das pontuações da melhor solução por geração
+    best_scores_per_generation = [score for _, score in best_solutions_per_generation]
+    return best_solution, best_score, best_scores_per_generation
