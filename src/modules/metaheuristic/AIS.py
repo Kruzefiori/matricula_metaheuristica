@@ -56,9 +56,9 @@ from modules.metaheuristic import score
 # Auxiliary functions
 
 # Generates an initial population of solutions.
-def generate_initial_population(studentHistory, allDisciplines, initialPopulation):
+def generate_initial_population(studentHistory, allDisciplines, initialPopulation, maxRecommendationLength):
+    
     bestPeriod = studentHistory.get('generalStatistics', {}).get('bestSemester', {}).get('period', 'N/A')
-    maxRecommendationLength = studentHistory.get('statisticsBySemester', {}).get(bestPeriod, {}).get('totalMat', 0)
 
     all_solutions = []
 
@@ -201,7 +201,7 @@ def ais_algorithm(studentHistory, allDisciplines, offers, neighborOffers, prereq
     missing_disciplines = studentHistory.get('missingDisciplines', [])
 
 
-    population = generate_initial_population(studentHistory, allDisciplines, initialPopulation)
+    population = generate_initial_population(studentHistory, allDisciplines, initialPopulation, maxRecommendationLength)
 
     # Lista para armazenar as melhores soluções encontradas (e sua pontuação) a cada geração
     best_solutions_per_generation = []
@@ -224,7 +224,7 @@ def ais_algorithm(studentHistory, allDisciplines, offers, neighborOffers, prereq
 
         # Diversificação: gera novas soluções aleatórias
         diversification_count = int(initialPopulation * diversification_rate) 
-        new_random_solutions = generate_initial_population(studentHistory, allDisciplines, diversification_count)
+        new_random_solutions = generate_initial_population(studentHistory, allDisciplines, diversification_count, maxRecommendationLength)
 
         # Substituição: nova população é composta pelos melhores + clones + novos aleatórios
         all_solutions = top_solutions + clones + new_random_solutions
