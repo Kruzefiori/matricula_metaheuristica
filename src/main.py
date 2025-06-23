@@ -35,6 +35,7 @@ def main():
     equivalences = csvParser.parseCSVequivalences()
     # Chama a função de recomendação escolhida
     if args.mh == 'grasp':  # Se o usuário escolheu GRASP
+        #python src/main.py --period "25.1" --mh "grasp" --update_json "y" --dataset_name "historico_SIN-5"
         print("Executando o algoritmo Grasp...")
         # Extrair missing disciplines e histórico do structuredPdfData
         #pprint.pprint(prerequisites)

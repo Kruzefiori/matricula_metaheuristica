@@ -1,5 +1,6 @@
 import random
 from copy import deepcopy
+from modules.metaheuristic.score import score
 
 def recommend_max_disciplines(statistics_by_semester, max_limit=7):
     if not statistics_by_semester:
@@ -241,63 +242,6 @@ def count_prerequisite_frequency(prerequisites):
         for prereq in disc_info.get('prerequisites', []):
             freq[prereq] = freq.get(prereq, 0) + 1
     return freq
-
-
-def score(solution, rare_disciplines, reproved, prereq_freq):
-    total = 0.0
-    base_weight = 1.0
-
-    for idx, disc in enumerate(solution):
-        peso = base_weight
-        # Peso extra que decresce conforme a posição para dar granularidade
-        position_factor = 1 / (idx + 1)
-
-        if isinstance(disc, tuple):
-            for d in disc:
-                p = base_weight
-                if d in rare_disciplines:
-                    p += 0.7  # peso fracionário para mais granularidade
-                if d in reproved:
-                    p += 1.5
-                p += prereq_freq.get(d, 0) * 0.3
-                p += position_factor * 0.1  # influência da posição
-                total += p
-        else:
-            if disc in rare_disciplines:
-                peso += 0.7
-            if disc in reproved:
-                peso += 1.5
-            peso += prereq_freq.get(disc, 0) * 0.3
-            peso += position_factor * 0.1
-            total += peso
-
-    return total
-
-
-
-def quality_score(solution, catalog_current, catalog_previous):
-    weight_new = 2
-    weight_old = 1
-
-    prev_disciplines = set()
-    for day, times in catalog_previous['disciplinesByDayAndTime'].items():
-        for time, discs in times.items():
-            prev_disciplines.update(discs)
-
-    curr_disciplines = set()
-    for day, times in catalog_current['disciplinesByDayAndTime'].items():
-        for time, discs in times.items():
-            curr_disciplines.update(discs)
-
-    score_val = 0
-    for disc in solution:
-        if disc not in curr_disciplines:
-            continue
-        if disc not in prev_disciplines:
-            score_val += weight_new
-        else:
-            score_val += weight_old
-    return score_val
 
 
 def get_rare_disciplines(current_catalog, previous_catalog):
