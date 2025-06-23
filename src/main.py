@@ -107,26 +107,26 @@ def main():
         pprint.pprint(best_solution_AIS)
         print(f"Score: {best_score_AIS}")
 
-        print("Best scores per generation:")
-        for i, score in enumerate(best_scores_per_generation):
-            if i == len(best_scores_per_generation) - 1:
-                print(f"{score:.2f}")
-            else:
-                print(f"{score:.2f}, ", end="")
+        # print("Best scores per generation:")
+        # for i, score in enumerate(best_scores_per_generation):
+        #     if i == len(best_scores_per_generation) - 1:
+        #         print(f"{score:.2f}")
+        #     else:
+        #         print(f"{score:.2f}, ", end="")
 
-        # Número de iterações (eixo x)
-        iterations = list(range(1, len(best_scores_per_generation) + 1))
+        # # Número de iterações (eixo x)
+        # iterations = list(range(1, len(best_scores_per_generation) + 1))
 
-        # Criando o gráfico
-        plt.plot(iterations, best_scores_per_generation, marker='o', linestyle='-', color='blue')
-        plt.title('Progresso do Score ao Longo das gerações')
-        plt.xlabel('Iteração')
-        plt.ylabel('Score')
-        plt.grid(True)
-        plt.tight_layout()
+        # # Criando o gráfico
+        # plt.plot(iterations, best_scores_per_generation, marker='o', linestyle='-', color='blue')
+        # plt.title('Progresso do Score ao Longo das gerações')
+        # plt.xlabel('Iteração')
+        # plt.ylabel('Score')
+        # plt.grid(True)
+        # plt.tight_layout()
 
-        # Exibe o gráfico
-        plt.show()
+        # # Exibe o gráfico
+        # plt.show()
         
         # Adicionar os resultados ao arquivo de texto AIS_results.txt. Para cada nova execução, os resultados serão adicionados ao final do arquivo.
         # with open("AIS_results.txt", "a", encoding="utf-8") as f:
