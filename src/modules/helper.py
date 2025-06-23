@@ -65,3 +65,26 @@ def initiateTimer():
 def endTimer(start):
     end = time.perf_counter()
     print(f"Total execution time: {end - start:.6f} seconds")
+
+def recommend_max_disciplines(statistics_by_semester, max_limit=7):
+    if not statistics_by_semester:
+        return 4  # default se não houver histórico
+
+    sorted_semesters = sorted(statistics_by_semester.items())
+
+    total_weight = 0
+    weighted_sum = 0
+
+    for i, (_, stats) in enumerate(sorted_semesters):
+        total_mat = stats.get("totalMat", 0)
+        pct_apr = stats.get("pctApr", 0)
+        perf = total_mat * pct_apr
+
+        weight = i + 1
+        total_weight += weight
+        weighted_sum += weight * perf
+
+    avg_approved = weighted_sum / total_weight
+    recommended = round(avg_approved)
+
+    return max(2, min(recommended, max_limit))

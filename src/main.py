@@ -33,6 +33,7 @@ def main():
     # Combinar as disciplinas (o último dicionário sobrescreve as chaves duplicadas)
     prerequisites = {**sin, **cco}
     equivalences = csvParser.parseCSVequivalences()
+    max_disciplines = helper.recommend_max_disciplines(structuredPdfData.get('statisticsBySemester', {}))
     # Chama a função de recomendação escolhida
     if args.mh == 'grasp':  # Se o usuário escolheu GRASP
         #python src/main.py --period "25.1" --mh "grasp" --update_json "y" --dataset_name "historico_SIN-5"
@@ -49,7 +50,7 @@ def main():
             iterations=int(args.i),
             k=int(args.k),
             equivalences=equivalences,
-            statistics_by_semester = structuredPdfData.get('statisticsBySemester'),
+            max_disciplines = max_disciplines,
             rpv = structuredPdfData.get('rpvBySemester')
         )
         print("Melhor solução encontrada:")
