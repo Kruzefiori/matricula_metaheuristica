@@ -57,21 +57,21 @@ from modules.metaheuristic import score
 
 # Generates an initial population of solutions.
 def generate_initial_population(studentHistory, allDisciplines, initialPopulation, maxRecommendationLength):
-    
-    bestPeriod = studentHistory.get('generalStatistics', {}).get('bestSemester', {}).get('period', 'N/A')
+    missing_disciplines = set(studentHistory.get("missingDisciplines", []))
+    available_disciplines = list(missing_disciplines.intersection(allDisciplines))
 
     all_solutions = []
 
     for _ in range(initialPopulation):
-        # Define aleatoriamente quantas disciplinas essa solução terá (entre 1 e o máximo)
-        num_disciplines = random.randint(1, maxRecommendationLength)
+        if not available_disciplines:
+            break
 
-        # Escolhe disciplinas aleatórias, sem se preocupar com conflitos ou restrições
-        solution = random.sample(allDisciplines, min(num_disciplines, len(allDisciplines)))
-
+        num_disciplines = random.randint(1, min(maxRecommendationLength, len(available_disciplines)))
+        solution = random.sample(available_disciplines, num_disciplines)
         all_solutions.append(solution)
 
     return all_solutions
+
 
 def get_rare_disciplines(current_catalog, previous_catalog):
     current_set = set(current_catalog)

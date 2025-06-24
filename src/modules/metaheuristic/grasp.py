@@ -304,7 +304,6 @@ def grasp(missing_disciplines, catalog_current, prerequisites, catalog_previous=
     equivalences_map = disciplines_equivalences_map(equivalences) if equivalences else {d: [d] for d in missing_disciplines}
     schedule_map = build_discipline_schedule_map(catalog_current)
 
-    max_disciplines
     print(f"Recomendando até {max_disciplines} disciplinas com base no histórico.")
     reproved = get_disciplines_intersection(rpv, missing_disciplines) if rpv else []
     prereq_freq = count_prerequisite_frequency(prerequisites)
