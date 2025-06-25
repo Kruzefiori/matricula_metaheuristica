@@ -249,6 +249,24 @@ def get_rare_disciplines(current_catalog, previous_catalog):
     previous_set = set(previous_catalog)
     return current_set - previous_set
 
+def remove_worst_discipline(solution, score_func, score_args, rare_disciplines, reproved):
+    worst_disc = None
+    worst_score_loss = float('inf')
+    current_score = score_func(solution, rare_disciplines, reproved, score_args['prereq_freq'])
+
+    for disc in solution:
+        temp_solution = [d for d in solution if d != disc]
+        if all(has_prerequisites(d, temp_solution, score_args['prerequisites'], score_args['missing_disciplines']) for d in temp_solution):
+            temp_score = score_func(temp_solution, rare_disciplines, reproved, score_args['prereq_freq'])
+            score_loss = current_score - temp_score
+            if score_loss < worst_score_loss:
+                worst_score_loss = score_loss
+                worst_disc = disc
+
+    if worst_disc:
+        solution.remove(worst_disc)
+    return solution
+
 
 def path_relinking(sol1, sol2, score_func, score_args, reproved, rare_disciplines):
     best_solution = sol1[:]
@@ -283,9 +301,9 @@ def path_relinking(sol1, sol2, score_func, score_args, reproved, rare_discipline
                     best_score = new_score
                     current_solution = new_solution
 
-    # Corta solução para garantir limite máximo
-    if len(best_solution) > score_args['max_disciplines']:
-        best_solution = best_solution[:score_args['max_disciplines']]
+        while len(best_solution) > score_args['max_disciplines']:
+            best_solution = remove_worst_discipline(best_solution, score, score_args, rare_disciplines, reproved)
+
 
     return best_solution
 
@@ -324,6 +342,7 @@ def grasp(missing_disciplines, catalog_current, prerequisites, catalog_previous=
         'max_disciplines': max_disciplines
     }
 
+    no_improvement_counter = 0
     for _ in range(iterations):
         solution = construct_solution(missing_disciplines, catalog_current, prerequisites, equivalences_map, schedule_map, k, max_disciplines, rare, reproved, prereq_freq)
 
@@ -356,6 +375,12 @@ def grasp(missing_disciplines, catalog_current, prerequisites, catalog_previous=
         if scoreS > best_score:
             best_score = scoreS
             best_solution = solution
+            no_improvement_counter = 0
+        else:
+            no_improvement_counter += 1
+        if no_improvement_counter >= 10:
+            print("Encerrando GRASP por estagnação (10 iterações sem melhoria).")
+            break
 
     # Path Relinking entre pares do conjunto elite
     for i in range(len(elite_solutions)):

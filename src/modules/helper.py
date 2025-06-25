@@ -33,13 +33,11 @@ def argsParser():
         "--constructive",
         type=str,
         help="Refinamento do resultado",
-        default="greedy",
     )
     argsParser.add_argument(
         "--refinement",
         type=str,
         help="função de refinamento a ser utilizada",
-        default="dicipline",
     )
     argsParser.add_argument(
         "--mh",
