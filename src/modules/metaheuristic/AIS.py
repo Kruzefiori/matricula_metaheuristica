@@ -81,27 +81,27 @@ def get_approved_disciplines(studentHistory):
 
 
 # Generates an initial population of solutions.
-def generate_initial_population(studentHistory, offers, initialPopulation, maxRecommendationLength):
+def generate_initial_population(studentHistory, offers, approved_disciplines, prerequisites, initialPopulation, maxRecommendationLength):
     missingDisciplines = studentHistory.get('missingDisciplines', [])
     availableDisciplines = offers.get('uniqueDisciplines', [])
     disciplinesByDayAndTime = offers.get('disciplinesByDayAndTime', {})
-
-    # Disciplinas candidatas: pendentes e disponíveis
     candidateDisciplines = list(set(missingDisciplines) & set(availableDisciplines))
-    
+
+    # for disc in solution:
+    #     prereqs = prerequisites.get(disc, {}).get('prerequisites', [])
+    #     if not all(prereq in approved_disciplines for prereq in prereqs):
+    #        return None  # Se a disciplina não tem todos os pré-requisitos aprovados, descarta a solução
+
+    # Remove disciplines that are not having prerequisites satisfied
+    candidateDisciplines = [disc for disc in candidateDisciplines if all(prereq in approved_disciplines for prereq in prerequisites.get(disc, {}).get('prerequisites', []))]
+
     all_solutions = []
-
     for _ in range(initialPopulation):
-        # Embaralhar as candidatas
         random.shuffle(candidateDisciplines)
-
         solution = []
         occupied_slots = set()
-
         for disc in candidateDisciplines:
-            # Verifica se a disciplina entra sem conflito
             conflict = False
-
             for day, times in disciplinesByDayAndTime.items():
                 for time, disciplines_at_time in times.items():
                     if disc in disciplines_at_time:
@@ -111,23 +111,16 @@ def generate_initial_population(studentHistory, offers, initialPopulation, maxRe
                             break
                 if conflict:
                     break
-
             if not conflict:
                 solution.append(disc)
-
-                # Marca os horários como ocupados
                 for day, times in disciplinesByDayAndTime.items():
                     for time, disciplines_at_time in times.items():
                         if disc in disciplines_at_time:
                             slot = f"{day}-{time}"
                             occupied_slots.add(slot)
-
-            # Respeita o limite máximo de disciplinas
             if len(solution) >= maxRecommendationLength:
                 break
-
         all_solutions.append(solution)
-
     return all_solutions
 
 
@@ -258,7 +251,7 @@ def ais_algorithm(studentHistory, equivalences, offers, neighborOffers, prerequi
     missing_disciplines = studentHistory.get('missingDisciplines', [])
     approved_disciplines = get_approved_disciplines(studentHistory)
 
-    population = generate_initial_population(studentHistory, offers, initialPopulation, maxRecommendationLength)
+    population = generate_initial_population(studentHistory, offers, approved_disciplines, prerequisites, initialPopulation, maxRecommendationLength)
 
     # Lista para armazenar as melhores soluções encontradas (e sua pontuação) a cada geração
     best_solutions_per_generation = []
@@ -281,7 +274,7 @@ def ais_algorithm(studentHistory, equivalences, offers, neighborOffers, prerequi
 
         # Diversificação: gera novas soluções aleatórias
         diversification_count = int(initialPopulation * diversification_rate) 
-        new_random_solutions = generate_initial_population(studentHistory, offers, diversification_count, maxRecommendationLength)
+        new_random_solutions = generate_initial_population(studentHistory, offers, approved_disciplines, prerequisites, diversification_count, maxRecommendationLength)
 
         # Substituição: nova população é composta pelos melhores + clones + novos aleatórios
         all_solutions = top_solutions + clones + new_random_solutions
