@@ -117,11 +117,6 @@ def main():
         convergence_factor = float(args.convergence_factor)
         supress_factor = float(args.supress_factor)
 
-        offeredDisciplines = structuredPdfData.get('uniqueDisciplines', [])
-        # Salvar as equivalências em um arquivo JSON
-        with open('infos/equivalences.json', 'w', encoding='utf-8') as f:
-            json.dump(equivalences, f, ensure_ascii=False, indent=2)
-
         best_solution_AIS, best_score_AIS = AIS.ais_algorithm(
             studentHistory=structuredPdfData,
             equivalences=equivalences,
