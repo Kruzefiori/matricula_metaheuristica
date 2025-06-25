@@ -18,22 +18,6 @@ import matplotlib.pyplot as plt
 
 import json
 
-def extract_all_disciplines(disciplinas_com_equivalencias):
-    todas = set()
-
-    for item in disciplinas_com_equivalencias:
-        # Adiciona o código principal
-        todas.add(item["discipline"])
-
-        # Processa cada código de equivalência
-        for equivalencia in item["equivalences"]:
-            # Substitui '+' por ',' e divide tudo em códigos individuais
-            codigos = equivalencia.replace("+", ",").replace(" ", "").split(",")
-            todas.update(codigos)
-
-    return sorted(todas)
-
-
 def main():
     args = helper.argsParser()
     print(args)
@@ -133,11 +117,14 @@ def main():
         convergence_factor = float(args.convergence_factor)
         supress_factor = float(args.supress_factor)
 
-        all_disciplines = extract_all_disciplines(equivalences)
+        offeredDisciplines = structuredPdfData.get('uniqueDisciplines', [])
+        # Salvar as equivalências em um arquivo JSON
+        with open('infos/equivalences.json', 'w', encoding='utf-8') as f:
+            json.dump(equivalences, f, ensure_ascii=False, indent=2)
 
-        best_solution_AIS, best_score_AIS, best_scores_per_generation = AIS.ais_algorithm(
+        best_solution_AIS, best_score_AIS = AIS.ais_algorithm(
             studentHistory=structuredPdfData,
-            allDisciplines=all_disciplines,
+            equivalences=equivalences,
             offers=availableDisciplines,
             neighborOffers=neighborDisciplines,
             prerequisites=prerequisites,
@@ -154,13 +141,6 @@ def main():
         print("Melhor solução encontrada:")
         pprint.pprint(best_solution_AIS)
         print(f"Score: {best_score_AIS}")
-
-        # print("Best scores per generation:")
-        # for i, score in enumerate(best_scores_per_generation):
-        #     if i == len(best_scores_per_generation) - 1:
-        #         print(f"{score:.2f}")
-        #     else:
-        #         print(f"{score:.2f}, ", end="")
 
         # # Número de iterações (eixo x)
         # iterations = list(range(1, len(best_scores_per_generation) + 1))
