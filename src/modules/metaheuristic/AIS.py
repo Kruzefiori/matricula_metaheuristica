@@ -81,20 +81,54 @@ def get_approved_disciplines(studentHistory):
 
 
 # Generates an initial population of solutions.
-def generate_initial_population(allDisciplines, initialPopulation, maxRecommendationLength):
+def generate_initial_population(studentHistory, offers, initialPopulation, maxRecommendationLength):
+    missingDisciplines = studentHistory.get('missingDisciplines', [])
+    availableDisciplines = offers.get('uniqueDisciplines', [])
+    disciplinesByDayAndTime = offers.get('disciplinesByDayAndTime', {})
 
-  all_solutions = []
+    # Disciplinas candidatas: pendentes e disponíveis
+    candidateDisciplines = list(set(missingDisciplines) & set(availableDisciplines))
+    
+    all_solutions = []
 
-  for _ in range(initialPopulation):
-      # Define aleatoriamente quantas disciplinas essa solução terá (entre 1 e o máximo)
-      num_disciplines = random.randint(1, maxRecommendationLength)
+    for _ in range(initialPopulation):
+        # Embaralhar as candidatas
+        random.shuffle(candidateDisciplines)
 
-      # Escolhe disciplinas aleatórias, sem se preocupar com conflitos ou restrições
-      solution = random.sample(allDisciplines, min(num_disciplines, len(allDisciplines)))
+        solution = []
+        occupied_slots = set()
 
-      all_solutions.append(solution)
+        for disc in candidateDisciplines:
+            # Verifica se a disciplina entra sem conflito
+            conflict = False
 
-  return all_solutions
+            for day, times in disciplinesByDayAndTime.items():
+                for time, disciplines_at_time in times.items():
+                    if disc in disciplines_at_time:
+                        slot = f"{day}-{time}"
+                        if slot in occupied_slots:
+                            conflict = True
+                            break
+                if conflict:
+                    break
+
+            if not conflict:
+                solution.append(disc)
+
+                # Marca os horários como ocupados
+                for day, times in disciplinesByDayAndTime.items():
+                    for time, disciplines_at_time in times.items():
+                        if disc in disciplines_at_time:
+                            slot = f"{day}-{time}"
+                            occupied_slots.add(slot)
+
+            # Respeita o limite máximo de disciplinas
+            if len(solution) >= maxRecommendationLength:
+                break
+
+        all_solutions.append(solution)
+
+    return all_solutions
 
 
 def get_rare_disciplines(current_catalog, previous_catalog):
@@ -121,51 +155,11 @@ def count_prerequisite_frequency(prerequisites):
 
 # Evaluates the fitness of a solution based on various criteria.
 def evaluate_fitness(solution, catalog_current, catalog_previous, rpv, missing_disciplines, prerequisites, approved_disciplines, equivalences):
-    # Antes de calcular a pontuação, verificar as situções que tornam cada disciplina não factível e penalizar a pontuação:
-    # 1. Verificar se a disciplina foi ofertada no período atual.
-    # 2. Verificar se a disciplina está entre as disciplinas pendentes do aluno.
-    # 3. Verificar se há conflitos de horário com as outras disciplinas já selecionadas na solução.
-    # 4. Verificar se a o aluno já cursou todas as disciplinas pré-requisitas da disciplina.
-    # 5. Verificar se a disciplina é uma das equivalências. Se for, verificar se a disciplina equivalente é uma das pendentes do aluno.
-  
-    penalty = 0
-    # 1. Verifica se todas as disciplinas estão no catálogo atual
-    for disc in solution:
-        if disc not in catalog_current.get('uniqueDisciplines', []):
-            penalty += 1  # Penaliza se a disciplina não está no catálogo atual
-
-    # 2. Verifica se todas as disciplinas estão entre as pendentes do aluno
-    for disc in solution:
-        if disc not in missing_disciplines:
-            penalty += 1 # Penaliza se a disciplina não está entre as pendentes do aluno
-
-    # 3. Verifica conflitos de horário
-    disciplinesByDayAndTime = catalog_current.get('disciplinesByDayAndTime', {})
-    occupied_slots = get_occupied_slots(solution, disciplinesByDayAndTime)
-    for disc in solution:
-        if has_conflict(disc, occupied_slots, disciplinesByDayAndTime):
-            penalty += 1 # Penaliza se há conflito de horário com outras disciplinas na solução
-
-    # 4. Verifica se o aluno já cursou todas as disciplinas pré-requisitas
-    for disc in solution:
-        prereqs = prerequisites.get(disc, {}).get('prerequisites', [])
-        if not all(prereq in approved_disciplines for prereq in prereqs):
-            penalty += 1  # Penaliza se o aluno não cursou todas as pré-requisitas
-    
-    # 5. Verifica se a disciplina é uma equivalência e se a equivalente está entre as pendentes
-    for disc in solution:
-        if disc in equivalences:
-            for equiv in equivalences[disc]:
-                if equiv not in missing_disciplines:
-                    penalty += 1
 
     rare = get_rare_disciplines(catalog_current, catalog_previous)
     reproved = get_disciplines_intersection(rpv, missing_disciplines) if rpv else []
     prereq_freq = count_prerequisite_frequency(prerequisites)
     fitness = score.score(solution=solution, rare_disciplines=rare, reproved=reproved, prereq_freq=prereq_freq)
-
-    # Subtrai a penalidade da pontuação total
-    fitness -= penalty
     return fitness
 
 
@@ -263,9 +257,8 @@ def ais_algorithm(studentHistory, equivalences, offers, neighborOffers, prerequi
     rpv = studentHistory.get('rpvBySemester')
     missing_disciplines = studentHistory.get('missingDisciplines', [])
     approved_disciplines = get_approved_disciplines(studentHistory)
-    offeredDisciplines = offers.get('uniqueDisciplines', [])
 
-    population = generate_initial_population(offeredDisciplines, initialPopulation, maxRecommendationLength)
+    population = generate_initial_population(studentHistory, offers, initialPopulation, maxRecommendationLength)
 
     # Lista para armazenar as melhores soluções encontradas (e sua pontuação) a cada geração
     best_solutions_per_generation = []
@@ -288,7 +281,7 @@ def ais_algorithm(studentHistory, equivalences, offers, neighborOffers, prerequi
 
         # Diversificação: gera novas soluções aleatórias
         diversification_count = int(initialPopulation * diversification_rate) 
-        new_random_solutions = generate_initial_population(offeredDisciplines, diversification_count, maxRecommendationLength)
+        new_random_solutions = generate_initial_population(studentHistory, offers, diversification_count, maxRecommendationLength)
 
         # Substituição: nova população é composta pelos melhores + clones + novos aleatórios
         all_solutions = top_solutions + clones + new_random_solutions
